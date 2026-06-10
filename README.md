@@ -406,6 +406,15 @@ Complete frameworks, styles, and contexts saved as:
 
 ## 📋 ROADMAP
 
+### Phase 0: Simple TUI Setup (Week 1) 🆕
+- [ ] One-command installer (`curl | bash` or `git clone && ./install`)
+- [ ] Interactive setup wizard (ncurses/TUI)
+- [ ] Detect system (Mac/Linux/Windows WSL)
+- [ ] Auto-install dependencies (Ollama, Python packages)
+- [ ] Configure cloud capture (browser extension or API proxy)
+- [ ] Test all three tiers end-to-end
+- [ ] First-run tutorial ("Your AI will learn from you")
+
 ### Phase 1: Shadow (Now — Month 1)
 - [x] Basic capture infrastructure
 - [ ] Automatic session logging
