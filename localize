@@ -1,0 +1,348 @@
+#!/usr/bin/env python3
+"""
+LOCALIZE — Simple CLI for Personal AI Sovereignty
+
+Usage:
+  localize "thing you want to localize"
+  
+Examples:
+  localize "I need to shift priorities towards job hunting"
+  localize "my preferred apps for these tasks"
+  localize "the research we've done here"
+
+The system asks follow-up questions to categorize and store appropriately.
+"""
+
+import json
+import argparse
+import sys
+from pathlib import Path
+from datetime import datetime
+from typing import Optional
+
+PROJECT_DIR = Path.home() / "Projects" / "localize_it"
+DATA_DIR = PROJECT_DIR / "data"
+LOG_FILE = DATA_DIR / "localize" / "entries.jsonl"
+
+
+def ensure_dirs():
+    """Ensure data directories exist."""
+    (DATA_DIR / "localize").mkdir(parents=True, exist_ok=True)
+    (DATA_DIR / "intraday").mkdir(parents=True, exist_ok=True)
+    (DATA_DIR / "explicit" / "contexts").mkdir(parents=True, exist_ok=True)
+
+
+def ask_multiple_choice(question: str, options: list, allow_custom: bool = True) -> str:
+    """Ask user to select from options."""
+    print(f"\n{question}")
+    for i, option in enumerate(options, 1):
+        print(f"  [{i}] {option}")
+    if allow_custom:
+        print(f"  [c] Custom (type your own)")
+    print(f"  [s] Skip")
+    
+    while True:
+        choice = input("\nSelect: ").strip().lower()
+        
+        if choice == 's':
+            return "skip"
+        
+        if choice == 'c' and allow_custom:
+            custom = input("Your answer: ").strip()
+            return custom if custom else "skip"
+        
+        try:
+            idx = int(choice) - 1
+            if 0 <= idx < len(options):
+                return options[idx]
+        except ValueError:
+            pass
+        
+        print("Invalid choice. Try again.")
+
+
+def capture_entry(raw_input: str, category: str, subcategory: Optional[str] = None, tags: list = None):
+    """Capture the localized entry to appropriate storage."""
+    
+    entry = {
+        "timestamp": datetime.now().isoformat(),
+        "raw_input": raw_input,
+        "category": category,
+        "subcategory": subcategory,
+        "tags": tags or [],
+        "processed": False
+    }
+    
+    # Save to localize log
+    ensure_dirs()
+    with open(LOG_FILE, 'a') as f:
+        f.write(json.dumps(entry) + '\n')
+    
+    # Also route to appropriate tier storage
+    if category == "preference":
+        _save_to_intraday("preferences", entry)
+    elif category == "pattern":
+        _save_to_intraday("patterns", entry)
+    elif category == "framework":
+        _save_to_explicit("frameworks", entry)
+    elif category == "context":
+        _save_to_explicit("contexts", entry)
+    elif category == "discovery":
+        _save_to_explicit("discoveries", entry)
+    
+    return entry
+
+
+def _save_to_intraday(type_name: str, entry: dict):
+    """Save to intraday storage."""
+    filepath = DATA_DIR / "intraday" / f"{type_name}.jsonl"
+    with open(filepath, 'a') as f:
+        f.write(json.dumps(entry) + '\n')
+
+
+def _save_to_explicit(type_name: str, entry: dict):
+    """Save to explicit storage."""
+    filepath = DATA_DIR / "explicit" / type_name / f"{type_name}.jsonl"
+    filepath.parent.mkdir(parents=True, exist_ok=True)
+    with open(filepath, 'a') as f:
+        f.write(json.dumps(entry) + '\n')
+
+
+def interactive_categorize(raw_input: str) -> dict:
+    """Interactive categorization with follow-up questions."""
+    
+    print(f"\n{'='*60}")
+    print(f"LOCALIZE: \"{raw_input[:60]}{'...' if len(raw_input) > 60 else ''}\"")
+    print(f"{'='*60}")
+    
+    # Question 1: What is this?
+    category = ask_multiple_choice(
+        "What would you call this?",
+        [
+            "A preference (how I like things)",
+            "A pattern (something I do repeatedly)",
+            "A framework (how I approach decisions)",
+            "A context (project/situation specific)",
+            "A discovery (something I just realized)",
+            "Research (information I gathered)",
+            "Just a note (capture for later)"
+        ]
+    )
+    
+    if category == "skip":
+        print("Skipped.")
+        return None
+    
+    # Map to internal category
+    category_map = {
+        "A preference (how I like things)": "preference",
+        "A pattern (something I do repeatedly)": "pattern",
+        "A framework (how I approach decisions)": "framework",
+        "A context (project/situation specific)": "context",
+        "A discovery (something I just realized)": "discovery",
+        "Research (information I gathered)": "research",
+        "Just a note (capture for later)": "note"
+    }
+    internal_cat = category_map.get(category, "note")
+    
+    # Question 2: Subcategory (context-dependent)
+    subcategory = None
+    tags = []
+    
+    if internal_cat == "preference":
+        subcategory = ask_multiple_choice(
+            "What kind of preference?",
+            [
+                "Output format (how I want info presented)",
+                "Communication style (how I interact)",
+                "Technical (tools, languages, approaches)",
+                "Workflow (how I work)",
+                "General (other)"
+            ]
+        )
+        if subcategory == "skip":
+            subcategory = None
+            
+    elif internal_cat == "context":
+        subcategory = ask_multiple_choice(
+            "What context is this for?",
+            [
+                "Current project/work",
+                "General setup/tools",
+                "Personal/life",
+                "Specific domain"
+            ]
+        )
+        if subcategory == "Current project/work":
+            project = input("Project name: ").strip()
+            if project:
+                tags.append(f"project:{project}")
+        elif subcategory == "skip":
+            subcategory = None
+    
+    elif internal_cat == "discovery":
+        subcategory = ask_multiple_choice(
+            "What kind of discovery?",
+            [
+                "Priority shift (changing focus)",
+                "Insight (new understanding)",
+                "Decision (made a choice)",
+                "Problem identified",
+                "Solution found"
+            ]
+        )
+        if subcategory == "skip":
+            subcategory = None
+    
+    elif internal_cat == "pattern":
+        subcategory = ask_multiple_choice(
+            "What kind of pattern?",
+            [
+                "Query pattern (how I ask for things)",
+                "Work pattern (how I approach tasks)",
+                "Decision pattern (how I choose)",
+                "Communication pattern (how I interact)"
+            ]
+        )
+        if subcategory == "skip":
+            subcategory = None
+    
+    # Question 3: Tags
+    print("\nAdd tags (comma-separated, or press Enter to skip):")
+    tags_input = input("Tags: ").strip()
+    if tags_input:
+        tags.extend([t.strip() for t in tags_input.split(",") if t.strip()])
+    
+    # Capture it
+    entry = capture_entry(raw_input, internal_cat, subcategory, tags)
+    
+    # Confirmation
+    print(f"\n✓ Localized as: {internal_cat}")
+    if subcategory:
+        print(f"  Subcategory: {subcategory}")
+    if tags:
+        print(f"  Tags: {', '.join(tags)}")
+    print(f"  Saved to: {LOG_FILE}")
+    
+    # Suggest next step
+    if internal_cat == "discovery" and "Priority shift" in (subcategory or ""):
+        print(f"\n💡 This looks like a priority shift.")
+        follow = ask_multiple_choice(
+            "Want to create an action item?",
+            ["Yes, create TODO", "No, just capture"],
+            allow_custom=False
+        )
+        if "Yes" in follow:
+            print("  [Would create TODO in your task system]")
+    
+    return entry
+
+
+def quick_capture(raw_input: str, category: str):
+    """Quick capture without interactive questions."""
+    entry = capture_entry(raw_input, category)
+    print(f"✓ Quick-captured as {category}")
+    return entry
+
+
+def list_recent(n: int = 10):
+    """List recent localized entries."""
+    if not LOG_FILE.exists():
+        print("No entries yet.")
+        return
+    
+    entries = []
+    with open(LOG_FILE, 'r') as f:
+        for line in f:
+            if line.strip():
+                try:
+                    entries.append(json.loads(line))
+                except:
+                    continue
+    
+    print(f"\nRecent Localizations (last {min(n, len(entries))}):")
+    print("=" * 60)
+    
+    for entry in entries[-n:]:
+        ts = entry.get("timestamp", "")[:10]
+        cat = entry.get("category", "unknown")
+        text = entry.get("raw_input", "")[:50]
+        print(f"\n[{ts}] {cat}: \"{text}...\"")
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="LOCALIZE — Capture anything for your personal AI",
+        usage="localize [THING_TO_LOCALIZE] [options]"
+    )
+    parser.add_argument(
+        "thing",
+        nargs="?",
+        help="What you want to localize (quote it if it has spaces)"
+    )
+    parser.add_argument(
+        "--type", "-t",
+        choices=["preference", "pattern", "framework", "context", "discovery", "research", "note"],
+        help="Skip questions and capture directly as this type"
+    )
+    parser.add_argument(
+        "--list", "-l",
+        action="store_true",
+        help="List recent captures"
+    )
+    parser.add_argument(
+        "--status",
+        action="store_true",
+        help="Show system status"
+    )
+    
+    args = parser.parse_args()
+    
+    if args.status:
+        print("LOCALIZE Status")
+        print("=" * 60)
+        print(f"Data directory: {DATA_DIR}")
+        print(f"Log file: {LOG_FILE}")
+        
+        if LOG_FILE.exists():
+            count = sum(1 for _ in open(LOG_FILE))
+            print(f"Total entries: {count}")
+        else:
+            print("Total entries: 0")
+        return
+    
+    if args.list:
+        list_recent()
+        return
+    
+    if not args.thing:
+        # Interactive mode
+        print("LOCALIZE — Personal AI Sovereignty")
+        print("=" * 60)
+        print("\nWhat do you want to localize?")
+        print("(Type your entry, or 'quit' to exit)\n")
+        
+        while True:
+            user_input = input("> ").strip()
+            
+            if user_input.lower() in ['quit', 'exit', 'q']:
+                print("Goodbye!")
+                break
+            
+            if not user_input:
+                continue
+            
+            interactive_categorize(user_input)
+            print("\n" + "-" * 40)
+        
+        return
+    
+    # Single capture mode
+    if args.type:
+        quick_capture(args.thing, args.type)
+    else:
+        interactive_categorize(args.thing)
+
+
+if __name__ == "__main__":
+    main()
