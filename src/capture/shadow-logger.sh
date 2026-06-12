@@ -75,55 +75,12 @@ case "${1:-}" in
         ;;
         
     process)
-        log "Processing shadow data for $(date -d yesterday +%Y-%m-%d)..."
+        log "Starting shadow pipeline for $(date -d yesterday +%Y-%m-%d)..."
         
-        # Step 1: Collect yesterday's interactions
-        YESTERDAY_DIR="$DATA_DIR/$(date -d yesterday +%Y-%m)"
-        if [ ! -d "$YESTERDAY_DIR" ]; then
-            log "No data for yesterday"
-            exit 0
-        fi
+        # Run the new Python pipeline
+        "$PROJECT_DIR/src/pipeline-shadow.py" --yesterday
         
-        # Step 2: Extract patterns
-        log "Extracting patterns..."
-        "$PROJECT_DIR/src/distill/extract-patterns.py" \
-            --input="$YESTERDAY_DIR" \
-            --output="$SHADOW_DIR/patterns/$(date -d yesterday +%Y%m%d).json"
-        
-        # Step 3: Analyze style
-        log "Analyzing style..."
-        "$PROJECT_DIR/src/distill/analyze-style.py" \
-            --input="$YESTERDAY_DIR" \
-            --output="$SHADOW_DIR/style/$(date -d yesterday +%Y%m%d).json"
-        
-        # Step 4: Build knowledge graph
-        log "Building knowledge graph..."
-        "$PROJECT_DIR/src/distill/build-knowledge.py" \
-            --input="$YESTERDAY_DIR" \
-            --output="$SHADOW_DIR/knowledge/$(date -d yesterday +%Y%m%d).json"
-        
-        # Step 5: Generate report
-        REPORT="$PROJECT_DIR/logs/shadow-synthesis-$(date -d yesterday +%Y%m%d).md"
-        cat > "$REPORT" << EOF
-# Shadow Synthesis Report
-## Date: $(date -d yesterday +%Y-%m-%d)
-
-### Overview
-- Interactions captured: $(ls "$YESTERDAY_DIR"/*.jsonl 2>/dev/null | wc -l)
-- Patterns extracted: $(jq length "$SHADOW_DIR/patterns/$(date -d yesterday +%Y%m%d).json" 2>/dev/null || echo 0)
-- Knowledge nodes: $(jq '.nodes | length' "$SHADOW_DIR/knowledge/$(date -d yesterday +%Y%m%d).json" 2>/dev/null || echo 0)
-
-### Style Drift
-$(cat "$SHADOW_DIR/style/$(date -d yesterday +%Y%m%d).json" 2>/dev/null | jq -r '.summary' || echo "No style analysis available")
-
-### Recommendations
-- Training corpus size: $(du -sh "$YESTERDAY_DIR" | cut -f1)
-- Ready for LoRA training: Yes
-
-Run: localize_it train-nightly --date=$(date -d yesterday +%Y-%m-%d)
-EOF
-        
-        log "Shadow synthesis complete. Report: $REPORT"
+        log "Shadow pipeline complete"
         ;;
         
     *)
