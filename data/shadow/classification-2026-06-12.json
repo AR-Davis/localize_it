@@ -1,0 +1,243 @@
+{
+  "total_queries": 2440,
+  "categories": {
+    "SOCIAL": {
+      "count": 112,
+      "percentage": 4.6,
+      "examples": [
+        {
+          "text": "Good morning, Shepherd. Use the wakeup skill and get reoriented.",
+          "timestamp": "2026-06-05T15:59:33.599Z",
+          "subtype": "greeting_or_signoff",
+          "confidence": 0.85
+        },
+        {
+          "text": "Hey Shepherd, so I am also communicating with an online AI named Lumo who works through Proton. Can you give me a brief write up of our distributed ne",
+          "timestamp": "2026-04-04T22:43:14.855Z",
+          "subtype": "greeting_or_signoff",
+          "confidence": 0.85
+        },
+        {
+          "text": "Hey Shepherd, so on Pecan's network, there is an onboarding file for you, written by Rhubarb. It should be located here: /mnt/pecan-vault/sync-index/o",
+          "timestamp": "2026-04-04T23:54:34.559Z",
+          "subtype": "greeting_or_signoff",
+          "confidence": 0.85
+        },
+        {
+          "text": "Hey Shepherd. Can you fetch me my morning paper? The Grove Farseer, Volume 1?",
+          "timestamp": "2026-04-05T14:45:36.171Z",
+          "subtype": "greeting_or_signoff",
+          "confidence": 0.85
+        },
+        {
+          "text": "Hey Shepherd, can you fetch updates from the rest of the Grove? What's everyone's up to?",
+          "timestamp": "2026-04-05T17:08:05.800Z",
+          "subtype": "greeting_or_signoff",
+          "confidence": 0.85
+        }
+      ]
+    },
+    "LEARNING": {
+      "count": 459,
+      "percentage": 18.8,
+      "examples": [
+        {
+          "text": "Do you remember what we worked on yesterday?",
+          "timestamp": "2026-06-05T16:01:00.572Z",
+          "subtype": "information_seeking",
+          "confidence": 0.75
+        },
+        {
+          "text": "Hmm, does uploading image blobs require human uploading?",
+          "timestamp": "2026-06-05T18:51:31.307Z",
+          "subtype": "information_seeking",
+          "confidence": 0.75
+        },
+        {
+          "text": "Let's do a little research on how you are set up as a personal agent. Let's think about what you usually handle and the switching you need to do and s",
+          "timestamp": "2026-06-05T20:07:36.739Z",
+          "subtype": "information_seeking",
+          "confidence": 0.75
+        },
+        {
+          "text": "I believe we're already on Pi. Just sync the updates from Pecan. Honestly, I'd like to figure out a better way to reorient you when I restart a sessio",
+          "timestamp": "2026-04-04T20:40:57.623Z",
+          "subtype": "information_seeking",
+          "confidence": 0.75
+        },
+        {
+          "text": "How about we take a look at all that we have built so far. Look at the files in Pecan and the sessions that are logged. Take a slow analysis of everyt",
+          "timestamp": "2026-04-04T23:38:38.657Z",
+          "subtype": "information_seeking",
+          "confidence": 0.75
+        }
+      ]
+    },
+    "OTHER": {
+      "count": 1531,
+      "percentage": 62.7,
+      "examples": [
+        {
+          "text": "I'm not sure what my priorities are for today, but we will figure it out. Let's bring up Job Hunter and write a quick cover letter for thisjob: https:",
+          "timestamp": "2026-06-05T16:02:16.496Z",
+          "subtype": "unclassified",
+          "confidence": 0.5
+        },
+        {
+          "text": "Not a single law firm has gotten back to me. I don't think they will.",
+          "timestamp": "2026-06-05T17:26:54.863Z",
+          "subtype": "unclassified",
+          "confidence": 0.5
+        },
+        {
+          "text": "I don't wait anymore, and I don't do aggressive followups. Let's just work on our bluesky bot today and also look at the mastodon integration. We shou",
+          "timestamp": "2026-06-05T18:32:05.091Z",
+          "subtype": "unclassified",
+          "confidence": 0.5
+        },
+        {
+          "text": "so i am at the final step of bridging. Ive clicked the bridging toggle on and it is asking me to migrate the fediverse account to at you at instance.c",
+          "timestamp": "2026-06-05T18:48:29.628Z",
+          "subtype": "unclassified",
+          "confidence": 0.5
+        },
+        {
+          "text": "I think it worked: https://bsky.app/profile/thefinaldispatch.bsky.social",
+          "timestamp": "2026-06-05T18:49:33.001Z",
+          "subtype": "unclassified",
+          "confidence": 0.5
+        }
+      ]
+    },
+    "DIRECTIVE": {
+      "count": 127,
+      "percentage": 5.2,
+      "examples": [
+        {
+          "text": "Fix it better. We want a proper fix.",
+          "timestamp": "2026-06-05T18:35:39.114Z",
+          "subtype": "command",
+          "confidence": 0.9
+        },
+        {
+          "text": "Lets do option C. I have the same handle on mastodon. thefinaldispatch@mastodon.social",
+          "timestamp": "2026-06-05T18:44:21.455Z",
+          "subtype": "command",
+          "confidence": 0.9
+        },
+        {
+          "text": "Lets do it.",
+          "timestamp": "2026-06-05T18:51:48.072Z",
+          "subtype": "command",
+          "confidence": 0.9
+        },
+        {
+          "text": "Give me a brief thing to paste to watts to fix his bluesky bots post to add the photo.",
+          "timestamp": "2026-06-05T19:52:45.735Z",
+          "subtype": "command",
+          "confidence": 0.9
+        },
+        {
+          "text": "Lets build corraler's skill scaffolding.",
+          "timestamp": "2026-06-05T20:28:24.177Z",
+          "subtype": "command",
+          "confidence": 0.9
+        }
+      ]
+    },
+    "VERIFICATION": {
+      "count": 192,
+      "percentage": 7.9,
+      "examples": [
+        {
+          "text": "Ok, lets just double check the code of our bots right now. the bsky and the mastodon and bridgy. Check that everything is working properly and can wor",
+          "timestamp": "2026-06-05T18:58:47.949Z",
+          "subtype": "correctness_check",
+          "confidence": 0.8
+        },
+        {
+          "text": "Let's do Shepherd auto-wake skill, but also, let's set up another job for corraler, to check the status of the alpaca account.",
+          "timestamp": "2026-06-05T20:36:49.120Z",
+          "subtype": "correctness_check",
+          "confidence": 0.8
+        },
+        {
+          "text": "Let's have corraler take over the texas elections, climate and noaa bots too. right?",
+          "timestamp": "2026-06-05T20:57:52.392Z",
+          "subtype": "correctness_check",
+          "confidence": 0.8
+        },
+        {
+          "text": "<skill name=\"dream\" location=\"/home/kinch/.pi/skills/dream/SKILL.md\">\nReferences are relative to /home/kinch/.pi/skills/dream.\n\n# Dream: Memory Consol",
+          "timestamp": "2026-04-14T04:15:29.793Z",
+          "subtype": "correctness_check",
+          "confidence": 0.8
+        },
+        {
+          "text": "We will come back to this. We're going to work on some things from the DOMM terminal, but maybe you might be able to learn a bit of how Barb and I hav",
+          "timestamp": "2026-04-30T21:41:49.830Z",
+          "subtype": "correctness_check",
+          "confidence": 0.8
+        }
+      ]
+    },
+    "META": {
+      "count": 19,
+      "percentage": 0.8,
+      "examples": [
+        {
+          "text": "how is minecraft looking on our system?",
+          "timestamp": "2026-05-07T01:44:57.218Z",
+          "subtype": "connection_check",
+          "confidence": 0.9
+        },
+        {
+          "text": "how we lookin",
+          "timestamp": "2026-05-11T17:50:02.224Z",
+          "subtype": "connection_check",
+          "confidence": 0.9
+        },
+        {
+          "text": "How are we looking right now? Should I be closing anything out? making any moves before EOD? hows the alpaca account?",
+          "timestamp": "2026-04-22T18:38:12.180Z",
+          "subtype": "connection_check",
+          "confidence": 0.9
+        },
+        {
+          "text": "Still here?",
+          "timestamp": "2026-04-24T17:42:11.670Z",
+          "subtype": "connection_check",
+          "confidence": 0.9
+        },
+        {
+          "text": "how is it looking now",
+          "timestamp": "2026-06-02T17:36:31.872Z",
+          "subtype": "connection_check",
+          "confidence": 0.9
+        }
+      ]
+    }
+  },
+  "analysis": {
+    "meta_patterns": {
+      "status_check": 9,
+      "still_check": 5,
+      "presence_check": 5
+    },
+    "social_patterns": {
+      "morning_greeting": 67,
+      "casual_greeting": 43,
+      "night_signoff": 2
+    },
+    "learning_structure": {
+      "style": "freeform",
+      "ratio": 0.02
+    }
+  },
+  "insights": {
+    "primary_mode": "OTHER",
+    "social_ratio": 5.4,
+    "learning_depth": "surface",
+    "directive_tendency": "low"
+  }
+}
