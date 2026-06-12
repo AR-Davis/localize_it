@@ -24,6 +24,10 @@ Every interaction you have with cloud AI becomes training data for your personal
 
 ## 🏗️ ARCHITECTURE
 
+> **Note:** LOCALIZE_IT is designed to work with or without a memory management system.  
+> The reference implementation uses the **Pi Dream skill** for session consolidation, but this is optional.  
+> See [Memory Management Requirements](#memory-management-requirements) below.
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                     CLOUD AI LAYER                          │
@@ -112,33 +116,68 @@ localize_it train-nightly --adapter-size=64
 
 ## ☀️ TIER 2: INTRADAY LOGGING
 
-### Preference Discovery
+### Preference Discovery (Implemented)
 
-Active prompting during cloud sessions to capture explicit preferences.
+Active detection and prompting during cloud sessions.
 
-**Automatic prompts (configurable frequency):**
+**Automatic Detection:**
 
-*After 5 similar queries:*
-> "It looks like you prefer detailed explanations with code examples. Is this a pattern I should remember?"
-
-*After correcting AI output:*
-> "You changed 'utilize' to 'use'. Do you prefer simpler language in technical writing?"
-
-*After choosing one option over others:*
-> "You selected the structured approach over the narrative one. Is this a general preference?"
-
-**User-initiated capture:**
 ```bash
-# During any cloud session
-localize_it note-preference "I always want TypeScript before Python examples"
-localize_it note-pattern "Start summaries with the conclusion first"
-localize_it note-framework "Use MECE structure for analysis"
+# Detect patterns in recent sessions
+python3 src/tier2/pattern-detector.py --sessions ~/.pi/agent/sessions/ --hours 24
+
+# Real-time hook (called after each message exchange)
+python3 src/tier2/intraday-hook.py --session-file /path/to/session.jsonl
+```
+
+**Detection Triggers:**
+- ✅ **Repeated similar queries** (3+ times in session)
+- ✅ **Corrections made** to AI output ("Actually, ...", "No, ...")
+- ✅ **Selections between options** ("Let's go with X")
+- ✅ **Meta-questions** about memory ("Do you remember...")
+
+**Prompt Example:**
+```
+🤔 PREFERENCE DETECTED
+
+I've noticed a pattern in our session:
+• 5 corrections made
+• Multiple option selections
+
+It seems like you might have a preference for how I handle this.
+
+Would you like me to remember this?
+
+[y] Yes, capture this preference
+[n] No, ignore this time  
+[r] Refine the description
+[l] Learn more (show details)
+[s] Skip and don't ask again
+```
+
+**Daily Aggregation:**
+
+Runs at **03:00 daily** via cron:
+```bash
+# Consolidates all intraday captures into daily summary
+./src/tier2/daily-aggregator.sh 2026-06-12
+
+# Output: data/intraday/daily/summary-YYYY-MM-DD.md
 ```
 
 **Storage:**
-- `data/intraday/preferences.jsonl` — Timestamped preferences
-- `data/intraday/patterns.jsonl` — Detected patterns
+- `data/intraday/preferences.jsonl` — Captured preferences
+- `data/intraday/patterns.jsonl` — Detected patterns  
 - `data/intraday/frameworks.jsonl` — Explicit frameworks
+- `data/intraday/daily/` — Daily aggregated summaries
+
+**User-Initiated Capture:**
+```bash
+# During any session
+localize_it note-preference "I always want TypeScript before Python"
+localize_it note-pattern "Start summaries with conclusion first"
+localize_it note-framework "Use MECE structure for analysis"
+```
 
 ---
 
@@ -184,11 +223,25 @@ localize_it capture-voice --name="pupper-refined" \
 
 | Component | Tool | Status |
 |:---|:---|:---:|
+| **Tier 1: Shadow** | | |
 | Shadow Logger | `pi` session capture | ✅ |
+| Pattern Extraction | `src/distill/extract-patterns.py` | ✅ |
+| Style Analysis | `src/distill/analyze-style.py` | ✅ |
+| Knowledge Graph | `src/distill/build-knowledge.py` | ✅ |
+| Shadow Pipeline | `src/pipeline-shadow.py` | ✅ |
+| **Tier 2: Intraday** | | |
+| Pattern Detector | `src/tier2/pattern-detector.py` | ✅ |
+| Intraday Hook | `src/tier2/intraday-hook.py` | ✅ |
+| Daily Aggregator | `src/tier2/daily-aggregator.sh` | ✅ |
 | Intraday DB | JSONL append-only | ✅ |
+| **Tier 3: Explicit** | | |
 | Explicit Store | Markdown frontmatter | ✅ |
-| Training | Ollama + unsloth | 🔄 |
+| **Training** | | |
+| Corpus Builder | Included in pipeline | ✅ |
+| LoRA Training | Ollama + unsloth | 🔄 |
+| **Serving** | | |
 | Local Serving | llama.cpp server | ✅ |
+| **Interface** | | |
 | TUI | Custom bash/python | 🔄 |
 
 ### File Structure
@@ -244,6 +297,88 @@ localize_it capture-voice --name="pupper-refined" \
     ├── architecture.md
     └── api-reference.md
 ```
+
+---
+
+## 🧠 Memory Management Requirements
+
+### You May Need a Memory System
+
+LOCALIZE_IT was designed alongside **Pi's Dream skill** — a memory consolidation system that:
+- Reviews session transcripts daily
+- Synthesizes learnings into durable memories  
+- Maintains continuity across sessions
+
+**However**, LOCALIZE_IT is intentionally **memory-system agnostic**. You can use it with:
+
+#### Option 1: Pi Dream Skill (Recommended if available)
+```bash
+# Dream skill runs daily at 03:00
+# LOCALIZE_IT piggybacks on Pi's session logging
+# No additional configuration needed
+```
+
+#### Option 2: Manual Session Management
+```bash
+# Create daily session notes
+localize_it session-start --tag="bluesky-bots"
+# ... work ...
+localize_it session-end --summary="Fixed OG card upload"
+```
+
+#### Option 3: No Memory System (Simplest)
+LOCALIZE_IT will still:
+- ✅ Capture all interactions to JSONL
+- ✅ Extract patterns and style
+- ✅ Generate training corpus
+- ❌ Require you to remember context manually
+
+### What You'll Lose Without Memory
+
+| Feature | With Memory | Without |
+|:---|:---:|:---:|
+| Session continuity | ✅ Automatic | ❌ Manual |
+| Weekly synthesis | ✅ Dream produces WAKE.md | ❌ Review logs yourself |
+| Cross-session patterns | ✅ Detected automatically | ❌ Harder to spot |
+| "Where were we?" | ✅ Just works | ❌ Check git logs |
+
+### Recommended Setup
+
+If you don't have Pi's Dream skill, consider:
+
+1. **Simple Bash Logger**
+   ```bash
+   # ~/.bashrc
+   alias session-start='echo "$(date): START" >> ~/sessions/$(date +%Y-%m-%d).log'
+   alias session-end='echo "$(date): END" >> ~/sessions/$(date +%Y-%m-%d).log'
+   ```
+
+2. **Daily Journal**
+   - Single markdown file per day
+   - Note: "Working on X", "Learned Y"
+   - LOCALIZE_IT can parse this as input
+
+3. **Git Commit Messages**
+   ```bash
+   # Your commit messages become session logs
+   git log --since="24 hours ago" --format="%h %s"
+   ```
+
+### For Developers Forking This
+
+If you're adapting LOCALIZE_IT for another AI system:
+
+**Required:**
+- Session logs (JSONL or similar)
+- User/assistant message pairs
+- Timestamps
+
+**Optional but Recommended:**
+- Automatic daily aggregation
+- Memory consolidation
+- WAKE-style session cards
+
+The shadow pipeline (`src/distill/`) expects standard JSONL format but can be adapted to other log formats.
 
 ---
 
