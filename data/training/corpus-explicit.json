@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "generated_at": "2026-06-15T11:59:19.493673",
+    "version": "1.0",
+    "tiers": [
+      "explicit"
+    ],
+    "sources": {
+      "styles": 0,
+      "frameworks": 2,
+      "contexts": 0,
+      "voices": 0
+    }
+  },
+  "system_prompt_additions": []
+}

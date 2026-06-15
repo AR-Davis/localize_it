@@ -37,17 +37,25 @@ def build_style_additions(styles: list) -> list:
     additions = []
     
     for style in styles:
-        content = f"""Working Style: {style['name']}
-{style['description']}"""
+        # Skip entries without required fields
+        if 'name' not in style:
+            print(f"  ⚠️ Skipping style without 'name' field: {style.get('raw_input', 'unknown')[:50]}...")
+            continue
         
-        if style.get('examples'):
-            content += f"\n\nExamples:\n" + "\n".join(f"- {ex}" for ex in style['examples'][:3])
+        description = style.get('description', style.get('raw_input', 'No description'))
+        
+        content = f"""Working Style: {style['name']}
+{description}"""
+        
+        examples = style.get('examples', [])
+        if examples:
+            content += f"\n\nExamples:\n" + "\n".join(f"- {ex}" for ex in examples[:3])
         
         additions.append({
             "type": "style_profile",
             "name": style['name'],
             "content": content,
-            "captured_at": style.get('captured_at')
+            "captured_at": style.get('timestamp') or style.get('captured_at')
         })
     
     return additions
@@ -58,22 +66,32 @@ def build_framework_additions(frameworks: list) -> list:
     additions = []
     
     for fw in frameworks:
-        content = f"""Framework: {fw['name']}
-{fw['description']}
-
-Steps:
-"""
-        for i, step in enumerate(fw.get('steps', []), 1):
-            content += f"{i}. {step}\n"
+        # Skip entries without required fields
+        if 'name' not in fw:
+            print(f"  ⚠️ Skipping framework without 'name' field: {fw.get('raw_input', 'unknown')[:50]}...")
+            continue
         
-        if fw.get('triggers'):
-            content += f"\nUse when: {', '.join(fw['triggers'])}"
+        description = fw.get('description', fw.get('raw_input', 'No description'))
+        steps = fw.get('steps', [])
+        triggers = fw.get('triggers', [])
+        
+        content = f"""Framework: {fw['name']}
+{description}
+
+"""
+        if steps:
+            content += "Steps:\n"
+            for i, step in enumerate(steps, 1):
+                content += f"{i}. {step}\n"
+        
+        if triggers:
+            content += f"\nUse when: {', '.join(triggers)}"
         
         additions.append({
             "type": "decision_framework",
             "name": fw['name'],
             "content": content,
-            "captured_at": fw.get('captured_at')
+            "captured_at": fw.get('timestamp') or fw.get('captured_at')
         })
     
     return additions
@@ -84,20 +102,30 @@ def build_context_additions(contexts: list) -> list:
     additions = []
     
     for ctx in contexts:
-        content = f"""Project Context: {ctx['project']}
-Stack: {ctx['stack']}"""
+        # Skip entries without required fields
+        if 'project' not in ctx:
+            print(f"  ⚠️ Skipping context without 'project' field: {ctx.get('raw_input', 'unknown')[:50]}...")
+            continue
         
-        if ctx.get('patterns'):
-            content += f"\nPatterns: {', '.join(ctx['patterns'])}"
+        project = ctx['project']
+        stack = ctx.get('stack', 'Not specified')
         
-        if ctx.get('conventions'):
-            content += f"\nConventions: {', '.join(ctx['conventions'])}"
+        content = f"""Project Context: {project}
+Stack: {stack}"""
+        
+        patterns = ctx.get('patterns', [])
+        if patterns:
+            content += f"\nPatterns: {', '.join(patterns)}"
+        
+        conventions = ctx.get('conventions', [])
+        if conventions:
+            content += f"\nConventions: {', '.join(conventions)}"
         
         additions.append({
             "type": "project_context",
-            "name": ctx['project'],
+            "name": project,
             "content": content,
-            "captured_at": ctx.get('captured_at')
+            "captured_at": ctx.get('timestamp') or ctx.get('captured_at')
         })
     
     return additions
@@ -108,20 +136,31 @@ def build_voice_additions(voices: list) -> list:
     additions = []
     
     for voice in voices:
-        content = f"""Voice/Persona: {voice['name']}
-Traits: {', '.join(voice['traits'])}"""
+        # Skip entries without required fields
+        if 'name' not in voice:
+            print(f"  ⚠️ Skipping voice without 'name' field: {voice.get('raw_input', 'unknown')[:50]}...")
+            continue
         
-        if voice.get('markers'):
-            content += f"\nMarkers: {', '.join(voice['markers'])}"
+        traits = voice.get('traits', [])
+        markers = voice.get('markers', [])
+        examples = voice.get('examples', [])
         
-        if voice.get('examples'):
-            content += f"\n\nExample phrases:\n" + "\n".join(f"- {ex}" for ex in voice['examples'][:3])
+        content = f"""Voice/Persona: {voice['name']}"""
+        
+        if traits:
+            content += f"\nTraits: {', '.join(traits)}"
+        
+        if markers:
+            content += f"\nMarkers: {', '.join(markers)}"
+        
+        if examples:
+            content += f"\n\nExample phrases:\n" + "\n".join(f"- {ex}" for ex in examples[:3])
         
         additions.append({
             "type": "voice_profile",
             "name": voice['name'],
             "content": content,
-            "captured_at": voice.get('captured_at')
+            "captured_at": voice.get('timestamp') or voice.get('captured_at')
         })
     
     return additions

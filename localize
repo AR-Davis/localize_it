@@ -30,6 +30,9 @@ def ensure_dirs():
     (DATA_DIR / "localize").mkdir(parents=True, exist_ok=True)
     (DATA_DIR / "intraday").mkdir(parents=True, exist_ok=True)
     (DATA_DIR / "explicit" / "contexts").mkdir(parents=True, exist_ok=True)
+    (DATA_DIR / "explicit" / "frameworks").mkdir(parents=True, exist_ok=True)
+    (DATA_DIR / "explicit" / "styles").mkdir(parents=True, exist_ok=True)
+    (DATA_DIR / "explicit" / "voices").mkdir(parents=True, exist_ok=True)
 
 
 def ask_multiple_choice(question: str, options: list, allow_custom: bool = True) -> str:
@@ -61,8 +64,45 @@ def ask_multiple_choice(question: str, options: list, allow_custom: bool = True)
         print("Invalid choice. Try again.")
 
 
+def capture_structured_entry(raw_input: str, category: str, structured_data: dict):
+    """Capture entry with structured data for corpus building."""
+    
+    entry = {
+        "timestamp": datetime.now().isoformat(),
+        "raw_input": raw_input,
+        "category": category,
+        "processed": False
+    }
+    
+    # Merge structured data
+    entry.update(structured_data)
+    
+    # Save to localize log
+    ensure_dirs()
+    with open(LOG_FILE, 'a') as f:
+        f.write(json.dumps(entry) + '\n')
+    
+    # Also route to appropriate tier storage
+    if category == "preference":
+        _save_to_intraday("preferences", entry)
+    elif category == "pattern":
+        _save_to_intraday("patterns", entry)
+    elif category == "framework":
+        _save_to_explicit("frameworks", entry)
+    elif category == "context":
+        _save_to_explicit("contexts", entry)
+    elif category == "discovery":
+        _save_to_explicit("discoveries", entry)
+    elif category == "voice":
+        _save_to_explicit("voices", entry)
+    elif category == "style":
+        _save_to_explicit("styles", entry)
+    
+    return entry
+
+
 def capture_entry(raw_input: str, category: str, subcategory: Optional[str] = None, tags: list = None):
-    """Capture the localized entry to appropriate storage."""
+    """Capture the localized entry to appropriate storage (legacy)."""
     
     entry = {
         "timestamp": datetime.now().isoformat(),
@@ -119,10 +159,11 @@ def interactive_categorize(raw_input: str) -> dict:
     category = ask_multiple_choice(
         "What would you call this?",
         [
-            "A preference (how I like things)",
+            "A preference / working style (how I like things)",
             "A pattern (something I do repeatedly)",
-            "A framework (how I approach decisions)",
+            "A framework / decision process (how I approach things)",
             "A context (project/situation specific)",
+            "A voice / persona (how I sound)",
             "A discovery (something I just realized)",
             "Research (information I gathered)",
             "Just a note (capture for later)"
@@ -135,96 +176,213 @@ def interactive_categorize(raw_input: str) -> dict:
     
     # Map to internal category
     category_map = {
-        "A preference (how I like things)": "preference",
+        "A preference / working style (how I like things)": "style",
         "A pattern (something I do repeatedly)": "pattern",
-        "A framework (how I approach decisions)": "framework",
+        "A framework / decision process (how I approach things)": "framework",
         "A context (project/situation specific)": "context",
+        "A voice / persona (how I sound)": "voice",
         "A discovery (something I just realized)": "discovery",
         "Research (information I gathered)": "research",
         "Just a note (capture for later)": "note"
     }
     internal_cat = category_map.get(category, "note")
     
-    # Question 2: Subcategory (context-dependent)
-    subcategory = None
-    tags = []
+    # STRUCTURED DATA COLLECTION based on category
+    structured_data = {}
     
-    if internal_cat == "preference":
-        subcategory = ask_multiple_choice(
-            "What kind of preference?",
-            [
-                "Output format (how I want info presented)",
-                "Communication style (how I interact)",
-                "Technical (tools, languages, approaches)",
-                "Workflow (how I work)",
-                "General (other)"
-            ]
-        )
-        if subcategory == "skip":
-            subcategory = None
-            
+    if internal_cat == "framework":
+        print("\n📋 FRAMEWORK CAPTURE")
+        print("-" * 40)
+        
+        # Framework name
+        name = input("Framework name (short, like 'Priority Matrix' or 'Triage Method'): ").strip()
+        if not name:
+            name = raw_input[:40] if len(raw_input) <= 40 else raw_input[:37] + "..."
+        structured_data["name"] = name
+        
+        # Description
+        description = input("Brief description: ").strip()
+        if not description:
+            description = raw_input
+        structured_data["description"] = description
+        
+        # Steps
+        print("\nSteps (enter one per line, blank line when done):")
+        steps = []
+        step_num = 1
+        while True:
+            step = input(f"  Step {step_num}: ").strip()
+            if not step:
+                break
+            steps.append(step)
+            step_num += 1
+        if steps:
+            structured_data["steps"] = steps
+        
+        # Triggers
+        triggers_input = input("\nWhen do you use this? (comma-separated, or Enter to skip): ").strip()
+        if triggers_input:
+            structured_data["triggers"] = [t.strip() for t in triggers_input.split(",") if t.strip()]
+        
+        # Capture structured
+        entry = capture_structured_entry(raw_input, internal_cat, structured_data)
+        
+        print(f"\n✓ Framework captured: {name}")
+        print(f"  Steps: {len(steps)}")
+        
+    elif internal_cat == "style":
+        print("\n🎨 STYLE CAPTURE")
+        print("-" * 40)
+        
+        # Style name
+        name = input("Style name (e.g., 'My Brief Mode' or 'Collaborative Voice'): ").strip()
+        if not name:
+            name = "Working Style"
+        structured_data["name"] = name
+        
+        # Description
+        description = input("Description of this style: ").strip()
+        if not description:
+            description = raw_input
+        structured_data["description"] = description
+        
+        # Examples
+        print("\nExample phrases (how you sound when using this style):")
+        examples = []
+        for i in range(1, 4):
+            ex = input(f"  Example {i}: ").strip()
+            if ex:
+                examples.append(ex)
+            else:
+                break
+        if examples:
+            structured_data["examples"] = examples
+        
+        # Capture structured
+        entry = capture_structured_entry(raw_input, internal_cat, structured_data)
+        
+        print(f"\n✓ Style captured: {name}")
+        print(f"  Examples: {len(examples)}")
+        
     elif internal_cat == "context":
-        subcategory = ask_multiple_choice(
-            "What context is this for?",
-            [
-                "Current project/work",
-                "General setup/tools",
-                "Personal/life",
-                "Specific domain"
-            ]
-        )
-        if subcategory == "Current project/work":
-            project = input("Project name: ").strip()
-            if project:
-                tags.append(f"project:{project}")
-        elif subcategory == "skip":
-            subcategory = None
+        print("\n📁 CONTEXT CAPTURE")
+        print("-" * 40)
+        
+        # Project name
+        project = input("Project name: ").strip()
+        if not project:
+            project = "Unnamed Project"
+        structured_data["project"] = project
+        
+        # Stack
+        stack = input("Tech stack / tools (comma-separated): ").strip()
+        if stack:
+            structured_data["stack"] = stack
+        
+        # Patterns
+        patterns_input = input("Common patterns on this project (comma-separated, or Enter to skip): ").strip()
+        if patterns_input:
+            structured_data["patterns"] = [p.strip() for p in patterns_input.split(",") if p.strip()]
+        
+        # Conventions
+        conventions_input = input("Project conventions (comma-separated, or Enter to skip): ").strip()
+        if conventions_input:
+            structured_data["conventions"] = [c.strip() for c in conventions_input.split(",") if c.strip()]
+        
+        # Capture structured
+        entry = capture_structured_entry(raw_input, internal_cat, structured_data)
+        
+        print(f"\n✓ Context captured: {project}")
+        
+    elif internal_cat == "voice":
+        print("\n🎭 VOICE/PERSONA CAPTURE")
+        print("-" * 40)
+        
+        # Voice name
+        name = input("Voice/persona name (e.g., 'Shepherd', 'Formal Mode', 'Casular Kinch'): ").strip()
+        if not name:
+            name = "Personal Voice"
+        structured_data["name"] = name
+        
+        # Traits
+        traits_input = input("Traits (comma-separated, e.g., 'direct, technical, patient'): ").strip()
+        if traits_input:
+            structured_data["traits"] = [t.strip() for t in traits_input.split(",") if t.strip()]
+        
+        # Markers
+        markers_input = input("Linguistic markers (phrases you use, comma-separated): ").strip()
+        if markers_input:
+            structured_data["markers"] = [m.strip() for m in markers_input.split(",") if m.strip()]
+        
+        # Examples
+        print("\nExample phrases:")
+        examples = []
+        for i in range(1, 4):
+            ex = input(f"  Example {i}: ").strip()
+            if ex:
+                examples.append(ex)
+            else:
+                break
+        if examples:
+            structured_data["examples"] = examples
+        
+        # Capture structured
+        entry = capture_structured_entry(raw_input, internal_cat, structured_data)
+        
+        print(f"\n✓ Voice captured: {name}")
+        
+    else:
+        # Standard capture for other categories
+        # Question 2: Subcategory (context-dependent)
+        subcategory = None
+        tags = []
+        
+        if internal_cat == "pattern":
+            subcategory = ask_multiple_choice(
+                "What kind of pattern?",
+                [
+                    "Query pattern (how I ask for things)",
+                    "Work pattern (how I approach tasks)",
+                    "Decision pattern (how I choose)",
+                    "Communication pattern (how I interact)"
+                ]
+            )
+            if subcategory == "skip":
+                subcategory = None
+        
+        elif internal_cat == "discovery":
+            subcategory = ask_multiple_choice(
+                "What kind of discovery?",
+                [
+                    "Priority shift (changing focus)",
+                    "Insight (new understanding)",
+                    "Decision (made a choice)",
+                    "Problem identified",
+                    "Solution found"
+                ]
+            )
+            if subcategory == "skip":
+                subcategory = None
+        
+        # Question 3: Tags
+        print("\nAdd tags (comma-separated, or press Enter to skip):")
+        tags_input = input("Tags: ").strip()
+        if tags_input:
+            tags.extend([t.strip() for t in tags_input.split(",") if t.strip()])
+        
+        # Capture it
+        entry = capture_entry(raw_input, internal_cat, subcategory, tags)
+        
+        # Confirmation
+        print(f"\n✓ Localized as: {internal_cat}")
+        if subcategory:
+            print(f"  Subcategory: {subcategory}")
+        if tags:
+            print(f"  Tags: {', '.join(tags)}")
     
-    elif internal_cat == "discovery":
-        subcategory = ask_multiple_choice(
-            "What kind of discovery?",
-            [
-                "Priority shift (changing focus)",
-                "Insight (new understanding)",
-                "Decision (made a choice)",
-                "Problem identified",
-                "Solution found"
-            ]
-        )
-        if subcategory == "skip":
-            subcategory = None
-    
-    elif internal_cat == "pattern":
-        subcategory = ask_multiple_choice(
-            "What kind of pattern?",
-            [
-                "Query pattern (how I ask for things)",
-                "Work pattern (how I approach tasks)",
-                "Decision pattern (how I choose)",
-                "Communication pattern (how I interact)"
-            ]
-        )
-        if subcategory == "skip":
-            subcategory = None
-    
-    # Question 3: Tags
-    print("\nAdd tags (comma-separated, or press Enter to skip):")
-    tags_input = input("Tags: ").strip()
-    if tags_input:
-        tags.extend([t.strip() for t in tags_input.split(",") if t.strip()])
-    
-    # Capture it
-    entry = capture_entry(raw_input, internal_cat, subcategory, tags)
-    
-    # Confirmation
-    print(f"\n✓ Localized as: {internal_cat}")
-    if subcategory:
-        print(f"  Subcategory: {subcategory}")
-    if tags:
-        print(f"  Tags: {', '.join(tags)}")
     print(f"  Saved to: {LOG_FILE}")
     
-    # Suggest next step
+    # Suggest next step for discoveries
     if internal_cat == "discovery" and "Priority shift" in (subcategory or ""):
         print(f"\n💡 This looks like a priority shift.")
         follow = ask_multiple_choice(
@@ -238,8 +396,14 @@ def interactive_categorize(raw_input: str) -> dict:
     return entry
 
 
-def quick_capture(raw_input: str, category: str):
+def quick_capture(raw_input: str, category: str, structured: bool = False):
     """Quick capture without interactive questions."""
+    
+    if structured and category in ["framework", "style", "context", "voice"]:
+        # For structured categories, we need the interactive prompts
+        # Fall back to interactive mode
+        return interactive_categorize(raw_input)
+    
     entry = capture_entry(raw_input, category)
     print(f"✓ Quick-captured as {category}")
     return entry
@@ -282,7 +446,7 @@ def main():
     )
     parser.add_argument(
         "--type", "-t",
-        choices=["preference", "pattern", "framework", "context", "discovery", "research", "note"],
+        choices=["preference", "pattern", "framework", "context", "discovery", "research", "note", "style", "voice"],
         help="Skip questions and capture directly as this type"
     )
     parser.add_argument(
@@ -339,7 +503,11 @@ def main():
     
     # Single capture mode
     if args.type:
-        quick_capture(args.thing, args.type)
+        # For structured types, force interactive mode
+        if args.type in ["framework", "style", "context", "voice"]:
+            interactive_categorize(args.thing)
+        else:
+            quick_capture(args.thing, args.type, structured=False)
     else:
         interactive_categorize(args.thing)
 
