@@ -1,0 +1,111 @@
+{
+  "pattern_classifier": {
+    "type": "pattern_classifier",
+    "name": "Kinch Query Pattern Detector",
+    "version": "1.0",
+    "patterns": {
+      "wake_requests": {
+        "count": 236,
+        "examples": [
+          "Wake up, Shepherd",
+          "Good morning, Shepherd",
+          "Let's get reoriented"
+        ],
+        "indicators": [
+          "wake",
+          "morning",
+          "reorient",
+          "session start"
+        ]
+      },
+      "technical_setup": {
+        "count": 0,
+        "examples": [
+          "Configure ProtonDrive",
+          "Set up rclone",
+          "Build llama.cpp"
+        ],
+        "indicators": [
+          "configure",
+          "install",
+          "build",
+          "setup",
+          "deploy"
+        ]
+      },
+      "research_requests": {
+        "count": 459,
+        "examples": [
+          "Research distributed LLM",
+          "Find pattern in applications"
+        ],
+        "indicators": [
+          "research",
+          "find",
+          "compare",
+          "analyze",
+          "look up"
+        ]
+      },
+      "job_hunt_context": {
+        "count": 12,
+        "examples": [
+          "Update resume",
+          "Write cover letter",
+          "Analyze applications"
+        ],
+        "indicators": [
+          "resume",
+          "cover letter",
+          "application",
+          "job",
+          "DNC",
+          "hiring"
+        ]
+      }
+    }
+  },
+  "style_classifier": {
+    "type": "style_classifier",
+    "name": "Kinch Communication Style Profile",
+    "version": "1.0",
+    "profile": {
+      "structure_preference": {
+        "level": "highly_structured",
+        "score": 0.89,
+        "evidence": [
+          "89% of interactions use structured formats",
+          "Reformats narrative to lists",
+          "Uses tables frequently"
+        ]
+      },
+      "verbosity": {
+        "level": "moderate",
+        "avg_words": 44.9,
+        "median_words": 18
+      },
+      "code_preference": {
+        "balance": "balanced",
+        "code_requests": 112,
+        "explanation_requests": 110
+      },
+      "formality": {
+        "level": "formal",
+        "formal_rate": 0.0029
+      },
+      "directness": {
+        "style": "question_friendly_collaborative",
+        "uses_lets": true,
+        "command_ratio": 0.01
+      }
+    },
+    "generation_guidelines": [
+      "Lead with summary/bullet points before narrative",
+      "Use tables for comparisons and options",
+      "Include code blocks for technical content",
+      "Use 'Let's' for collaborative framing",
+      "Keep sections discrete with clear headers"
+    ]
+  },
+  "generated_at": "2026-06-15T23:05:00"
+}
