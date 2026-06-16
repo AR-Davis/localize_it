@@ -1,16 +1,23 @@
 {
   "metadata": {
-    "generated_at": "2026-06-15T11:59:19.493673",
+    "generated_at": "2026-06-15T22:52:03.631028",
     "version": "1.0",
     "tiers": [
       "explicit"
     ],
     "sources": {
       "styles": 0,
-      "frameworks": 2,
+      "frameworks": 3,
       "contexts": 0,
       "voices": 0
     }
   },
-  "system_prompt_additions": []
+  "system_prompt_additions": [
+    {
+      "type": "decision_framework",
+      "name": "Priority Matrix Framework",
+      "content": "Framework: Priority Matrix Framework\nA framework for prioritizing tasks based on impact and effort\n\nSteps:\n1. List all tasks\n2. Score by impact\n3. Score by effort\n4. Plot on matrix\n5. Focus high impact low effort\n\nUse when: Overwhelmed with tasks, Planning sprint, Resource constraints",
+      "captured_at": "2026-06-15T12:05:00"
+    }
+  ]
 }

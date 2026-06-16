@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-06-12T10:46:58.263727",
+    "generated_at": "2026-06-13T03:00:06.322671",
     "version": "1.0",
     "tiers": [
       "shadow"
@@ -9,7 +9,7 @@
   "system_prompt_additions": [
     {
       "type": "style_profile",
-      "content": "Style Profile\n\nFormality: Formal\n- Formal markers: 0.29%\n- Casual markers: 0.09%\n\nCode Preference: Balanced\n- Code requests: 112\n- Explanation requests: 107\n\nVerbosity: Moderate\n- Average words per message: 45.4\n\nStructure: Highly Structured\n- Prefers lists/tables: 89%\n\nDirectness: Question Friendly\n- Command style: 16%\n"
+      "content": "Style Profile\n\nFormality: Formal\n- Formal markers: 0.29%\n- Casual markers: 0.09%\n\nCode Preference: Balanced\n- Code requests: 112\n- Explanation requests: 110\n\nVerbosity: Moderate\n- Average words per message: 44.9\n\nStructure: Highly Structured\n- Prefers lists/tables: 89%\n\nDirectness: Question Friendly\n- Command style: 15%\n"
     },
     {
       "type": "preferences",

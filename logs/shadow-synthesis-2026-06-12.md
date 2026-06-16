@@ -1,11 +1,11 @@
 # Shadow Synthesis Report
 ## Date: 2026-06-12
-## Generated: 2026-06-12 10:46
+## Generated: 2026-06-13 03:00
 
 ---
 
 ### Session Statistics
-- Messages processed: 21553
+- Messages processed: 22324
 
 ### Files Generated
 - Patterns: `/home/kinch/Projects/localize_it/data/shadow/patterns/2026-06-12.json`
@@ -23,16 +23,16 @@ Formality: Formal
 
 Code Preference: Balanced
 - Code requests: 112
-- Explanation requests: 107
+- Explanation requests: 110
 
 Verbosity: Moderate
-- Average words per message: 45.4
+- Average words per message: 44.9
 
 Structure: Highly Structured
 - Prefers lists/tables: 89%
 
 Directness: Question Friendly
-- Command style: 16%
+- Command style: 15%
 
 ```
 
