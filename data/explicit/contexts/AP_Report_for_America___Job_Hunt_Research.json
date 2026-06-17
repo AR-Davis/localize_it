@@ -1,0 +1,13 @@
+{
+  "type": "context_capture",
+  "project": "AP Report for America / Job Hunt Research",
+  "stack": "Investigative journalism, beat alignment, statehouse reporting, visual storytelling",
+  "patterns": [
+    "Beat matching over experience, unconventional candidate framing, opposition research"
+  ],
+  "conventions": [
+    "Resume emphasizes Texas/statehouse, cover letter mentions rejection once, LibreOffice formatting"
+  ],
+  "captured_at": "2026-06-17T13:12:04.184203",
+  "version": "1.0"
+}

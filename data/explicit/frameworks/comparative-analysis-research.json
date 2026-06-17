@@ -1,0 +1,26 @@
+{
+  "type": "framework_capture",
+  "name": "comparative-analysis-research",
+  "description": "Research and compare multiple options, technologies, or approaches with structured analysis",
+  "steps": [
+    "Define comparison criteria (features, compatibility, cost, etc.)",
+    "Research each option independently",
+    "Create comparison matrix",
+    "Analyze trade-offs and edge cases",
+    "Provide recommendation with justification",
+    "Document decision rationale for future reference"
+  ],
+  "triggers": [
+    "compare X vs Y",
+    "which is better for...",
+    "research alternatives for...",
+    "evaluate options for..."
+  ],
+  "examples": [
+    "GrapheneOS vs DivestOS: security, compatibility, maintenance",
+    "Tailscale vs ZeroTier: mesh VPN comparison",
+    "llama.cpp vs vLLM: inference engine evaluation"
+  ],
+  "captured_at": "2026-06-17T13:12:22.298018",
+  "version": "1.0"
+}

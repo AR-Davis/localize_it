@@ -1,0 +1,15 @@
+{
+  "type": "style_capture",
+  "name": "watts-spec-writing",
+  "description": "Technical deep-dives with clear architecture, etymology, and structured phases. Combines technical precision with narrative flair.",
+  "examples": [
+    "The Mycelium \u2014 distributed inference mesh across home network",
+    "The Unaligned \u2014 RPC tensor padding fix for quantized tensors",
+    "6-phase stack: Tailscale \u2192 Syncthing \u2192 Yggdrasil \u2192 prima.cpp \u2192 Automerge \u2192 Localize It"
+  ],
+  "tags": [
+    "technical,spec-writing,architecture,grove"
+  ],
+  "captured_at": "2026-06-17T12:26:49.447268",
+  "version": "1.0"
+}

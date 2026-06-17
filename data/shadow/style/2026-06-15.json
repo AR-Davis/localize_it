@@ -1,0 +1,36 @@
+{
+  "formality": {
+    "level": "formal",
+    "formal_rate": 0.0031,
+    "casual_rate": 0.0008,
+    "total_words": 114745
+  },
+  "code_preference": {
+    "preference": "balanced",
+    "code_ratio": 0.5,
+    "explain_ratio": 0.5,
+    "code_requests": 112,
+    "explain_requests": 112
+  },
+  "verbosity": {
+    "level": "moderate",
+    "avg_words": 44.6,
+    "min_words": 1,
+    "max_words": 5730,
+    "median_words": 18
+  },
+  "structure": {
+    "preference": "highly_structured",
+    "structure_score": 0.89,
+    "narrative_score": 0.11,
+    "structured_requests": 374,
+    "narrative_requests": 45
+  },
+  "directness": {
+    "style": "question_friendly",
+    "directness": 0.16,
+    "command_ratio": 0.01,
+    "question_ratio": 0.06
+  },
+  "summary": "Style Profile\n\nFormality: Formal\n- Formal markers: 0.31%\n- Casual markers: 0.08%\n\nCode Preference: Balanced\n- Code requests: 112\n- Explanation requests: 112\n\nVerbosity: Moderate\n- Average words per message: 44.6\n\nStructure: Highly Structured\n- Prefers lists/tables: 89%\n\nDirectness: Question Friendly\n- Command style: 16%\n"
+}

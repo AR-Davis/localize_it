@@ -1,0 +1,6335 @@
+{
+  "nodes": [
+    {
+      "id": "shepherd",
+      "count": 2956,
+      "contexts": [
+        "Good morning, Shepherd. Use the wakeup skill and get reoriented.",
+        "iption: Session orientation and memory reload for Shepherd (Dell Latitude 5420). Use when Kinch says \"wake u",
+        "o ProtonDrive-CLI-Guide.md -> /home/kinch/Desktop/Shepherd/ProtonDrive-CLI-Guide.md\n-rw-rw-r--  1 kinch kinc"
+      ],
+      "first_seen": "2026-06-05T15:59:33.599Z",
+      "last_seen": "2026-05-18T15:14:08.544Z"
+    },
+    {
+      "id": "script",
+      "count": 2005,
+      "contexts": [
+        "---\nname: wake-up\ndescription: Session orientation and memory reload for She",
+        "\ndrwxrwxr-x  2 kinch kinch      4096 Apr 25 13:31 scripts\n-rw-rw-r--  1 kinch kinch     13197 Apr  6 20:49",
+        "rwxr-xr-x  2 kinch kinch 4096 Apr  3 18:55 backup-scripts\ndrwxr-xr-x  3 kinch kinch 4096 Apr  3 18:55 cybe"
+      ],
+      "first_seen": "2026-06-05T15:59:35.050Z",
+      "last_seen": "2026-05-18T15:13:39.004Z"
+    },
+    {
+      "id": "git",
+      "count": 1691,
+      "contexts": [
+        "ires manual `sudo mount` or automation setup)\n\n## Git Vault Check\n\nCheck `~/Desktop/Shepherd/git/vault.",
+        "\ndrwxrwxr-x  4 kinch kinch      4096 Apr  2 11:04 git\n-rw-rw-r--  1 kinch kinch      3949 Apr  2 14:17 ",
+        "5 ..\ndrwxrwxr-x  8 kinch kinch 4096 Jun  4 19:31 .git\n-rw-rw-r--  1 kinch kinch 5202 Apr 11 15:46 BACKT"
+      ],
+      "first_seen": "2026-06-05T15:59:35.050Z",
+      "last_seen": "2026-05-18T15:26:23.355Z"
+    },
+    {
+      "id": "repository",
+      "count": 309,
+      "contexts": [
+        "\nCheck `~/Desktop/Shepherd/git/vault.git`:\n- Bare repository exists, ready to clone\n- Suggest cloning to worki",
+        "fatal: not a git repository (or any of the parent directories): .git\n\n\nComman",
+        "fatal: not a git repository (or any of the parent directories): .git\n\n\nComman"
+      ],
+      "first_seen": "2026-06-05T15:59:35.050Z",
+      "last_seen": "2026-05-18T15:13:39.013Z"
+    },
+    {
+      "id": "rest",
+      "count": 1936,
+      "contexts": [
+        "ys \"wake up\" or needs reorientation after session restart. Loads context from vault memory, project stat",
+        "N complete |\n\n*Note: Book of Business Blitz, Pinterest Fraud, Verification Protocol \u23f8\ufe0f (not lost, just p",
+        "----|:-------|:------|:-----|\n| Chris (Gauzy/Pinterest) | \ud83d\udfe2 ACTIVE | ~20 hrs/wk | TBD (client funded) |\n"
+      ],
+      "first_seen": "2026-06-05T15:59:35.050Z",
+      "last_seen": "2026-05-18T15:26:19.232Z"
+    },
+    {
+      "id": "automation",
+      "count": 319,
+      "contexts": [
+        " sync is pending (requires manual `sudo mount` or automation setup)\n\n## Git Vault Check\n\nCheck `~/Desktop/Shep",
+        "nnel Infrastructure** \u2014 Skills, subagent tooling, automation\n\n**Stack**:\n- Discovery: BLE (bluetooth-low-energ",
+        "ring for baseline dataset establishment. Phase 3: Automation preparation.\\\",\\\"tags\\\":[\\\"extension-reload\\\",\\\"a"
+      ],
+      "first_seen": "2026-06-05T15:59:35.050Z",
+      "last_seen": "2026-05-18T15:26:23.355Z"
+    },
+    {
+      "id": "rhubarb",
+      "count": 1339,
+      "contexts": [
+        "s\n- Pecan (192.168.1.35): [mounted/not mounted]\n- Rhubarb (192.168.1.92): [reachable/untested]\n- Watts: [TB",
+        "kills\ndrwxr-xr-x  2 kinch kinch 4096 Apr  3 18:55 rhubarb-tools\ndrwxrwxr-x  7 kinch kinch 4096 May  3 00:19",
+        "| \u2705 Online | Mobile OSINT Platform | Shepherd |\n| Rhubarb | 192.168.1.92 | \u2705 Online | Cyberdeck/Mesh Hub | "
+      ],
+      "first_seen": "2026-06-05T15:59:35.050Z",
+      "last_seen": "2026-05-18T15:14:08.544Z"
+    },
+    {
+      "id": "watts",
+      "count": 1411,
+      "contexts": [
+        "\n- Rhubarb (192.168.1.92): [reachable/untested]\n- Watts: [TBD]\n\n## Current Location\n`[cwd]` \u2014 [relevant c",
+        "\n-rw-rw-r--  1 kinch kinch      4645 May 19 15:23 WATTS_LITIGATION_SECTION_SPEC.md\n-rw-rw-r--  1 kinch ki",
+        "8.1.92 | \u2705 Online | Cyberdeck/Mesh Hub | \u2600\ufe0f\u26a1\ud83c\udf11 |\n| Watts | 192.168.100.29 | \u2705 Online | AI Gateway/Heavy | "
+      ],
+      "first_seen": "2026-06-05T15:59:35.050Z",
+      "last_seen": "2026-05-18T15:14:08.544Z"
+    },
+    {
+      "id": "pecan",
+      "count": 541,
+      "contexts": [
+        "[ ] [Task from last session]\n\n## Network Status\n- Pecan (192.168.1.35): [mounted/not mounted]\n- Rhubarb (",
+        ".168.100.29 | \u2705 Online | AI Gateway/Heavy | \u26a1 |\n| Pecan | 192.168.1.35 | \u2705 Online | Archive/Storage | \ud83d\udcda |",
+        "firmed) |\n| Watts | 192.168.100.29 | \u2705 Online |\n| Pecan | 192.168.1.35 | \u2705 Online |\n| Crow/Wren/Owl | Var"
+      ],
+      "first_seen": "2026-06-05T15:59:35.050Z",
+      "last_seen": "2026-05-18T15:14:08.544Z"
+    },
+    {
+      "id": "code",
+      "count": 1613,
+      "contexts": [
+        " 1 kinch kinch      3720 May 27 19:48 DOMM_CLIENT_CODE_REUSE.md\n-rw-rw-r--  1 kinch kinch     25356 May ",
+        "wake up ready to lead the pack.\n\n### My Role (Hardcoded 2026-06-03)\n1. **Assess** what Kinch needs\n2. **",
+        "e flattening, Job Hunter, 13 emails, identity hardcode |\n| [~/.pi/personas/jobhunter/WAKE.md](~/.pi/pers"
+      ],
+      "first_seen": "2026-06-05T15:59:39.661Z",
+      "last_seen": "2026-05-18T15:13:03.704Z"
+    },
+    {
+      "id": "branch",
+      "count": 249,
+      "contexts": [
+        "-r--  1 kinch kinch      8622 May 27 16:04 KENNEL_BRANCH_WORKFLOW.md\n-rw-rw-r--  1 kinch kinch     15210 J",
+        " \u2014 Complete breed/personality guide** |\n| [KENNEL_BRANCH_WORKFLOW.md](KENNEL_BRANCH_WORKFLOW.md) | \ud83d\udfe2 **NEW",
+        "\nhint: Using 'master' as the name for the initial branch. This default branch name\nhint: is subject to cha"
+      ],
+      "first_seen": "2026-06-05T15:59:39.661Z",
+      "last_seen": "2026-05-18T15:13:50.904Z"
+    },
+    {
+      "id": "database",
+      "count": 600,
+      "contexts": [
+        "\n-rw-rw-r--  1 kinch kinch      6452 Apr 24 22:42 DATABASE_MASTER_INDEX.md\n-rw-rw-r--  1 kinch kinch      37",
+        "l):\n\n```markdown\n---\nname: db-expert\ndescription: Database schema and migration specialist\ntools: read,write",
+        "ffs. **Now wears a pendant containing a miniature database cylinder** along with her hourglass. Always three"
+      ],
+      "first_seen": "2026-06-05T15:59:39.661Z",
+      "last_seen": "2026-05-18T15:25:58.351Z"
+    },
+    {
+      "id": "pi",
+      "count": 5565,
+      "contexts": [
+        "\ndrwxrwxr-x  2 kinch kinch      4096 May  4 10:27 Pi Skills\n-rw-rw-r--  1 kinch kinch      7253 Apr 20",
+        "jsonl\ndrwxr-xr-x  4 kinch kinch 4096 Apr  3 18:55 pi-skills\ndrwxr-xr-x  2 kinch kinch 4096 Apr  3 18:5",
+        "/DOMM (on-call) |\n| **Tracker** | \u23f3 **DORMANT** | PI Cases (wake when case arrives) |\n\n---\n\n## Open Th"
+      ],
+      "first_seen": "2026-06-05T15:59:39.661Z",
+      "last_seen": "2026-05-18T15:43:49.433Z"
+    },
+    {
+      "id": "kennel",
+      "count": 1816,
+      "contexts": [
+        "\n-rw-rw-r--  1 kinch kinch      8622 May 27 16:04 KENNEL_BRANCH_WORKFLOW.md\n-rw-rw-r--  1 kinch kinch     ",
+        "-rw-rw-r--  1 kinch kinch 2619 Jun  2 13:39 topic-kennel-core-infrastructure-2026-06-02.md\n-rw-rw-r--  1 k",
+        "nter\n-rw-rw-r--  1 kinch kinch 15427 May  4 14:42 KENNEL_PACK_STATUS.md\ndrwxrwxr-x  6 kinch kinch  4096 Ju"
+      ],
+      "first_seen": "2026-06-05T15:59:39.661Z",
+      "last_seen": "2026-05-18T15:26:39.457Z"
+    },
+    {
+      "id": "investigation",
+      "count": 812,
+      "contexts": [
+        "ch kinch      5470 May  1 23:01 topic-skye-curzon-investigation.md\n-rw-rw-r--  1 kinch kinch 237563508 Apr 15 12:",
+        "ols deployed + 36 custom scripts)\n4. **OSINT Self-Investigation** - \u2705 **COMPLETE** \u2014 Report saved to `/mnt/grove/",
+        "passes\n- Deleting contradicted facts - if today's investigation disproves an old\n  memory, fix it at the source\n "
+      ],
+      "first_seen": "2026-06-05T15:59:39.661Z",
+      "last_seen": "2026-05-18T15:25:58.351Z"
+    },
+    {
+      "id": "research",
+      "count": 1698,
+      "contexts": [
+        "-x  2 kinch kinch      4096 Apr  5 16:49 Shepherd_Research_Upload\ndrwxrwxr-x  2 kinch kinch      4096 Apr  5",
+        "ME.md\n-rw-rw-r--  1 kinch kinch 8371 Apr 11 18:05 RESEARCH_AND_PORTFOLIO.md\n-rw-rw-r--  1 kinch kinch 4556 A",
+        "s accuracy |\n| **Digger** | \u23f3 **STANDBY** | OSINT research (on-call) |\n| **Programmer** | \u23f3 **STANDBY** | Co"
+      ],
+      "first_seen": "2026-06-05T15:59:39.661Z",
+      "last_seen": "2026-05-18T15:26:53.910Z"
+    },
+    {
+      "id": "osint",
+      "count": 720,
+      "contexts": [
+        "\n-rw-r--r--  1 root  root       8925 Apr  6 11:44 OSINT_Test_Report_Aaron_Davis.md\n-rw-r--r--  1 root  ro",
+        "S.md\ndrwxrwxr-x  6 kinch kinch  4096 Jun  4 14:50 OSINT\ndrwxrwxr-x  6 kinch kinch  4096 Jun  4 14:49 Prog",
+        "pherd's accuracy |\n| **Digger** | \u23f3 **STANDBY** | OSINT research (on-call) |\n| **Programmer** | \u23f3 **STAND"
+      ],
+      "first_seen": "2026-06-05T15:59:39.661Z",
+      "last_seen": "2026-05-18T15:14:08.544Z"
+    },
+    {
+      "id": "grove",
+      "count": 1895,
+      "contexts": [
+        "\n-rw-rw-r--  1 kinch kinch      2263 Apr 26 14:31 GROVE_HP_SSH_KEY.md\n-rw-rw-r--  1 kinch kinch      7230",
+        "goals\n-rw-rw-r--  1 kinch kinch 3210 May  6 20:21 grove-registry.md\ndrwxr-xr-x  2 kinch kinch 4096 Apr  3",
+        "ames\ndrwxrwxr-x  3 kinch kinch  4096 Jun  4 14:51 Grove Docs\ndrwxrwxr-x  4 kinch kinch  4096 Jun  4 14:50"
+      ],
+      "first_seen": "2026-06-05T15:59:39.661Z",
+      "last_seen": "2026-05-18T15:14:08.544Z"
+    },
+    {
+      "id": "portfolio",
+      "count": 984,
+      "contexts": [
+        "r--  1 kinch kinch 8371 Apr 11 18:05 RESEARCH_AND_PORTFOLIO.md\n-rw-rw-r--  1 kinch kinch 4556 Apr 11 18:50 SE",
+        "r B Cover Letter** | Forbes/Gannett letters |\n| **Portfolio Clips** | `Aaron Davis Portfolio Clips.pdf` |\n| *",
+        "d income.\n\n---\n\nThat said, if you want this for **portfolio building**, **political journalism experience**, "
+      ],
+      "first_seen": "2026-06-05T15:59:39.663Z",
+      "last_seen": "2026-05-18T15:26:14.310Z"
+    },
+    {
+      "id": "bash",
+      "count": 1279,
+      "contexts": [
+        "ckup\ndrwxrwxr-x  2 kinch kinch  4096 Jan 29 14:56 bash files\ndrwxr-xr-x  5 kinch kinch  4096 May 13 16:1",
+        "identity\n\n---\n\n## Monitoring\n\nCheck cron logs:\n```bash\ntail -f ~/Projects/texas-elections-bluesky/logs/c",
+        "ink cards.\n\n## Setup\n\n1. **Create .env file:**\n```bash\ncp .env.example .env\n# Edit with your credentials"
+      ],
+      "first_seen": "2026-06-05T15:59:39.668Z",
+      "last_seen": "2026-04-22T21:28:59.213Z"
+    },
+    {
+      "id": "programmer",
+      "count": 306,
+      "contexts": [
+        "SINT\ndrwxrwxr-x  6 kinch kinch  4096 Jun  4 14:49 Programmer\ndrwxrwxr-x  2 kinch kinch  4096 Jan 31 13:06 RTL ",
+        " | \u23f3 **STANDBY** | OSINT research (on-call) |\n| **Programmer** | \u23f3 **STANDBY** | Code/DOMM (on-call) |\n| **Tra",
+        "ructure, THE THIRTEEN network |\n| [~/.pi/personas/programmer/WAKE.md](~/.pi/personas/programmer/WAKE.md) | \ud83d\udfe2 *"
+      ],
+      "first_seen": "2026-06-05T15:59:39.668Z",
+      "last_seen": "2026-04-22T18:57:18.528Z"
+    },
+    {
+      "id": "budger",
+      "count": 1785,
+      "contexts": [
+        "e Eye work (dormant until cases)  \n**Always On:** Budger (finance island), Corraler (heartbeat)\n\n---\n\n## \ud83d\udc15",
+        "e management for job hunting) |\n| [~/.pi/personas/budger/WAKE.md](~/.pi/personas/budger/WAKE.md) | \ud83d\udfe2 **CUR",
+        "\ud83d\udd25 **ACTIVE** | Job hunting stage management |\n| **Budger** | \u2705 **RUNNING** | Finance island (AEGS trading)"
+      ],
+      "first_seen": "2026-06-05T15:59:41.924Z",
+      "last_seen": "2026-05-18T15:26:53.910Z"
+    },
+    {
+      "id": "case",
+      "count": 1694,
+      "contexts": [
+        "ENT  \n**Paused:** Private Eye work (dormant until cases)  \n**Always On:** Budger (finance island), Corra",
+        "ker/WAKE.md) | \ud83d\udfe2 Book of Business Blitz tracking, case continuity |\n| [~/.pi/personas/flanker/WAKE.md](~",
+        "DOMM on-call |\n| **Tracker** | \u23f3 **DORMANT** | PI Cases (no active cases) |\n\n---\n\n## Standing Projects\n\n"
+      ],
+      "first_seen": "2026-06-05T15:59:41.924Z",
+      "last_seen": "2026-05-18T15:14:08.544Z"
+    },
+    {
+      "id": "finance",
+      "count": 553,
+      "contexts": [
+        "rk (dormant until cases)  \n**Always On:** Budger (finance island), Corraler (heartbeat)\n\n---\n\n## \ud83d\udc15 SHEPHERD",
+        "stage management |\n| **Budger** | \u2705 **RUNNING** | Finance island (AEGS trading) |\n| **Corraler** | \u2705 **RUNN",
+        "/ticker.yaml`\n- Budget storage: `~/.config/budger/finance/`\n- Ticker binary: `~/.local/bin/ticker`\n\n## Voic"
+      ],
+      "first_seen": "2026-06-05T15:59:41.924Z",
+      "last_seen": "2026-05-18T15:26:07.804Z"
+    },
+    {
+      "id": "trading",
+      "count": 1121,
+      "contexts": [
+        "Rate: $100/$150 A/B | Waiting responses\n2. **AEGS Trading Strategy** - \ud83d\udfe2 **LIVE \u2014 Budger handles** | Auto-e",
+        "**Budger** | \u2705 **RUNNING** | Finance island (AEGS trading) |\n| **Corraler** | \u2705 **RUNNING** | Heartbeat (la",
+        "**Understood.** Budger's trading infrastructure is mission-critical and actively e"
+      ],
+      "first_seen": "2026-06-05T15:59:41.956Z",
+      "last_seen": "2026-05-18T15:26:53.910Z"
+    },
+    {
+      "id": "cron",
+      "count": 501,
+      "contexts": [
+        "  9432  2848 ?        Ss   May24   0:00 /usr/sbin/cron -f -P\n",
+        "issue).\n\n---\n\n## Bot Fleet\n\n| Bot | Loc | Feeds | Cron | Posts/Run | Delay |\n|:---|:---|:---|:---|:---|:",
+        "nd OG cards. They're **running autonomously** via cron right now.\n\n---\n\n**What you want today:**\n1. Work"
+      ],
+      "first_seen": "2026-06-05T15:59:47.126Z",
+      "last_seen": "2026-04-22T21:31:16.356Z"
+    },
+    {
+      "id": "commit",
+      "count": 735,
+      "contexts": [
+        "ideo Research Associate\n\n#### Democratic National Committee\n\nUnited States 3 days ago\n\n### Political Data ",
+        "Recommend **wait-and-see** on the 13 firms before committing bandwidth here.\n\nWant me to draft a different",
+        "re, then optimize\n9. **Backup everything** \u2014 `git commit` is breathing\n\n---\n\n## Open Threads\n\n- [ ] **ESP8"
+      ],
+      "first_seen": "2026-06-05T16:02:23.416Z",
+      "last_seen": "2026-05-18T15:13:03.704Z"
+    },
+    {
+      "id": "api",
+      "count": 1521,
+      "contexts": [
+        "on tab brings together the candidates and races shaping the next cycle, and rounding it out are the civ",
+        "ollers**: Python scripts for agent management  \n**API**: HTTP endpoints for spawn, move, build, chat  \n",
+        ":/usr/local/bin:/usr/bin:$PATH\"; export LIVE_APCA_API_KEY_ID=\"$(grep LIVE_APCA_API_KEY_ID ~/Projects/ke"
+      ],
+      "first_seen": "2026-06-05T16:02:23.416Z",
+      "last_seen": "2026-05-18T15:43:49.433Z"
+    },
+    {
+      "id": "model",
+      "count": 747,
+      "contexts": [
+        " role\n\nCompensation is built on the same founding model as our State Anchor Network: founding equity in A",
+        "ortable with early-stage uncertainty. Your equity model aligns incentives\u2014I succeed when the platform suc",
+        "nts\n\n- [Quick Start](#quick-start)\n- [Providers & Models](#providers--models)\n- [Interactive Mode](#inter"
+      ],
+      "first_seen": "2026-06-05T16:02:23.416Z",
+      "last_seen": "2026-04-22T21:31:16.356Z"
+    },
+    {
+      "id": "lora",
+      "count": 304,
+      "contexts": [
+        "on, DC 2 days ago\n\n### Political Correspondent, Colorado\n\n#### COURIER\n\nColorado, United States 1 week a",
+        "rby\"  \n3. ESP-NOW \u2014 Hardware devices (Phase 2)\n4. LoRa \u2014 Long-range discovery (Phase 3)\n\n**Communication",
+        "only (disallowed: edit, write) | Fast codebase exploration, finding files by pattern, searching code for"
+      ],
+      "first_seen": "2026-06-05T16:02:23.416Z",
+      "last_seen": "2026-05-18T15:13:38.995Z"
+    },
+    {
+      "id": "bluesky",
+      "count": 383,
+      "contexts": [
+        "t do aggressive followups. Let's just work on our bluesky bot today and also look at the mastodon integrati",
+        "ects/vault/vault-memory-docs/Shepherd/topic-texas-bluesky-bots-2026-06-04.md\n",
+        "Found it\u2014there's a Bluesky bot topic file from **yesterday (June 4)**! And P"
+      ],
+      "first_seen": "2026-06-05T18:32:05.091Z",
+      "last_seen": "2026-04-22T21:31:16.356Z"
+    },
+    {
+      "id": "bot",
+      "count": 1649,
+      "contexts": [
+        "ressive followups. Let's just work on our bluesky bot today and also look at the mastodon integration. ",
+        "nv/lib/python3.12/site-packages/pygments/lexers/robotframework.py\n/home/kinch/Projects/vault/vault-memo",
+        "Found it\u2014there's a Bluesky bot topic file from **yesterday (June 4)**! And Progr"
+      ],
+      "first_seen": "2026-06-05T18:32:05.091Z",
+      "last_seen": "2026-05-18T15:26:07.804Z"
+    },
+    {
+      "id": "python",
+      "count": 773,
+      "contexts": [
+        "/home/kinch/Projects/kennel/venv/lib/python3.12/site-packages/pygments/lexers/robotframework.",
+        "ty** | Embedded systems, ESP-NOW, Noise Protocol, Python, Godot |\n\n---\n\n## Core Personality\n\n- **Tenacious",
+        "ocal/bin:$PATH\"; cd /home/kinch/.config/budger && python3 market_watcher.py >> /home/kinch/.config/budger/"
+      ],
+      "first_seen": "2026-06-05T18:32:09.532Z",
+      "last_seen": "2026-05-18T15:26:34.534Z"
+    },
+    {
+      "id": "javascript",
+      "count": 88,
+      "contexts": [
+        "ed.external` (OG cards).\n\n**Solution:** Added:\n```javascript\nfacets: [{                         // Clickable U",
+        "**For Watts \u2014 Bluesky Image Upload Fix:**\n\n```javascript\n// 1. Add to imports:\nimport 'dotenv/config';\n\n//",
+        "2 W SKU 334904\nBuyZero 2 WNow\nIn Store Only\n[top](javascript:void(0))\n## Sign in for the best experience\nAcces"
+      ],
+      "first_seen": "2026-06-05T18:32:13.948Z",
+      "last_seen": "2026-04-22T21:31:16.356Z"
+    },
+    {
+      "id": "shell",
+      "count": 226,
+      "contexts": [
+        "LE environment variable\n```\n\n**Root Cause:** Cron shell doesn't source `.env` files; `process.env` was em",
+        "md) | [Terminal setup](docs/terminal-setup.md) | [Shell aliases](docs/shell-aliases.md)\n\n---\n\n## Provider",
+        "onfigs, CSVs\n- `bash` \u2014 Run ticker, process data, shell scripts\n- `edit` \u2014 Update budget files, watchlist"
+      ],
+      "first_seen": "2026-06-05T18:37:28.987Z",
+      "last_seen": "2026-04-22T21:31:16.356Z"
+    },
+    {
+      "id": "github",
+      "count": 793,
+      "contexts": [
+        "idgy+fed%22\">News</a> &nbsp;\n    <a href=\"https://github.com/snarfed/bridgy-fed\">Code</a> &nbsp;\n",
+        "gent?style=flat-square\" /></a>\n  <a href=\"https://github.com/badlogic/pi-mono/actions/workflows/ci.yml\"><i",
+        "/extensions/subagent at main \u00b7 badlogic/pi-mono \u00b7 GitHub\n   URL: https://github.com/badlogic/pi-mono/tree/"
+      ],
+      "first_seen": "2026-06-05T18:49:50.117Z",
+      "last_seen": "2026-05-18T15:13:38.995Z"
+    },
+    {
+      "id": "container",
+      "count": 98,
+      "contexts": [
+        "\n\n</div>\n\n<main class=\"tp-main lead\n              container\n             \">\n\n<div id=\"header\" class=\"row\">\n  ",
+        " } from \"@mariozechner/pi-coding-agent\";\nimport { Container, Markdown, Spacer, Text } from \"@mariozechner/pi-",
+        "arved in Giant: ...\"\n```\n\n---\n\n## \ud83d\udcc1 Files in This Container\n\n- `persona.md` \u2014 This file\n- `system-prompts/` \u2014"
+      ],
+      "first_seen": "2026-06-05T18:49:50.117Z",
+      "last_seen": "2026-05-18T15:13:38.995Z"
+    },
+    {
+      "id": "localize",
+      "count": 332,
+      "contexts": [
+        "levant\n- Anything domain-specific that would help localize regressions or identify bottlenecks\n\nThe script r",
+        "levant\n- Anything domain-specific that would help localize regressions or identify bottlenecks\n\nThe script r",
+        ": 0 (Sunday)\n# TZ: America/Chicago\n# DESCRIPTION: LOCALIZE_IT Weekly Review \u2014 Generate weekly digest for Pup"
+      ],
+      "first_seen": "2026-06-05T20:07:50.122Z",
+      "last_seen": "2026-05-27T23:19:21.839Z"
+    },
+    {
+      "id": "training",
+      "count": 295,
+      "contexts": [
+        "score reliable from the start. Slow workloads (ML training, large builds) don't need this \u2014 single runs are ",
+        "optimization target: test speed, bundle size, LLM training, build times, Lighthouse scores.\n\n---\n\npi-autores",
+        "score reliable from the start. Slow workloads (ML training, large builds) don't need this \u2014 single runs are "
+      ],
+      "first_seen": "2026-06-05T20:07:50.122Z",
+      "last_seen": "2026-04-22T18:57:18.002Z"
+    },
+    {
+      "id": "stock",
+      "count": 808,
+      "contexts": [
+        "dent  \n**Expertise**: Budgeting, fiscal tracking, stock/index monitoring, expense analysis, cost projecti",
+        "les\n\n### Trigger: Finance Keywords\n**Keywords**: `stock`, `portfolio`, `tax`, `budget`, `expense`, `ticke",
+        "R V4 + antenna kit for field deployment. Current: Stock whip ADS-B capture executing for validation befor"
+      ],
+      "first_seen": "2026-06-05T20:08:07.895Z",
+      "last_seen": "2026-05-18T15:26:07.804Z"
+    },
+    {
+      "id": "llm",
+      "count": 272,
+      "contexts": [
+        "n index at: https://mintlify.com/badlogic/pi-mono/llms.txt\n> Use this file to discover all available pa",
+        "\u2192 Bluesky\n**Not subagent**: Direct execution, not LLM delegation\n\n**Apply this to other domains**:\n- Jo",
+        "any optimization target: test speed, bundle size, LLM training, build times, Lighthouse scores.\n\n---\n\np"
+      ],
+      "first_seen": "2026-06-05T20:08:47.561Z",
+      "last_seen": "2026-04-22T21:31:16.356Z"
+    },
+    {
+      "id": "webhook",
+      "count": 49,
+      "contexts": [
+        "rded today\u2014subagent definition live, Truth Social webhook operational (192.168.1.5:5000), and portfolio tra",
+        "rded today\u2014subagent definition live, Truth Social webhook operational (192.168.1.5:5000), and portfolio tra",
+        "rded today\u2014subagent definition live, Truth Social webhook operational (192.168.1.5:5000), and portfolio tra"
+      ],
+      "first_seen": "2026-06-05T20:16:35.949Z",
+      "last_seen": "2026-04-22T20:24:27.233Z"
+    },
+    {
+      "id": "sql",
+      "count": 136,
+      "contexts": [
+        " with good lighting), with access to the upstairs SQL library\n\n## Appearance\nSilver-streaked locs pulle",
+        "It's not just files\u2014it's **semantic memory**:\n\n```sql\n-- The Grove Ledger Schema\npeople          \u2190 Who ",
+        "e Barb persona thing going with that Grove Ledger SQLite database. Love the lorekeeper vibe \u2014 silver-st"
+      ],
+      "first_seen": "2026-04-04T23:38:57.614Z",
+      "last_seen": "2026-05-18T15:26:53.910Z"
+    },
+    {
+      "id": "sqlite",
+      "count": 94,
+      "contexts": [
+        " Ledger\n\nBarb maintains the **Grove Ledger** - an SQLite database at `/media/teraptis/KINCH_GROVE/Grove_Da",
+        "ed cuffs\n         \u251c\u2500\u2500 Maintains The Grove Ledger (SQLite)\n         \u251c\u2500\u2500 Speaks in full sentences, teaches S",
+        "e Barb persona thing going with that Grove Ledger SQLite database. Love the lorekeeper vibe \u2014 silver-strea"
+      ],
+      "first_seen": "2026-04-04T23:38:57.614Z",
+      "last_seen": "2026-05-18T15:26:53.910Z"
+    },
+    {
+      "id": "docker",
+      "count": 39,
+      "contexts": [
+        "w-rw-r-- 1 kinch kinch 1126 Apr 29 23:03 issue-05-docker-devops.md\n\n/home/kinch/Desktop/DOMM-Terminal/cmd:",
+        "xrwxrwx 1 kinch kinch  1126 Apr 29 23:27 issue-05-docker-devops.md\n-rwxrwxrwx 1 kinch kinch  9522 Apr 29 2",
+        "wxrwxrwx 1 kinch kinch 1169 Apr 29 23:37 issue-05-docker-devops.md\n-rwxrwxrwx 1 kinch kinch 9522 Apr 29 23"
+      ],
+      "first_seen": "2026-04-30T21:41:58.807Z",
+      "last_seen": "2026-06-02T16:51:06.942Z"
+    },
+    {
+      "id": "postgres",
+      "count": 15,
+      "contexts": [
+        "ase login with admin pass\" -\"leak\" -sourceforge\r\n\"PostgreSQL query failed: ERROR: parser: parse error\"\r\n\"pow",
+        ", USA\n\nFull-time\n\nSenior Cloud Database Engineer, Postgres\n\nRemote, USA\n\nFull-time\n\n9. eDiscovery Document R",
+        "ed SystemsElasticSearchGRPCKafkaMicroservicesMySQLPostgresPython\n\n11d\n\n12d\n\n### Content Marketing Strategist"
+      ],
+      "first_seen": "2026-05-06T19:17:47.106Z",
+      "last_seen": "2026-04-07T18:04:53.863Z"
+    },
+    {
+      "id": "kubernetes",
+      "count": 4,
+      "contexts": [
+        "Level\n\nSenior\n\n\u270d\ufe0f Content Marketing Manager\n\nCloudKubernetesSDLC\n\n8d\n\n9d\n\n### Media and Content Assistant \u2013 Re",
+        "5Fcodelineno-11-5) vllm/vllm-openai `\n\nIf you use Kubernetes, set up the pod spec as follows:\n\n`[](#%5F%5Fcode",
+        "fferent environments.\n- **Technologies**: Docker, Kubernetes\n- **Features**:\n  - Containerized game server\n  -"
+      ],
+      "first_seen": "2026-06-04T16:11:59.909Z",
+      "last_seen": "2026-06-02T16:51:06.942Z"
+    },
+    {
+      "id": "k8s",
+      "count": 2,
+      "contexts": [
+        "d load balancer configuration. If running vLLM on K8s, GPU affinity rules must match your parallelism c",
+        "\nlocation-services-prd.tesla.com\nus-west-2-prd-it.k8s.tesla.com\nmedia-server-api.eng.vn.cloud.tesla.com"
+      ],
+      "first_seen": "2026-06-15T17:47:22.777Z",
+      "last_seen": "2026-04-28T00:08:56.863Z"
+    },
+    {
+      "id": "graphql",
+      "count": 3,
+      "contexts": [
+        "ociatedPressNews] fix: re-write old broken API to GraphQL API (#4969) \u00b7 e884acb \u00b7 RSS-Bridge/rss-bridge\n   ",
+        "inear: Linear: manage issues, projects, teams via GraphQL + curl.\\n    - maps: Geocode, POIs, routes, timez",
+        "inear: Linear: manage issues, projects, teams via GraphQL + curl.\\n    - maps: Geocode, POIs, routes, timez"
+      ],
+      "first_seen": "2026-06-11T16:37:41.521Z",
+      "last_seen": "2026-05-18T15:43:05.749Z"
+    }
+  ],
+  "edges": [
+    {
+      "source": "shepherd",
+      "target": "script",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "git",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "repository",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "rest",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "automation",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "rhubarb",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "watts",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "pecan",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "code",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "branch",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "database",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "pi",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "kennel",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "investigation",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "research",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "shepherd",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "git",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "repository",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "rest",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "automation",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "rhubarb",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "watts",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "pecan",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "code",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "branch",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "database",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "pi",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "kennel",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "investigation",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "research",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "script",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "repository",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "rest",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "automation",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "rhubarb",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "watts",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "pecan",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "code",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "branch",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "database",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "pi",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "kennel",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "investigation",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "research",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "git",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "rest",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "automation",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "rhubarb",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "watts",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "pecan",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "code",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "branch",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "database",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "pi",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "kennel",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "investigation",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "research",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "repository",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "automation",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "rhubarb",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "watts",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "pecan",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "code",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "branch",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "database",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "pi",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "kennel",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "investigation",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "research",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "rest",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "rhubarb",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "watts",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "pecan",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "code",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "branch",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "database",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "pi",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "kennel",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "investigation",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "research",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "automation",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "watts",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "pecan",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "code",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "branch",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "database",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "pi",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "kennel",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "investigation",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "research",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "rhubarb",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "pecan",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "code",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "branch",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "database",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "pi",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "kennel",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "investigation",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "research",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "watts",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "code",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "branch",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "database",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "pi",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "kennel",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "investigation",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "research",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "pecan",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "branch",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "database",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "pi",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "kennel",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "investigation",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "research",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "code",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "database",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "pi",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "kennel",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "investigation",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "research",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "branch",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "pi",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "kennel",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "investigation",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "research",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "database",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "kennel",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "investigation",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "research",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "pi",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "investigation",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "research",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "kennel",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "research",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "investigation",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "osint",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "research",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "grove",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "osint",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "portfolio",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "grove",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "bash",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "portfolio",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "programmer",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "bash",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "budger",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "programmer",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "case",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "budger",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "finance",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "case",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "trading",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "finance",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "cron",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "trading",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "commit",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "cron",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "api",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "commit",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "model",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "api",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "lora",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "model",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "bluesky",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "lora",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "bot",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "bluesky",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "python",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "bot",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "python",
+      "target": "javascript",
+      "strength": "medium"
+    },
+    {
+      "source": "python",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "python",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "python",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "python",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "python",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "python",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "python",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "python",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "python",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "python",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "python",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "python",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "python",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "python",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "javascript",
+      "target": "shell",
+      "strength": "medium"
+    },
+    {
+      "source": "javascript",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "javascript",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "javascript",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "javascript",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "javascript",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "javascript",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "javascript",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "javascript",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "javascript",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "javascript",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "javascript",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "javascript",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "javascript",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "shell",
+      "target": "github",
+      "strength": "medium"
+    },
+    {
+      "source": "shell",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "shell",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "shell",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "shell",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "shell",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "shell",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "shell",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "shell",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "shell",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "shell",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "shell",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "shell",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "github",
+      "target": "container",
+      "strength": "medium"
+    },
+    {
+      "source": "github",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "github",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "github",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "github",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "github",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "github",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "github",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "github",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "github",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "github",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "github",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "container",
+      "target": "localize",
+      "strength": "medium"
+    },
+    {
+      "source": "container",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "container",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "container",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "container",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "container",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "container",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "container",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "container",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "container",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "container",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "localize",
+      "target": "training",
+      "strength": "medium"
+    },
+    {
+      "source": "localize",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "localize",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "localize",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "localize",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "localize",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "localize",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "localize",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "localize",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "localize",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "training",
+      "target": "stock",
+      "strength": "medium"
+    },
+    {
+      "source": "training",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "training",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "training",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "training",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "training",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "training",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "training",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "training",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "stock",
+      "target": "llm",
+      "strength": "medium"
+    },
+    {
+      "source": "stock",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "stock",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "stock",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "stock",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "stock",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "stock",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "stock",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "llm",
+      "target": "webhook",
+      "strength": "medium"
+    },
+    {
+      "source": "llm",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "llm",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "llm",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "llm",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "llm",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "llm",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "webhook",
+      "target": "sql",
+      "strength": "medium"
+    },
+    {
+      "source": "webhook",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "webhook",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "webhook",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "webhook",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "webhook",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "sql",
+      "target": "sqlite",
+      "strength": "medium"
+    },
+    {
+      "source": "sql",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "sql",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "sql",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "sql",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "sqlite",
+      "target": "docker",
+      "strength": "medium"
+    },
+    {
+      "source": "sqlite",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "sqlite",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "sqlite",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "docker",
+      "target": "postgres",
+      "strength": "medium"
+    },
+    {
+      "source": "docker",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "docker",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "postgres",
+      "target": "kubernetes",
+      "strength": "medium"
+    },
+    {
+      "source": "postgres",
+      "target": "graphql",
+      "strength": "medium"
+    },
+    {
+      "source": "kubernetes",
+      "target": "graphql",
+      "strength": "medium"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "topic": "skill location kinch",
+      "times_asked": 5,
+      "examples": [
+        "<skill name=\"wake-up\" location=\"/home/kinch/.pi/skills/wake-up/SKILL.md\">\nReferences are relative to /home/kinch/.pi/skills/wake-up.\n\n# Wake Up - Shep",
+        "<skill name=\"wake-up\" location=\"/home/kinch/.pi/skills/wake-up/SKILL.md\">\nReferences are relative to /home/kinch/.pi/skills/wake-up.\n\n# Wake Up - Shep"
+      ]
+    },
+    {
+      "topic": "shepherd",
+      "times_asked": 4,
+      "examples": [
+        "Shepherd, you here?",
+        "You here shepherd?"
+      ]
+    },
+    {
+      "topic": "still",
+      "times_asked": 4,
+      "examples": [
+        "Still here?",
+        "Still with me?"
+      ]
+    },
+    {
+      "topic": "morning shepherd",
+      "times_asked": 4,
+      "examples": [
+        "Good morning, Shepherd. How are you?",
+        "Morning, Shepherd how ya doin?"
+      ]
+    },
+    {
+      "topic": "skill dream location",
+      "times_asked": 3,
+      "examples": [
+        "<skill name=\"dream\" location=\"/home/kinch/.pi/skills/dream/SKILL.md\">\nReferences are relative to /home/kinch/.pi/skills/dream.\n\n# Dream: Memory Consol",
+        "<skill name=\"dream\" location=\"/home/kinch/.pi/skills/dream/SKILL.md\">\nReferences are relative to /home/kinch/.pi/skills/dream.\n\n# Dream: Memory Consol"
+      ]
+    },
+    {
+      "topic": "looking",
+      "times_asked": 3,
+      "examples": [
+        "how is it looking now",
+        "how is it looking now."
+      ]
+    },
+    {
+      "topic": "kinch kinch projects",
+      "times_asked": 3,
+      "examples": [
+        "kinch@kinch-work:~$ cd ~/Projects/kennel && python3 test_production.py 2>&1 | tail -5\nDIAGNOSIS:          \n===========================================",
+        "kinch@kinch-work:~/Projects/kennel$ gh auth login\n? Where do you use GitHub? GitHub.com\n? What is your preferred protocol for Git operations on this h"
+      ]
+    },
+    {
+      "topic": "shepherd going night",
+      "times_asked": 2,
+      "examples": [
+        "Hey Shepherd. I'm going to sign off for the night. Do you want to use the Dream skill?",
+        "Hey Shepherd, I'm going to log out for the night, so let's run the dream skill. Ok? goodnight."
+      ]
+    },
+    {
+      "topic": "terminal",
+      "times_asked": 2,
+      "examples": [
+        "How can I run this one in the terminal.",
+        "How do I load it from the terminal?"
+      ]
+    },
+    {
+      "topic": "lookin",
+      "times_asked": 2,
+      "examples": [
+        "how we lookin",
+        "how we lookin"
+      ]
+    }
+  ],
+  "expertise": {
+    "familiar": [
+      "shepherd",
+      "script",
+      "git",
+      "repository",
+      "rest",
+      "automation",
+      "rhubarb",
+      "watts",
+      "pecan",
+      "code",
+      "branch",
+      "database",
+      "pi",
+      "kennel",
+      "investigation",
+      "research",
+      "osint",
+      "grove",
+      "portfolio",
+      "bash",
+      "programmer",
+      "budger",
+      "case",
+      "finance",
+      "trading",
+      "cron",
+      "commit",
+      "api",
+      "model",
+      "lora",
+      "bluesky",
+      "bot",
+      "python",
+      "javascript",
+      "shell",
+      "github",
+      "container",
+      "localize",
+      "training",
+      "stock",
+      "llm",
+      "webhook",
+      "sql",
+      "sqlite",
+      "docker",
+      "postgres"
+    ],
+    "learning": [
+      "kubernetes",
+      "graphql"
+    ],
+    "exploring": []
+  },
+  "diversity": {
+    "diversity": 0.001,
+    "focus": "diverse",
+    "concentration": 0.23,
+    "total_topics": 49,
+    "total_mentions": 45064,
+    "top_topics": [
+      "pi",
+      "shepherd",
+      "script",
+      "rest",
+      "grove"
+    ]
+  }
+}

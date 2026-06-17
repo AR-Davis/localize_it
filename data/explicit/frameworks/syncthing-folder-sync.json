@@ -1,0 +1,26 @@
+{
+  "type": "framework_capture",
+  "name": "syncthing-folder-sync",
+  "description": "Set up Syncthing for bidirectional folder sync across Grove devices",
+  "steps": [
+    "Install Syncthing: 'sudo apt install syncthing' or download",
+    "Enable service: 'systemctl --user enable syncthing'",
+    "Start service: 'systemctl --user start syncthing'",
+    "Access web UI: http://127.0.0.1:8384",
+    "Add device: Share device ID with mesh, accept shares",
+    "Add folder: Set path, select devices to share with",
+    "Verify sync: Check folder status in web UI"
+  ],
+  "triggers": [
+    "new folder to sync",
+    "adding device to sync",
+    "grove-commons setup"
+  ],
+  "examples": [
+    "grove-commons folder to Pixel 2",
+    "projects folder sync to TheTower",
+    "vault backup to Coven"
+  ],
+  "captured_at": "2026-06-17T12:26:24.276051",
+  "version": "1.0"
+}

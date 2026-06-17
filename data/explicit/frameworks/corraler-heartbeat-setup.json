@@ -1,0 +1,22 @@
+{
+  "type": "framework_capture",
+  "name": "corraler-heartbeat-setup",
+  "description": "Configure Corraler for autonomous scheduling and heartbeat monitoring",
+  "steps": [
+    "Add cron jobs to ~/.pi/corraler/crontab.master",
+    "Register skills in ~/.pi/corraler/registry/",
+    "Set deadlines in ~/.pi/corraler/deadlines/",
+    "Verify with: crontab -l",
+    "Check logs: ~/.pi/corraler/logs/"
+  ],
+  "triggers": [
+    "scheduling",
+    "automation"
+  ],
+  "examples": [
+    "5-min heartbeat from all hounds",
+    "Weekly Pupper check at 09:00 Sundays"
+  ],
+  "captured_at": "2026-06-17T12:28:44.318295",
+  "version": "1.0"
+}

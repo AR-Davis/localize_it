@@ -1,0 +1,13 @@
+{
+  "type": "context_capture",
+  "project": "Continuous Trader / Budger Trading",
+  "stack": "Python, Alpaca API, AEGS strategy, backtesting",
+  "patterns": [
+    "Morning gap scanning, earnings drift detection, auto-execute HIGH confidence"
+  ],
+  "conventions": [
+    "Paper by default, live requires override, 50% sizing Week 1"
+  ],
+  "captured_at": "2026-06-17T12:27:29.374947",
+  "version": "1.0"
+}

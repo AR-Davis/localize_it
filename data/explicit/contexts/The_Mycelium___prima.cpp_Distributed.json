@@ -1,0 +1,13 @@
+{
+  "type": "context_capture",
+  "project": "The Mycelium / prima.cpp Distributed",
+  "stack": "C++, llama.cpp, RPC, Tailscale, distributed inference",
+  "patterns": [
+    "RPC tensor padding, piped-ring parallelism, mmap management"
+  ],
+  "conventions": [
+    "Watts leads, 6-phase stack, Ember=worker, TheTower=head"
+  ],
+  "captured_at": "2026-06-17T12:26:37.210653",
+  "version": "1.0"
+}

@@ -1,0 +1,20 @@
+{
+  "type": "framework_capture",
+  "name": "troubleshoot-tailscale",
+  "description": "Diagnose and fix Tailscale connectivity issues",
+  "steps": [
+    "Check status: 'tailscale status' for all nodes",
+    "Check service: 'sudo systemctl status tailscaled'",
+    "Reauthenticate if needed: 'sudo tailscale up'",
+    "Check ACLs: tailscale.com/admin",
+    "Verify firewall: UDP 41641"
+  ],
+  "triggers": [
+    "troubleshooting,connectivity,network"
+  ],
+  "examples": [
+    "Node showing offline, re-authenticated, online now"
+  ],
+  "captured_at": "2026-06-17T12:29:07.447209",
+  "version": "1.0"
+}

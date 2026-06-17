@@ -1,0 +1,25 @@
+{
+  "type": "framework_capture",
+  "name": "access-lines-verification",
+  "description": "Check all 6 Grove access lines are operational before critical operations",
+  "steps": [
+    "GitHub: 'ssh -T git@github.com' should return success",
+    "Codeberg: 'ssh -T git@codeberg.org' should return success",
+    "ProtonDrive: 'rclone about protondrive:' should show storage",
+    "Syncthing: Check http://127.0.0.1:8384 for connected devices",
+    "Tailscale: 'tailscale status' should show all nodes",
+    "Grove Drive: 'ls /mnt/grove' should list vault contents"
+  ],
+  "triggers": [
+    "before major deployment",
+    "weekly verification",
+    "troubleshooting connectivity"
+  ],
+  "examples": [
+    "All lines verified \u2705",
+    "ProtonDrive needs re-auth",
+    "Tailscale showing offline nodes"
+  ],
+  "captured_at": "2026-06-17T12:27:25.799466",
+  "version": "1.0"
+}

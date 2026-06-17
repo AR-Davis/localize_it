@@ -1,0 +1,24 @@
+{
+  "type": "framework_capture",
+  "name": "codeberg-ssh-authentication",
+  "description": "Connect to Codeberg via SSH for repository operations and upstream syncs",
+  "steps": [
+    "Use existing SSH key or generate new: 'ssh-keygen -t ed25519 -C email'",
+    "Add public key to Codeberg: Settings > SSH/GPG Keys > Add Key",
+    "Test connection: 'ssh -T git@codeberg.org'",
+    "Clone with SSH: 'git clone git@codeberg.org:user/repo.git'",
+    "For upstream: 'git remote add upstream git@codeberg.org:kinch_kesh/localize_it.git'"
+  ],
+  "triggers": [
+    "new Codeberg repo",
+    "upstream sync setup",
+    "migrate from GitHub"
+  ],
+  "examples": [
+    "git push codeberg main",
+    "git fetch upstream",
+    "git merge upstream/main"
+  ],
+  "captured_at": "2026-06-17T12:26:14.742266",
+  "version": "1.0"
+}

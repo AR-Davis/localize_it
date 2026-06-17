@@ -1,0 +1,15 @@
+{
+  "type": "style_capture",
+  "name": "corraler-status-broadcast",
+  "description": "Concise, timestamped status updates with standardized format for distributed system heartbeat",
+  "examples": [
+    "TIMESTAMP | WHO | PROJECT | STATUS | NOTE",
+    "2026-06-16T14:30:00-05:00 | TheTower | PRIMA_CPP | IN_PROGRESS | WSL2 CUDA verified",
+    "5-min heartbeat from all hounds"
+  ],
+  "tags": [
+    "status-broadcast,timestamped,concise,corraler"
+  ],
+  "captured_at": "2026-06-17T12:27:50.147267",
+  "version": "1.0"
+}

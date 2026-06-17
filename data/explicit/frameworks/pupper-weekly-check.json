@@ -1,0 +1,21 @@
+{
+  "type": "framework_capture",
+  "name": "pupper-weekly-check",
+  "description": "Weekly status verification via Pupper for all active hounds",
+  "steps": [
+    "Check Corraler for missed heartbeats",
+    "Review Pupper digest from previous week",
+    "Query each hound for status and blockers",
+    "Update ~/grove-commons/STATUS/ files",
+    "Log results to ~/grove-commons/LOGS/YYYY-MM.md"
+  ],
+  "triggers": [
+    "weekly cadence",
+    "hound health check"
+  ],
+  "examples": [
+    "All 12 hounds reporting. No blockers."
+  ],
+  "captured_at": "2026-06-17T12:28:44.265554",
+  "version": "1.0"
+}

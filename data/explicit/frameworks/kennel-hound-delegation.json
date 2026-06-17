@@ -1,0 +1,25 @@
+{
+  "type": "framework_capture",
+  "name": "kennel-hound-delegation",
+  "description": "Delegate work to appropriate Kennel hound based on task type",
+  "steps": [
+    "Identify task type: Research, Code, Trading, Verification, etc.",
+    "Match to hound: Tracker for verification, Programmer for code, Budger for trading",
+    "Check hound WAKE.md for current status and capabilities",
+    "Formulate clear task with context and acceptance criteria",
+    "Submit to hound via subagent or direct message",
+    "Track in Corraler or Pupper weekly checks"
+  ],
+  "triggers": [
+    "new task to delegate",
+    "need specialized skills",
+    "overflow work from Shepherd"
+  ],
+  "examples": [
+    "Tracker: Verify this contact information",
+    "Programmer: Review this code for security",
+    "Budger: Execute this trade if conditions met"
+  ],
+  "captured_at": "2026-06-17T12:27:40.756097",
+  "version": "1.0"
+}

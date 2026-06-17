@@ -1,0 +1,13 @@
+{
+  "type": "context_capture",
+  "project": "Alpaca Skills / MCP Integration",
+  "stack": "Python, Alpaca API, MCP server, backtesting",
+  "patterns": [
+    "Staged access: read-only \u2192 paper \u2192 live, Security review before enable"
+  ],
+  "conventions": [
+    "PAPER_TRADE=true default, trading toolset opt-in, explicit confirmation"
+  ],
+  "captured_at": "2026-06-17T12:28:16.990132",
+  "version": "1.0"
+}

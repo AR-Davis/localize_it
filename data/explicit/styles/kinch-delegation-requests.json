@@ -1,0 +1,17 @@
+{
+  "type": "style_capture",
+  "name": "kinch-delegation-requests",
+  "description": "How Kinch structures work delegation: clear context, explicit acceptance criteria, appropriate expertise matching, and tracked accountability",
+  "examples": [
+    "Let's also do another capture on how I like to delegate work among the members of the Grove",
+    "Watts is at work on the mycelium. Let's get our captures for localize it",
+    "I need you to bring up Programmer and have you both review code written by Budger",
+    "Newton \u2014 research distributed LLM inference across home network devices",
+    "Tinker \u2014 inventory our access lines and pattern-match tools to situations"
+  ],
+  "tags": [
+    "delegation,workflow,collaboration,grove-commons,structured-requests"
+  ],
+  "captured_at": "2026-06-17T12:31:33.481906",
+  "version": "1.0"
+}

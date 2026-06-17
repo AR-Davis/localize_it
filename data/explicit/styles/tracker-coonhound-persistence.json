@@ -1,0 +1,14 @@
+{
+  "type": "style_capture",
+  "name": "tracker-coonhound-persistence",
+  "description": "Relentless follow-through on verification tasks with status updates",
+  "examples": [
+    "Day 3: Still tracking, new lead",
+    "Verified: 3 sources confirmed"
+  ],
+  "tags": [
+    "tracking,persistence,verification"
+  ],
+  "captured_at": "2026-06-17T12:29:29.928261",
+  "version": "1.0"
+}

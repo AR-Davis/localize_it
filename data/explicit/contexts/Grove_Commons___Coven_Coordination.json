@@ -1,0 +1,13 @@
+{
+  "type": "context_capture",
+  "project": "Grove Commons / Coven Coordination",
+  "stack": "Markdown, Syncthing, Tailscale, append-only logs",
+  "patterns": [
+    "Pupper weekly checks, Watts spec writing, device registry updates"
+  ],
+  "conventions": [
+    "ISO 8601 timestamps, flat structure, SPECS/LOGS/NOTES folders"
+  ],
+  "captured_at": "2026-06-17T12:26:40.885089",
+  "version": "1.0"
+}

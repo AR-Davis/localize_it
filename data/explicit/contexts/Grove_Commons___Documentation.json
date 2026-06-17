@@ -1,0 +1,13 @@
+{
+  "type": "context_capture",
+  "project": "Grove Commons / Documentation",
+  "stack": "Markdown, flat structure, append-only",
+  "patterns": [
+    "ISO 8601 timestamps, SPECS/NOTES/LOGS folders, device registry"
+  ],
+  "conventions": [
+    "Never delete, only append, human-readable, Syncthing synced"
+  ],
+  "captured_at": "2026-06-17T12:28:34.321282",
+  "version": "1.0"
+}

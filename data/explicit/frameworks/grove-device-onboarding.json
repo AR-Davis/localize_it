@@ -1,0 +1,23 @@
+{
+  "type": "framework_capture",
+  "name": "grove-device-onboarding",
+  "description": "Add new device to Grove mesh with Tailscale, Syncthing, and device registry",
+  "steps": [
+    "Install Tailscale and authenticate to mesh",
+    "Get device Tailscale IP: 'tailscale ip -4'",
+    "Add to device registry: ~/grove-commons/DEVICES/device-registry.md",
+    "Install Syncthing and add device ID to mesh",
+    "Accept folder shares for grove-commons",
+    "Verify: Check tailscale status and syncthing web UI"
+  ],
+  "triggers": [
+    "new device joining Grove",
+    "Pixel, laptop, or edge device setup"
+  ],
+  "examples": [
+    "Pixel 2: 100.77.170.98, Android, Edge device",
+    "Ember: 100.90.116.1, Ubuntu, Edge compute"
+  ],
+  "captured_at": "2026-06-17T12:27:59.045170",
+  "version": "1.0"
+}

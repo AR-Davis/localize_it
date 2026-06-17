@@ -1,0 +1,13 @@
+{
+  "type": "context_capture",
+  "project": "localize_it / ML Training",
+  "stack": "Python, scikit-learn, TF-IDF, Naive Bayes, LoRA",
+  "patterns": [
+    "9-class classification, 38% baseline, shadow analysis"
+  ],
+  "conventions": [
+    "Need 50+ captures, explicit over shadow, framework/context/style/voice taxonomy"
+  ],
+  "captured_at": "2026-06-17T12:28:55.172401",
+  "version": "1.0"
+}

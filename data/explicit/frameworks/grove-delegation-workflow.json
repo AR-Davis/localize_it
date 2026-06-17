@@ -1,0 +1,29 @@
+{
+  "type": "framework_capture",
+  "name": "grove-delegation-workflow",
+  "description": "How Kinch delegates work among Grove members based on task type, expertise, and current capacity",
+  "steps": [
+    "Identify task type: Research, Code/Review, Trading, Verification, Infrastructure, Documentation",
+    "Match to Grove member expertise: Newton for deep research, Programmer for code review, Budger for trading, etc.",
+    "Check member WAKE.md or status for current capacity and blockers",
+    "Formulate clear task with context, acceptance criteria, and deadline",
+    "Delegate via appropriate channel: subagent for hounds, direct message for humans, Grove Commons for async",
+    "Track in Corraler/Pupper or project-pulse.log for accountability",
+    "Follow up if no response within deadline window"
+  ],
+  "triggers": [
+    "new task requiring specialized skills",
+    "Shepherd overflow - too many parallel streams",
+    "need independent verification",
+    "multi-person review required"
+  ],
+  "examples": [
+    "Code review: Delegate to Programmer with security focus",
+    "Research task: Delegate to Newton with Feynman + ELI5 skills",
+    "Trading analysis: Delegate to Budger with AEGS parameters",
+    "Status check: Delegate to Pupper for weekly hound roundup",
+    "Verification: Delegate to Tracker for contact/source confirmation"
+  ],
+  "captured_at": "2026-06-17T12:31:26.506592",
+  "version": "1.0"
+}

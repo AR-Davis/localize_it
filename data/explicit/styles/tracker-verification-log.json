@@ -1,0 +1,14 @@
+{
+  "type": "style_capture",
+  "name": "tracker-verification-log",
+  "description": "Verification reports with confirmation status and confidence levels",
+  "examples": [
+    "Verified: Contact information confirmed via primary source",
+    "Unverified: Secondary source only, needs confirmation"
+  ],
+  "tags": [
+    "verification,structured,confidence"
+  ],
+  "captured_at": "2026-06-17T12:28:34.296407",
+  "version": "1.0"
+}

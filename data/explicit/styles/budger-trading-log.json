@@ -1,0 +1,15 @@
+{
+  "type": "style_capture",
+  "name": "budger-trading-log",
+  "description": "Structured trading logs with position sizing, confidence levels, and outcome tracking",
+  "examples": [
+    "AEGS Week 2: HIGH confidence GME earnings drift, 50% sizing, +",
+    "Paper trade: SPY gap fill, 95% confidence, executed at open",
+    "Gap scan: 12 symbols, 3 HIGH confidence candidates"
+  ],
+  "tags": [
+    "trading,structured,metrics,financial"
+  ],
+  "captured_at": "2026-06-17T12:28:05.130944",
+  "version": "1.0"
+}

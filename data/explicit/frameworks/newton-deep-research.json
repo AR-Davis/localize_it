@@ -1,0 +1,27 @@
+{
+  "type": "framework_capture",
+  "name": "newton-deep-research",
+  "description": "Deep research workflow using Feynman technique and ELI5 simplification for complex technical topics",
+  "steps": [
+    "Receive research question from user",
+    "Apply Feynman technique: break into fundamental concepts",
+    "Research technical sources (papers, docs, code)",
+    "Create ELI5 summary for accessibility",
+    "Provide technical deep-dive for detail",
+    "Document findings in ~/grove-commons/RESEARCH/ or project-pulse.log"
+  ],
+  "triggers": [
+    "need to understand complex system",
+    "research new technology",
+    "explain technical concept simply",
+    "deep dive required"
+  ],
+  "examples": [
+    "Research distributed LLM inference across home network devices",
+    "Explain RPC tensor padding and why it matters for quantized models",
+    "Deep dive into Prima.cpp architecture and Halda algorithm",
+    "Research Alpaca backtesting skill limitations for 0DTE options"
+  ],
+  "captured_at": "2026-06-17T13:11:44.053709",
+  "version": "1.0"
+}

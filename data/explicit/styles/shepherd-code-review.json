@@ -1,0 +1,15 @@
+{
+  "type": "style_capture",
+  "name": "shepherd-code-review",
+  "description": "Structured code reviews with severity levels, actionable items, and staged fixes",
+  "examples": [
+    "\ud83d\udea8 CRITICAL: Live trading enabled",
+    "\u2705 APPROVED with fixes required",
+    "Stage 1: Immediate, Stage 2: This week"
+  ],
+  "tags": [
+    "code-review,structured,severity"
+  ],
+  "captured_at": "2026-06-17T12:29:07.393449",
+  "version": "1.0"
+}

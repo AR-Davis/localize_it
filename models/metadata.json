@@ -1,16 +1,15 @@
 {
-  "trained_at": "2026-06-15T23:03:42.995171",
+  "trained_at": "2026-06-17T13:13:22.916048",
   "version": "1.0",
   "query_categories": [
     "DIRECTIVE",
     "LEARNING",
     "META",
     "OTHER",
-    "PROJECT_SPECIFIC",
     "SOCIAL",
     "TECHNICAL",
     "VERIFICATION",
     "WAKE_REQUEST"
   ],
-  "explicit_entries": 4
+  "explicit_entries": 33
 }

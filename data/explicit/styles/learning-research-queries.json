@@ -1,0 +1,22 @@
+{
+  "type": "style_capture",
+  "name": "learning-research-queries",
+  "description": "Information-seeking queries for research, explanation, and understanding complex topics",
+  "examples": [
+    "Research how distributed inference works across multiple devices",
+    "Explain what RPC tensor alignment means for quantized models",
+    "How does the Halda algorithm optimize token generation?",
+    "What are the limitations of backtesting options strategies?",
+    "Compare GrapheneOS vs DivestOS for Pixel 2 compatibility",
+    "Research the DNC When We Count bootcamp requirements",
+    "What beat alignment factors matter for AP Report for America?",
+    "Explain how LoRA fine-tuning improves classifier accuracy",
+    "Research Tailscale mesh topologies for home networks",
+    "How does ESP-NOW differ from WiFi for peer-to-peer communication?"
+  ],
+  "tags": [
+    "learning,research,information-seeking,explain,how,what,compare"
+  ],
+  "captured_at": "2026-06-17T13:11:51.076923",
+  "version": "1.0"
+}

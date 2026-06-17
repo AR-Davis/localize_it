@@ -1,0 +1,22 @@
+{
+  "type": "framework_capture",
+  "name": "upsteam-sync-localize-it",
+  "description": "Sync localize_it repo with Codeberg upstream",
+  "steps": [
+    "Check status: git fetch upstream",
+    "Review commits: git log HEAD..upstream/main",
+    "Merge changes: git merge upstream/main",
+    "Resolve conflicts if needed",
+    "Push to origin: git push origin main"
+  ],
+  "triggers": [
+    "upstream sync",
+    "version control"
+  ],
+  "examples": [
+    "Synced 3 commits from upstream",
+    "Merge conflict in classifier.py resolved"
+  ],
+  "captured_at": "2026-06-17T12:28:44.291478",
+  "version": "1.0"
+}

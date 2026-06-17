@@ -1,0 +1,23 @@
+{
+  "type": "framework_capture",
+  "name": "dream-memory-consolidation",
+  "description": "Perform end-of-session memory consolidation to update WAKE.md and MEMORY.md",
+  "steps": [
+    "Review session transcript and completed tasks",
+    "Identify key learnings and decisions",
+    "Update ~/Desktop/Shepherd/WAKE.md with session card",
+    "Update ~/Desktop/Shepherd/MEMORY.md index",
+    "Add changelog entries",
+    "Log to ~/grove-commons/LOGS/project-pulse.log"
+  ],
+  "triggers": [
+    "session end",
+    "major milestone",
+    "context switch"
+  ],
+  "examples": [
+    "Dream complete. Memory fresh. Ready to hunt."
+  ],
+  "captured_at": "2026-06-17T12:28:26.758644",
+  "version": "1.0"
+}

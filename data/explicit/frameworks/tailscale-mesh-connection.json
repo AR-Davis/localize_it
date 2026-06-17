@@ -1,0 +1,24 @@
+{
+  "type": "framework_capture",
+  "name": "tailscale-mesh-connection",
+  "description": "Connect device to Grove Tailscale mesh for secure inter-device communication",
+  "steps": [
+    "Install Tailscale: 'curl -fsSL https://tailscale.com/install.sh | sh'",
+    "Authenticate: 'sudo tailscale up' and complete browser login",
+    "Verify: 'tailscale status' to see mesh nodes",
+    "Check IP: 'tailscale ip -4' for your Tailnet address",
+    "Access other nodes: ping or SSH using 100.x.x.x addresses"
+  ],
+  "triggers": [
+    "new device joining mesh",
+    "mesh connectivity issues",
+    "setting up Grove node"
+  ],
+  "examples": [
+    "tailscale status",
+    "tailscale ping myceliumnetwork",
+    "ssh kinch@100.90.116.1"
+  ],
+  "captured_at": "2026-06-17T12:26:19.211151",
+  "version": "1.0"
+}

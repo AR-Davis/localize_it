@@ -1,0 +1,13 @@
+{
+  "type": "context_capture",
+  "project": "Prima USB / Portable Installer",
+  "stack": "Go, TUI, hardware detection, FAT32 compatibility",
+  "patterns": [
+    "Auto-detect GPU/CPU, config generation, tmp binary copy"
+  ],
+  "conventions": [
+    "Handle FAT32 no-exec, cross-platform builds, USB deployment"
+  ],
+  "captured_at": "2026-06-17T12:29:15.953265",
+  "version": "1.0"
+}

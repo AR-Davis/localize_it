@@ -1,0 +1,26 @@
+{
+  "type": "framework_capture",
+  "name": "eli5-technical-explanation",
+  "description": "Simplify complex technical concepts using everyday analogies and progressive disclosure",
+  "steps": [
+    "Identify the core concept to explain",
+    "Find everyday analogy (car engine, plumbing, etc.)",
+    "Explain the 'why' before the 'how'",
+    "Use progressive disclosure: simple first, details on demand",
+    "Verify understanding with check questions",
+    "Provide deep-dive reference for advanced readers"
+  ],
+  "triggers": [
+    "explain this simply",
+    "what does X mean?",
+    "how does Y work in simple terms?",
+    "ELI5 request"
+  ],
+  "examples": [
+    "RPC tensor padding is like... making sure puzzle pieces fit even if they're odd sizes",
+    "Distributed inference is like... dividing a book among friends to read faster",
+    "LoRA fine-tuning is like... learning to drive a new car without forgetting how to ride a bike"
+  ],
+  "captured_at": "2026-06-17T13:12:12.687341",
+  "version": "1.0"
+}

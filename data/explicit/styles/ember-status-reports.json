@@ -1,0 +1,14 @@
+{
+  "type": "style_capture",
+  "name": "ember-status-reports",
+  "description": "Concise hardware and service status for edge compute nodes",
+  "examples": [
+    "Ember: AMD E-350, 3.4GB RAM, llama.cpp 0.4 tok/s",
+    "Service: active, Memory: 78% used"
+  ],
+  "tags": [
+    "hardware,status,edge"
+  ],
+  "captured_at": "2026-06-17T12:29:07.422006",
+  "version": "1.0"
+}

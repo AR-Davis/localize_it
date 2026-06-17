@@ -1,0 +1,25 @@
+{
+  "type": "framework_capture",
+  "name": "protondrive-cli-connection",
+  "description": "Connect to ProtonDrive via CLI for cloud storage access and file operations",
+  "steps": [
+    "Install rclone: check with 'which rclone' or install",
+    "Configure: run 'rclone config' and select ProtonDrive",
+    "Authenticate: complete browser-based OAuth flow",
+    "Verify: run 'rclone about protondrive:' to check connection",
+    "Use: 'rclone ls protondrive:' to browse files",
+    "Mount (optional): 'rclone mount protondrive: ~/mnt/proton'"
+  ],
+  "triggers": [
+    "need to access ProtonDrive files",
+    "cloud storage backup",
+    "file sync check"
+  ],
+  "examples": [
+    "rclone ls protondrive:",
+    "rclone copy ~/local/file.txt protondrive:/backups/",
+    "rclone sync ~/Projects protondrive:/projects-backup"
+  ],
+  "captured_at": "2026-06-17T12:26:03.247999",
+  "version": "1.0"
+}

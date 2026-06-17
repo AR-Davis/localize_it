@@ -1,0 +1,13 @@
+{
+  "type": "context_capture",
+  "project": "ELI5 Simplification / Technical Explanations",
+  "stack": "Simplification, analogies, core concepts, accessibility",
+  "patterns": [
+    "Break complex into simple parts, use everyday analogies, verify understanding"
+  ],
+  "conventions": [
+    "Avoid jargon, build from basics, check comprehension"
+  ],
+  "captured_at": "2026-06-17T13:12:04.212540",
+  "version": "1.0"
+}

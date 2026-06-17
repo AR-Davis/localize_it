@@ -1,0 +1,25 @@
+{
+  "type": "framework_capture",
+  "name": "github-ssh-authentication",
+  "description": "Connect to GitHub via SSH for push/pull operations without password prompts",
+  "steps": [
+    "Generate SSH key: 'ssh-keygen -t ed25519 -C email'",
+    "Add to ssh-agent: 'eval $(ssh-agent -s)' then 'ssh-add ~/.ssh/id_ed25519'",
+    "Copy public key: 'cat ~/.ssh/id_ed25519.pub'",
+    "Add to GitHub: Settings > SSH and GPG keys > New SSH key",
+    "Test connection: 'ssh -T git@github.com'",
+    "Clone repos with SSH: 'git clone git@github.com:user/repo.git'"
+  ],
+  "triggers": [
+    "first time GitHub setup",
+    "SSH key expired",
+    "new device setup"
+  ],
+  "examples": [
+    "git push origin main",
+    "git clone git@github.com:AR-Davis/prima_distributed_local.git",
+    "ssh -T git@github.com"
+  ],
+  "captured_at": "2026-06-17T12:26:09.819559",
+  "version": "1.0"
+}

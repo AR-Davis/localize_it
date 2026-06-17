@@ -1,0 +1,13 @@
+{
+  "type": "context_capture",
+  "project": "DOMM Terminal / ESP-NOW",
+  "stack": "ESP32, ESP-NOW, peer-to-peer, offline-first",
+  "patterns": [
+    "MUD-like interface, message passing, no central server"
+  ],
+  "conventions": [
+    "Battery efficient, low latency, no WiFi dependency"
+  ],
+  "captured_at": "2026-06-17T12:29:29.876905",
+  "version": "1.0"
+}

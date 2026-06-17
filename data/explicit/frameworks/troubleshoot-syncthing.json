@@ -1,0 +1,21 @@
+{
+  "type": "framework_capture",
+  "name": "troubleshoot-syncthing",
+  "description": "Fix Syncthing sync issues and folder conflicts",
+  "steps": [
+    "Check web UI: http://127.0.0.1:8384",
+    "Verify device IDs match",
+    "Check folder paths are correct",
+    "Review introducer settings (disable to prevent auto-propagation)",
+    "Check for out-of-sync items",
+    "Restart if needed: systemctl --user restart syncthing"
+  ],
+  "triggers": [
+    "troubleshooting,sync,files"
+  ],
+  "examples": [
+    "Device shows disconnected, re-added, sync restored"
+  ],
+  "captured_at": "2026-06-17T12:29:15.901564",
+  "version": "1.0"
+}

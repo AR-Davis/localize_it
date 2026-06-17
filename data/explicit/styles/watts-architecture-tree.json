@@ -1,0 +1,14 @@
+{
+  "type": "style_capture",
+  "name": "watts-architecture-tree",
+  "description": "Visual ASCII tree diagrams for system architecture and stack dependencies",
+  "examples": [
+    "Tailscale \u2192 Syncthing \u2192 Yggdrasil \u2192 prima.cpp \u2192 Automerge",
+    "Ember: CPU worker | TheTower: GPU head"
+  ],
+  "tags": [
+    "visual,architecture,tree,technical"
+  ],
+  "captured_at": "2026-06-17T12:29:07.365459",
+  "version": "1.0"
+}

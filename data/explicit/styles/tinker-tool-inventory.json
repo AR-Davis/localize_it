@@ -1,0 +1,14 @@
+{
+  "type": "style_capture",
+  "name": "tinker-tool-inventory",
+  "description": "Structured tool catalog with pattern matching for situation-to-tool mapping",
+  "examples": [
+    "Access lines: 6 operational, ProtonDrive needs re-auth",
+    "Weekly check: 5-min heartbeat from all hounds"
+  ],
+  "tags": [
+    "tools,inventory,structured"
+  ],
+  "captured_at": "2026-06-17T12:28:34.268595",
+  "version": "1.0"
+}

@@ -75,6 +75,15 @@ def load_training_data() -> Tuple[List[str], List[str]]:
                 texts.append(ctx.get("description", ""))
                 labels.append("PROJECT_SPECIFIC")
     
+    # Learning examples -> LEARNING
+    learning_file = EXPLICIT_DIR / "learning" / "learning-examples.jsonl"
+    if learning_file.exists():
+        for line in learning_file.read_text().strip().split('\n'):
+            if line:
+                example = json.loads(line)
+                texts.append(example.get("text", ""))
+                labels.append(example.get("category", "LEARNING"))
+    
     return texts, labels
 
 

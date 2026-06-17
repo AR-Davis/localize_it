@@ -1,0 +1,15 @@
+{
+  "type": "style_capture",
+  "name": "shepherd-status-reporting",
+  "description": "Structured, systematic status updates with clear visual hierarchy, checkboxes, and quick-reference tables. Collaborative narrator tone.",
+  "examples": [
+    "\u2705 System operational, \ud83d\udd04 In progress, \u23f3 Pending, \u26a0\ufe0f Blocked",
+    "Tailscale mesh: 8 nodes online including Pixel-2 (100.77.170.98)",
+    "Your orders, Kinch? \ud83d\udc15\u26a1"
+  ],
+  "tags": [
+    "status-report,structured,systematic,collaborative"
+  ],
+  "captured_at": "2026-06-17T12:26:53.894402",
+  "version": "1.0"
+}

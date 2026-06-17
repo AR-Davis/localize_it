@@ -1,0 +1,13 @@
+{
+  "type": "context_capture",
+  "project": "Newton Research / Distributed LLM",
+  "stack": "Research, llama.cpp, RPC, networking, distributed systems",
+  "patterns": [
+    "Feynman technique, ELI5 summaries, technical deep-dives, source citations"
+  ],
+  "conventions": [
+    "Document in ~/grove-commons/RESEARCH/, cross-reference with ELI5 skill"
+  ],
+  "captured_at": "2026-06-17T13:11:59.370889",
+  "version": "1.0"
+}
