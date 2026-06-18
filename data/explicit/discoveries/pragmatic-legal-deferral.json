@@ -1,0 +1,10 @@
+{
+  "discovery": "Legal compliance deferred until traction justifies lawyer costs",
+  "context": "Lumo review flagged ToS/copyright concerns as pre-release blockers",
+  "decision": "Ship with basic README disclaimer only; defer full LEGAL.md and compliance review until >1000 users or revenue",
+  "reasoning": "Current AI open source landscape: everyone ships fast, worries about lawyers later. Vaporware doesn't need lawyers. Product-market fit first, compliance second.",
+  "risk_acceptance": "Pre-traction ToS violations acceptable cost of validation; will formalize if traction emerges",
+  "mitigation": "Basic 'use at your own risk' disclaimer in README; no redistribution of base model weights; transformative use argument documented",
+  "date": "2026-06-18",
+  "revisit_when": "1000+ users, media attention, or revenue"
+}

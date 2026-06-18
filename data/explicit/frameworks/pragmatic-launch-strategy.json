@@ -1,0 +1,35 @@
+{
+  "name": "pragmatic-launch-strategy",
+  "description": "Ship now with minimal legal protection, formalize compliance only if traction justifies lawyer costs",
+  "steps": [
+    "Identify minimum viable legal protection (basic disclaimer)",
+    "Ship pre-alpha to gauge interest and product-market fit",
+    "Monitor adoption and user feedback",
+    "If traction emerges (>1000 users, revenue, or media attention), formalize legal",
+    "Only then: lawyers, full compliance review, entity formation",
+    "Pre-traction: focus on product, not legal edge cases"
+  ],
+  "triggers": [
+    "pre-alpha startup phase",
+    "limited resources",
+    "vaporware landscape",
+    "need to validate before investing in compliance"
+  ],
+  "examples": [
+    "Add basic README disclaimer, defer full LEGAL.md until traction",
+    "Ship shadow analysis feature, monitor before formalizing data retention policies",
+    "Use permissive open source license now, formalize IP strategy if commercialized",
+    "Everyone ships fast in AI space; worry about lawyers when you have money for lawyers"
+  ],
+  "risks": [
+    "Potential ToS violations with cloud AI providers",
+    "Privacy model gaps could expose user data",
+    "Copyright ambiguity around derivative works"
+  ],
+  "mitigations": [
+    "Keep basic 'use at your own risk' disclaimer in README",
+    "Stay under radar (<1000 users) before formalizing",
+    "Be prepared to pivot or add compliance if traction hits",
+    "Accept that pre-traction legal risk is acceptable cost of validation"
+  ]
+}
