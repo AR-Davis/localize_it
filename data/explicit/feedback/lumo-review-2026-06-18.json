@@ -1,0 +1,44 @@
+{
+  "reviewer": "Lumo",
+  "date": "2026-06-18",
+  "project": "localize_it",
+  "type": "external_review",
+  "what_works_well": [
+    "Three-tier capture system (Shadow Study → Intraday Logging → Explicit Commands) is logically sound",
+    "Technical choices: QLoRA, ollama, llama.cpp for resource-efficient local fine-tuning",
+    "JSONL storage format is standard and portable",
+    "Philosophical framing: ownership charter and 'rent vs. own' intelligence argument",
+    "Comprehensive documentation covering philosophy, privacy, threats, getting started"
+  ],
+  "areas_to_consider": {
+    "legal_gray_zones": {
+      "concern": "Training on cloud AI outputs may violate ToS and copyright",
+      "recommendation": "Add disclaimer section acknowledging risks, suggest fair use arguments, recommend consulting provider ToS"
+    },
+    "technical_feasibility": [
+      {"component": "Pattern Detection", "concern": "High false positive rate possible", "suggestion": "Add confidence scores to detected patterns"},
+      {"component": "Nightly Training", "concern": "03:00 scheduling assumes consistent hardware availability", "suggestion": "Allow rescheduling or deferred training"},
+      {"component": "Memory Agnostic Design", "concern": "Without session continuity, some patterns hard to detect", "suggestion": "Be explicit about what degrades without Pi Dream"}
+    ],
+    "code_structure_additions": ["tests/ directory", "scripts/ for common operations", "config/ for persistent settings"],
+    "privacy_model_gaps": [
+      "Data retention policies (when does shadow data get purged?)",
+      "User control over what gets trained",
+      "Export capabilities for portability"
+    ]
+  },
+  "minor_suggestions": [
+    "Semantic versioning even in pre-alpha",
+    "Dependency pinning with exact Python package versions",
+    "Minimal smoke tests for confidence",
+    "One-click installer note for non-technical users",
+    "Clarify contribution expectations"
+  ],
+  "pre_release_questions": [
+    "How do you handle rate limiting from cloud APIs during capture?",
+    "What happens when a base model updates (Gemma 2.0)?",
+    "Is there a fallback when Ollama isn't available?",
+    "What's your backup strategy for adapter weights?"
+  ],
+  "overall_assessment": "Thoughtful, well-documented pre-alpha project with clear vision. Tension between 'cloud intelligence rental' and 'local sovereignty' is real and worth exploring technically. Implementation appears pragmatic given constraints."
+}

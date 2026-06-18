@@ -1,0 +1,10 @@
+{"text": "Add ToS disclaimer for cloud AI training: Training on Claude GPT-4 outputs may violate provider Terms of Service and raise copyright questions for derivative works", "category": "LEARNING", "type": "legal-compliance"}
+{"text": "Document fair use arguments for AI training on cloud outputs: transformative use, research purpose, no commercial redistribution of base model outputs", "category": "LEARNING", "type": "fair-use-defense"}
+{"text": "Implement confidence scores for pattern detection to reduce false positives in shadow analysis", "category": "LEARNING", "type": "technical-improvement"}
+{"text": "Allow deferred training scheduling instead of fixed 03:00 for hardware flexibility", "category": "LEARNING", "type": "infrastructure-resilience"}
+{"text": "Document what degrades without Pi Dream session continuity for memory-agnostic design transparency", "category": "LEARNING", "type": "design-documentation"}
+{"text": "Add data retention policies for shadow data with automatic purge after N days", "category": "LEARNING", "type": "privacy-governance"}
+{"text": "Implement user control over training inclusion with opt-in per category", "category": "LEARNING", "type": "user-autonomy"}
+{"text": "Create export capabilities for adapter weights and training data portability", "category": "LEARNING", "type": "data-portability"}
+{"text": "Add fallback when Ollama unavailable: pure CPU inference via llama.cpp direct", "category": "LEARNING", "type": "resilience-pattern"}
+{"text": "Document backup strategy for LoRA adapter weights: versioned checkpoints to ProtonDrive", "category": "LEARNING", "type": "disaster-recovery"}
