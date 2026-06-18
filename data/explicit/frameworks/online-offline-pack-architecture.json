@@ -1,0 +1,29 @@
+{
+  "type": "framework_capture",
+  "name": "online-offline-pack-architecture",
+  "description": "Split AI capabilities into online and offline packs with clear handoff protocols for connectivity continuity",
+  "steps": [
+    "Identify which capabilities require internet (APIs, cloud services, real-time data)",
+    "Identify which capabilities work locally (file search, local LLM, mesh networking)",
+    "Assign hounds to online pack (cloud-connected) or offline pack (local-first)",
+    "Create hybrid hounds for tasks that bridge both (scheduling, task queuing)",
+    "Design handoff protocols for transitions (online\u2192offline, offline\u2192online)",
+    "Establish surrogate roles (e.g., offline hound replaces online hound when disconnected)",
+    "Document connectivity requirements for each capability"
+  ],
+  "triggers": [
+    "designing for intermittent connectivity",
+    "need offline-capable AI system",
+    "backpacking or remote work scenario",
+    "building resilient distributed systems"
+  ],
+  "examples": [
+    "Online: Newton (arXiv), Tracker (OSINT databases), Budger (Alpaca API)",
+    "Offline: Toby (local files), Builder (mesh), Pupper (local LLM)",
+    "Hybrid: Corraler (queues online tasks, runs offline tasks always)",
+    "Surrogate: Pupper replaces Shepherd when offline",
+    "Handoff: Newton research flows to Toby for offline access"
+  ],
+  "captured_at": "2026-06-18T12:15:20.514641",
+  "version": "1.0"
+}

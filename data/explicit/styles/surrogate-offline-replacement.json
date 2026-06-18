@@ -1,0 +1,17 @@
+{
+  "type": "style_capture",
+  "name": "surrogate-offline-replacement",
+  "description": "Offline hound replaces online hound when connectivity lost, maintaining continuity with reduced capabilities",
+  "examples": [
+    "Pupper replaces Shepherd when offline \u2014 local LLM vs cloud-connected subagents",
+    "Pupper: fast, simple, enthusiastic \u2014 Shepherd: complex, multi-step, cloud tools",
+    "When internet drops: Corraler detects \u2192 activates Pupper \u2192 online hounds sleep",
+    "When internet returns: Pupper hands back to Shepherd \u2192 queued tasks execute",
+    "Surrogate knows limitations: 'Ask Newton when online' or 'Toby has cached research'"
+  ],
+  "tags": [
+    "surrogate,offline-continuity,failover,continuity-pattern"
+  ],
+  "captured_at": "2026-06-18T12:15:57.806104",
+  "version": "1.0"
+}

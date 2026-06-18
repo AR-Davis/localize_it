@@ -1,0 +1,16 @@
+{
+  "type": "style_capture",
+  "name": "investigation-verification-pipeline",
+  "description": "Two-stage investigation: Tracker finds and builds case, Flanker verifies and cross-checks before conclusion",
+  "examples": [
+    "Tracker finds evidence \u2192 builds case file \u2192 sends to Flanker \u2192 Flanker validates sources \u2192 confirms or returns for more",
+    "Tracker: persistent, follows the scent, builds corkboard of connections",
+    "Flanker: skeptical, checks twice, verifies before trusting",
+    "Handoff protocol: Tracker completes investigation \u2192 Flanker reviews \u2192 Case closed or reopened"
+  ],
+  "tags": [
+    "investigation,verification,two-stage,trust-but-verify"
+  ],
+  "captured_at": "2026-06-18T12:15:47.678475",
+  "version": "1.0"
+}

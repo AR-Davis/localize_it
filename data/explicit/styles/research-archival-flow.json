@@ -1,0 +1,16 @@
+{
+  "type": "style_capture",
+  "name": "research-archival-flow",
+  "description": "Pattern for flowing research from online retrieval to offline archives for continuous availability",
+  "examples": [
+    "Newton (online) retrieves arXiv paper \u2192 synthesizes \u2192 summarizes \u2192 Toby (offline) archives",
+    "Online research captured \u2192 condensed \u2192 stored locally \u2192 available when cloud disconnected",
+    "Research pipeline: retrieve \u2192 synthesize \u2192 simplify \u2192 archive \u2192 index",
+    "When internet returns: Newton's research automatically flows to Toby"
+  ],
+  "tags": [
+    "research-pipeline,offline-continuity,knowledge-management"
+  ],
+  "captured_at": "2026-06-18T12:15:37.602422",
+  "version": "1.0"
+}

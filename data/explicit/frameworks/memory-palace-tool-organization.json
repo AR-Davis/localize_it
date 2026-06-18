@@ -1,0 +1,29 @@
+{
+  "type": "framework_capture",
+  "name": "memory-palace-tool-organization",
+  "description": "Organize AI tools and capabilities using personas (memory palace / theater of mind) for terminal-native workflows without GUI dependency",
+  "steps": [
+    "Identify tool domains (research, code, fiscal, investigation, etc.)",
+    "Assign breed archetypes to each domain (Bloodhound for tracking, Pointer for research, etc.)",
+    "Create persona files with unique voice, skills, and memory anchors",
+    "Store in accessible location (e.g., ~/.pi/personas/{name}/)",
+    "Create WAKE files for current status and quick orientation",
+    "Summon by name for domain-specific tasks",
+    "Cross-reference personas for complex multi-domain work"
+  ],
+  "triggers": [
+    "too many tools to remember",
+    "need terminal-native tool discovery",
+    "working offline without GUI assistance",
+    "organizing complex AI assistant capabilities"
+  ],
+  "examples": [
+    "Newton (Pointer) for research \u2014 remember by 'points to knowledge'",
+    "Tracker (Coonhound) for investigation \u2014 remember by 'follows the scent'",
+    "Budger (Bloodhound) for trading \u2014 remember by 'tracks finance'",
+    "Wake up Newton \u2014 loads research context and arXiv capabilities",
+    "Wake up Tracker \u2014 loads OSINT databases and investigation pathways"
+  ],
+  "captured_at": "2026-06-18T12:14:59.862962",
+  "version": "1.0"
+}
