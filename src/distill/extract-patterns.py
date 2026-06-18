@@ -51,8 +51,80 @@ def extract_text(content):
     return ""
 
 
+def calculate_confidence(content, pattern_type, context_window=None):
+    """Calculate confidence score (0.0-1.0) for a detected pattern.
+    
+    Factors:
+    - Keyword match strength (exact vs partial)
+    - Context richness (surrounding words)
+    - Historical frequency (if available)
+    - Pattern specificity (generic vs specific)
+    """
+    confidence = 0.0
+    content_lower = content.lower()
+    
+    if pattern_type == "code_requests":
+        # Strong indicators: code/script/function + language
+        strong_indicators = ['python', 'bash', 'javascript', 'code', 'script', 'function']
+        medium_indicators = ['write', 'create', 'implement', 'build']
+        
+        if any(kw in content_lower for kw in strong_indicators):
+            confidence += 0.5
+        if any(kw in content_lower for kw in medium_indicators):
+            confidence += 0.3
+        # Check for code-like syntax
+        if any(char in content for char in ['()', '{}', '[]', '=', ';']):
+            confidence += 0.2
+            
+    elif pattern_type == "explain_requests":
+        # Strong: "what is X", "how does Y work"
+        strong_patterns = ['what is', 'how does', 'how do', 'why is']
+        medium_patterns = ['explain', 'what are', 'tell me about']
+        
+        if any(pat in content_lower for pat in strong_patterns):
+            confidence += 0.6
+        elif any(pat in content_lower for pat in medium_patterns):
+            confidence += 0.4
+        else:
+            confidence += 0.2  # Weak match
+            
+    elif pattern_type == "verify_requests":
+        # Strong: explicit verification language
+        strong_indicators = ['verify', 'confirm', 'check if', 'is this correct']
+        medium_indicators = ['is this right', 'does this work', 'can you check']
+        
+        if any(kw in content_lower for kw in strong_indicators):
+            confidence += 0.6
+        elif any(kw in content_lower for kw in medium_indicators):
+            confidence += 0.4
+        else:
+            confidence += 0.2
+            
+    elif pattern_type == "wake_requests":
+        # Strong: explicit wake/reorient
+        strong_indicators = ['wake up', 'where were we', 'remind me']
+        medium_indicators = ['reorient', 'catch me up', 'what were we doing']
+        
+        if any(kw in content_lower for kw in strong_indicators):
+            confidence += 0.7
+        elif any(kw in content_lower for kw in medium_indicators):
+            confidence += 0.4
+        else:
+            confidence += 0.2
+    
+    # Context richness bonus
+    if context_window and len(context_window) > 100:
+        confidence += 0.1  # More context = more confident
+    
+    # Length penalty (very short queries are less confident)
+    if len(content) < 20:
+        confidence -= 0.1
+    
+    return min(max(confidence, 0.0), 1.0)  # Clamp 0-1
+
+
 def extract_query_patterns(messages):
-    """Extract patterns from user queries."""
+    """Extract patterns from user queries with confidence scores."""
     patterns = defaultdict(list)
     
     for msg in messages:
@@ -64,37 +136,55 @@ def extract_query_patterns(messages):
         if not content:
             continue
         
+        content_lower = content.lower()
+        
         # Pattern: Code requests
-        if any(kw in content.lower() for kw in ['code', 'script', 'function', 'python', 'bash']):
-            patterns["code_requests"].append({
-                "timestamp": msg.get("timestamp"),
-                "query": content[:200],
-                "category": "implementation"
-            })
+        if any(kw in content_lower for kw in ['code', 'script', 'function', 'python', 'bash']):
+            confidence = calculate_confidence(content, "code_requests")
+            if confidence >= 0.3:  # Threshold
+                patterns["code_requests"].append({
+                    "timestamp": msg.get("timestamp"),
+                    "query": content[:200],
+                    "category": "implementation",
+                    "confidence": confidence,
+                    "confidence_level": "high" if confidence > 0.7 else "medium" if confidence > 0.5 else "low"
+                })
         
         # Pattern: Explain requests
-        if any(kw in content.lower() for kw in ['explain', 'what is', 'how does', 'why']):
-            patterns["explain_requests"].append({
-                "timestamp": msg.get("timestamp"),
-                "query": content[:200],
-                "category": "learning"
-            })
+        if any(kw in content_lower for kw in ['explain', 'what is', 'how does', 'why']):
+            confidence = calculate_confidence(content, "explain_requests")
+            if confidence >= 0.3:
+                patterns["explain_requests"].append({
+                    "timestamp": msg.get("timestamp"),
+                    "query": content[:200],
+                    "category": "learning",
+                    "confidence": confidence,
+                    "confidence_level": "high" if confidence > 0.7 else "medium" if confidence > 0.5 else "low"
+                })
         
         # Pattern: Check/verify requests
-        if any(kw in content.lower() for kw in ['check', 'verify', 'confirm', 'is this right']):
-            patterns["verify_requests"].append({
-                "timestamp": msg.get("timestamp"),
-                "query": content[:200],
-                "category": "verification"
-            })
+        if any(kw in content_lower for kw in ['check', 'verify', 'confirm', 'is this right']):
+            confidence = calculate_confidence(content, "verify_requests")
+            if confidence >= 0.3:
+                patterns["verify_requests"].append({
+                    "timestamp": msg.get("timestamp"),
+                    "query": content[:200],
+                    "category": "verification",
+                    "confidence": confidence,
+                    "confidence_level": "high" if confidence > 0.7 else "medium" if confidence > 0.5 else "low"
+                })
         
         # Pattern: Wake/reorient requests
-        if any(kw in content.lower() for kw in ['wake up', 'reorient', 'where were we', 'remind me']):
-            patterns["wake_requests"].append({
-                "timestamp": msg.get("timestamp"),
-                "query": content[:200],
-                "category": "continuity"
-            })
+        if any(kw in content_lower for kw in ['wake up', 'reorient', 'where were we', 'remind me']):
+            confidence = calculate_confidence(content, "wake_requests")
+            if confidence >= 0.3:
+                patterns["wake_requests"].append({
+                    "timestamp": msg.get("timestamp"),
+                    "query": content[:200],
+                    "category": "continuity",
+                    "confidence": confidence,
+                    "confidence_level": "high" if confidence > 0.7 else "medium" if confidence > 0.5 else "low"
+                })
     
     return dict(patterns)
 
@@ -156,15 +246,45 @@ def extract_follow_up_patterns(messages):
     return corrections
 
 
+def calculate_pattern_statistics(patterns):
+    """Calculate confidence statistics for patterns."""
+    stats = {}
+    
+    for pattern_type, items in patterns.items():
+        if not items:
+            continue
+            
+        confidences = [item.get("confidence", 0) for item in items]
+        high_conf = len([c for c in confidences if c >= 0.7])
+        med_conf = len([c for c in confidences if 0.5 <= c < 0.7])
+        low_conf = len([c for c in confidences if c < 0.5])
+        
+        stats[pattern_type] = {
+            "count": len(items),
+            "avg_confidence": sum(confidences) / len(confidences) if confidences else 0,
+            "high_confidence": high_conf,
+            "medium_confidence": med_conf,
+            "low_confidence": low_conf,
+            "confidence_threshold": 0.3,
+            "reliable_patterns": high_conf  # Patterns we can trust
+        }
+    
+    return stats
+
+
 def calculate_pattern_frequency(patterns):
     """Calculate frequency scores for patterns."""
     frequencies = {}
     
     for pattern_type, items in patterns.items():
         if isinstance(items, list):
+            # Only count high confidence patterns for frequency
+            high_conf_items = [i for i in items if i.get("confidence", 0) >= 0.5]
+            
             frequencies[pattern_type] = {
                 "count": len(items),
-                "frequency": "high" if len(items) > 10 else "medium" if len(items) > 3 else "low"
+                "high_confidence_count": len(high_conf_items),
+                "frequency": "high" if len(high_conf_items) > 10 else "medium" if len(high_conf_items) > 3 else "low"
             }
     
     return frequencies
@@ -191,24 +311,45 @@ def main():
     print("Extracting follow-up patterns...")
     follow_ups = extract_follow_up_patterns(messages)
     
-    print("Calculating frequencies...")
+    print("Calculating frequencies and confidence statistics...")
     frequencies = calculate_pattern_frequency(query_patterns)
+    confidence_stats = calculate_pattern_statistics(query_patterns)
+    
+    # Filter to only high-confidence patterns for insights
+    reliable_patterns = {
+        k: [i for i in v if i.get("confidence", 0) >= 0.5] 
+        for k, v in query_patterns.items()
+    }
     
     output = {
         "extraction_timestamp": datetime.now().isoformat(),
         "input_files": len(list(Path(args.input).glob("*.jsonl"))),
         "total_messages": len(messages),
+        "confidence_settings": {
+            "threshold": 0.3,
+            "high_threshold": 0.7,
+            "medium_threshold": 0.5,
+            "filter_applied": True
+        },
         "patterns": {
             "query_patterns": query_patterns,
             "tool_patterns": tool_patterns,
             "follow_ups": follow_ups
         },
         "frequencies": frequencies,
+        "confidence_statistics": confidence_stats,
         "insights": {
-            "primary_mode": max(frequencies.items(), key=lambda x: x[1]["count"])[0] if frequencies else "unknown",
+            "primary_mode": max(frequencies.items(), key=lambda x: x[1].get("high_confidence_count", 0))[0] if frequencies else "unknown",
             "correction_rate": len(follow_ups) / len(messages) * 100 if messages else 0,
-            "tool_diversity": len(tool_patterns)
-        }
+            "tool_diversity": len(tool_patterns),
+            "reliable_patterns_count": sum(len([i for i in items if i.get("confidence", 0) >= 0.5]) for items in query_patterns.values()),
+            "avg_confidence": sum(s.get("avg_confidence", 0) for s in confidence_stats.values()) / len(confidence_stats) if confidence_stats else 0
+        },
+        "recommendations": [
+            f"Found {sum(s['high_confidence'] for s in confidence_stats.values())} high-confidence patterns for training",
+            f"Filtered out {sum(s['low_confidence'] for s in confidence_stats.values())} low-confidence patterns",
+            "Review medium-confidence patterns before including in training"
+        ]
     }
     
     # Ensure output directory exists
@@ -222,7 +363,16 @@ def main():
     print(f"  - Query patterns: {len(query_patterns)} types")
     print(f"  - Tool patterns: {len(tool_patterns)} tools")
     print(f"  - Follow-ups: {len(follow_ups)} corrections/elaborations")
-    print(f"  - Primary interaction mode: {output['insights']['primary_mode']}")
+    print(f"\n📊 Confidence Statistics:")
+    for pattern_type, stats in confidence_stats.items():
+        print(f"    {pattern_type}: {stats['count']} patterns")
+        print(f"      High (≥0.7): {stats['high_confidence']}")
+        print(f"      Medium (0.5-0.7): {stats['medium_confidence']}")
+        print(f"      Low (<0.5): {stats['low_confidence']}")
+        print(f"      Avg confidence: {stats['avg_confidence']:.2f}")
+    print(f"\n🎯 Primary interaction mode: {output['insights']['primary_mode']}")
+    print(f"✅ Reliable patterns (≥0.5): {output['insights']['reliable_patterns_count']}")
+    print(f"📈 Average confidence: {output['insights']['avg_confidence']:.2f}")
 
 
 if __name__ == "__main__":

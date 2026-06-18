@@ -1,0 +1,28 @@
+{
+  "type": "framework_capture",
+  "name": "confidence-scored-pattern-detection",
+  "description": "Add confidence scores to pattern detection to reduce false positives and identify reliable training patterns",
+  "steps": [
+    "Define confidence calculation function (0.0-1.0) based on keyword strength, context, specificity",
+    "Set confidence threshold (e.g., \u22650.3) for pattern inclusion",
+    "Calculate confidence per pattern instance",
+    "Categorize into levels: high (\u22650.7), medium (0.5-0.7), low (<0.5)",
+    "Generate statistics: avg confidence, distribution per pattern type",
+    "Filter to reliable patterns (\u22650.5) for training data",
+    "Report recommendations: which patterns are trustworthy"
+  ],
+  "triggers": [
+    "high false positive rate in pattern detection",
+    "need to identify reliable patterns for training",
+    "shadow analysis producing too much noise",
+    "want confidence-weighted pattern matching"
+  ],
+  "examples": [
+    "'Write Python function' \u2192 code_requests @ 0.80 (high confidence)",
+    "'Hi' \u2192 explain_requests @ 0.10 (filtered out, below threshold)",
+    "'What is machine learning' \u2192 explain_requests @ 0.60 (medium, review before training)",
+    "Statistics: 45 high-confidence, 30 medium, 25 low (filtered)"
+  ],
+  "captured_at": "2026-06-18T16:20:53.595933",
+  "version": "1.0"
+}
