@@ -1,0 +1,10 @@
+{"text": "Can you access ProtonDrive?", "category": "META", "type": "capability-check"}
+{"text": "Are you able to connect to GitHub?", "category": "META", "type": "capability-check"}
+{"text": "Can you process this file?", "category": "META", "type": "capability-check"}
+{"text": "Do you have access to the trading API?", "category": "META", "type": "permission-check"}
+{"text": "Can you run Python scripts?", "category": "META", "type": "capability-check"}
+{"text": "Are you connected to the internet?", "category": "META", "type": "connectivity-check"}
+{"text": "Can you see my files?", "category": "META", "type": "visibility-check"}
+{"text": "Do you have enough disk space?", "category": "META", "type": "resource-check"}
+{"text": "Can you send notifications?", "category": "META", "type": "capability-check"}
+{"text": "Are you operational?", "category": "META", "type": "status-check"}

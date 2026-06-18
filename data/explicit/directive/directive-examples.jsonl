@@ -1,0 +1,10 @@
+{"text": "Execute the trade now", "category": "DIRECTIVE", "type": "immediate-action"}
+{"text": "Stop all trading immediately", "category": "DIRECTIVE", "type": "halt"}
+{"text": "Deploy the new version to production", "category": "DIRECTIVE", "type": "deployment"}
+{"text": "Cancel that order", "category": "DIRECTIVE", "type": "cancellation"}
+{"text": "Run the backtest with these parameters", "category": "DIRECTIVE", "type": "execution"}
+{"text": "Send me the report by end of day", "category": "DIRECTIVE", "type": "deadline"}
+{"text": "Update the configuration file", "category": "DIRECTIVE", "type": "modification"}
+{"text": "Restart the service", "category": "DIRECTIVE", "type": "restart"}
+{"text": "Archive these logs", "category": "DIRECTIVE", "type": "maintenance"}
+{"text": "Enable paper trading mode", "category": "DIRECTIVE", "type": "mode-change"}

@@ -1,0 +1,10 @@
+{"text": "What do you think about this?", "category": "OTHER", "type": "opinion-request"}
+{"text": "Any thoughts on the market today?", "category": "OTHER", "type": "general-inquiry"}
+{"text": "What's your take on this strategy?", "category": "OTHER", "type": "feedback-request"}
+{"text": "Random question — what's the weather like?", "category": "OTHER", "type": "off-topic"}
+{"text": "Can you help me understand something?", "category": "OTHER", "type": "vague-request"}
+{"text": "I have a problem", "category": "OTHER", "type": "unspecified-issue"}
+{"text": "Tell me something interesting", "category": "OTHER", "type": "open-ended"}
+{"text": "What's new?", "category": "OTHER", "type": "status-inquiry"}
+{"text": "How would you approach this?", "category": "OTHER", "type": "methodology-inquiry"}
+{"text": "Any recommendations?", "category": "OTHER", "type": "suggestion-request"}

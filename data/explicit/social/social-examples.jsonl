@@ -1,0 +1,10 @@
+{"text": "Hey, how are you doing today?", "category": "SOCIAL", "type": "greeting"}
+{"text": "Good morning! Hope you're doing well.", "category": "SOCIAL", "type": "greeting"}
+{"text": "Thanks for all your help yesterday", "category": "SOCIAL", "type": "gratitude"}
+{"text": "Have a great weekend!", "category": "SOCIAL", "type": "farewell"}
+{"text": "Nice work on that project", "category": "SOCIAL", "type": "praise"}
+{"text": "How's everything going?", "category": "SOCIAL", "type": "check-in"}
+{"text": "Long time no talk!", "category": "SOCIAL", "type": "reconnection"}
+{"text": "Appreciate you taking the time", "category": "SOCIAL", "type": "gratitude"}
+{"text": "Happy holidays!", "category": "SOCIAL", "type": "seasonal"}
+{"text": "See you later", "category": "SOCIAL", "type": "farewell"}

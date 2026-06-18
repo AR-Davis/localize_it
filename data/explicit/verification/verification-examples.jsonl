@@ -1,0 +1,10 @@
+{"text": "Did you verify that contact information?", "category": "VERIFICATION", "type": "confirmation-request"}
+{"text": "Can you confirm the account balance?", "category": "VERIFICATION", "type": "data-verification"}
+{"text": "Is this trade executed?", "category": "VERIFICATION", "type": "status-check"}
+{"text": "Did the deployment complete successfully?", "category": "VERIFICATION", "type": "completion-check"}
+{"text": "Can you double-check those numbers?", "category": "VERIFICATION", "type": "accuracy-check"}
+{"text": "Is the sync working?", "category": "VERIFICATION", "type": "functionality-check"}
+{"text": "Did you receive my last message?", "category": "VERIFICATION", "type": "receipt-check"}
+{"text": "Can you validate this API key?", "category": "VERIFICATION", "type": "credential-check"}
+{"text": "Is Tailscale connected on all nodes?", "category": "VERIFICATION", "type": "connectivity-check"}
+{"text": "Did the backup complete?", "category": "VERIFICATION", "type": "backup-verification"}

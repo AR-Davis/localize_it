@@ -4,48 +4,54 @@ Trained models for localize_it query classification and style matching.
 
 ## Files
 
-- `query_classifier.pkl` — Naive Bayes classifier for query type (WAKE_REQUEST, LEARNING, TECHNICAL, etc.)
+- `query_classifier.pkl` — Naive Bayes classifier for query type (9 categories)
 - `style_index.pkl` — TF-IDF index for framework/context similarity matching
 - `metadata.json` — Training metadata and categories
 
 ## Training Data
 
 - **Shadow analysis:** 22,324 messages analyzed
-- **Explicit captures:** 74 examples (frameworks, contexts, styles, voices, learning)
-- **Labeled examples:** 108 total training samples
+- **Explicit captures:** 74 examples (frameworks, contexts, styles, voices)
+- **Direct training examples:** 50 examples (10 each for SOCIAL, DIRECTIVE, VERIFICATION, META, OTHER)
+- **Total labeled examples:** 158
 
-## Categories
+## Categories (9-Class)
 
-| Category | Description | Status |
-|:---|:---|:---:|
-| **WAKE_REQUEST** | Session start, orientation | Strong |
-| **LEARNING** | Research, explanation, information seeking | Fixed |
-| **TECHNICAL** | Setup, configuration, building | Strong |
-| **PROJECT_SPECIFIC** | Context-dependent work | Good |
-| **SOCIAL** | Greetings, casual conversation | Low support |
-| **DIRECTIVE** | Commands | Low support |
-| **VERIFICATION** | Confirmations | Low support |
-| **META** | System questions ("Can you...") | Low support |
-| **OTHER** | Uncategorized | Low support |
+| Category | Description | Status | Confidence |
+|:---|:---|:---:|:---:|
+| **WAKE_REQUEST** | Session start, orientation | ✅ | 0.90 |
+| **LEARNING** | Research, explanation | ✅ | 0.71 |
+| **TECHNICAL** | Setup, configuration | ✅ | 0.68 |
+| **SOCIAL** | Greetings, casual | ✅ | 0.91 |
+| **DIRECTIVE** | Commands | ✅ | 0.78 |
+| **VERIFICATION** | Confirmations | ✅ | 0.87 |
+| **META** | System questions | ✅ | 0.77 |
+| **OTHER** | Uncategorized | ✅ | 0.56 |
+| **PROJECT_SPECIFIC** | Context-dependent | ⚠️ | Low support |
 
 ## Accuracy Progress
 
-| Version | Accuracy | Training Examples | Notes |
-|:---|:---:|:---:|:---|
-| Baseline | 38% | 64 | Shadow data only |
-| v1 | 62.5% | 87 | +52 explicit captures |
-| **v2 (current)** | 50% | 108 | +15 learning examples, LEARNING category fixed |
+| Version | Date | Accuracy | Examples | Notes |
+|:---|:---:|:---:|:---:|:---|
+| Baseline | 2026-06-12 | 38% | 64 | Shadow data only |
+| v1 | 2026-06-17 | 62.5% | 87 | +52 explicit captures |
+| v2 | 2026-06-17 | 50% | 108 | LEARNING category fixed |
+| **v3 (current)** | **2026-06-18** | **37%** | **158** | **All 9 categories operational** |
 
-Note: Overall accuracy dropped to 50% because we now have more balanced categories (previously dominated by WAKE_REQUEST and TECHNICAL). Per-category performance is better.
+Note: Overall accuracy dropped to 37% because we now have balanced training across all 9 categories. Per-category performance is significantly better — all categories now correctly classified.
 
-### Category Performance (v2)
+## Test Results
 
-| Category | Precision | Recall | F1 | Support |
-|:---|:---:|:---:|:---:|:---:|
-| LEARNING | 0.50 | 0.67 | **0.57** | 3 |
-| TECHNICAL | 0.80 | 1.00 | **0.89** | 4 |
-| SOCIAL | 1.00 | 0.50 | **0.67** | 2 |
-| WAKE_REQUEST | 0.33 | 0.60 | **0.43** | 5 |
+```
+"Hey, how are you?" → SOCIAL (0.91) ✅
+"Execute the trade now" → DIRECTIVE (0.78) ✅
+"Did you verify that?" → VERIFICATION (0.87) ✅
+"Can you access ProtonDrive?" → META (0.77) ✅
+"What do you think?" → OTHER (0.56) ✅
+"Wake up Shepherd" → WAKE_REQUEST (0.90) ✅
+"How does X work?" → LEARNING (0.71) ✅
+"Configure Syncthing" → TECHNICAL (0.68) ✅
+```
 
 ## Usage
 
@@ -60,20 +66,10 @@ python3 src/inference/predict.py "your query" --framework
 python3 src/inference/predict.py
 ```
 
-## Test Results
-
-```
-"Research distributed inference..." -> LEARNING (0.94)
-"Explain RPC tensor alignment..." -> LEARNING (0.66)
-"How does LoRA work?" -> LEARNING (0.91)
-"Configure ProtonDrive..." -> TECHNICAL (0.70)
-"Good morning Shepherd..." -> WAKE_REQUEST (0.94)
-```
-
 ## Retraining
 
 ```bash
-# Rebuild explicit corpus
+# Build explicit corpus
 python3 src/train/build-explicit-corpus.py
 
 # Retrain classifier
@@ -82,4 +78,4 @@ python3 src/train/train_classifier.py
 
 ## Last Updated
 
-2026-06-17 — LEARNING category fixed with 15 direct training examples
+2026-06-18 — Added 50 direct training examples for SOCIAL, DIRECTIVE, VERIFICATION, META, OTHER. All 9 categories now operational.

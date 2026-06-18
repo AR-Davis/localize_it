@@ -84,6 +84,16 @@ def load_training_data() -> Tuple[List[str], List[str]]:
                 texts.append(example.get("text", ""))
                 labels.append(example.get("category", "LEARNING"))
     
+    # Direct training examples for underrepresented categories
+    for category in ["social", "directive", "verification", "meta", "other"]:
+        examples_file = EXPLICIT_DIR / category / f"{category}-examples.jsonl"
+        if examples_file.exists():
+            for line in examples_file.read_text().strip().split('\n'):
+                if line:
+                    example = json.loads(line)
+                    texts.append(example.get("text", ""))
+                    labels.append(example.get("category", category.upper()))
+    
     return texts, labels
 
 
