@@ -1,0 +1,112 @@
+[
+  {
+    "concept_a": "config",
+    "concept_b": "docker",
+    "weight": 1.0,
+    "first_seen": "2026-06-19T12:43:47.114021",
+    "last_seen": "2026-06-19T12:43:47.114021",
+    "contexts": [
+      "capture_0"
+    ],
+    "emotional_weight": 1.0
+  },
+  {
+    "concept_a": "config",
+    "concept_b": "working",
+    "weight": 1.0,
+    "first_seen": "2026-06-19T12:43:47.114021",
+    "last_seen": "2026-06-19T12:43:47.114021",
+    "contexts": [
+      "capture_0"
+    ],
+    "emotional_weight": 1.0
+  },
+  {
+    "concept_a": "config",
+    "concept_b": "yaml",
+    "weight": 1.0,
+    "first_seen": "2026-06-19T12:43:47.114021",
+    "last_seen": "2026-06-19T12:43:47.114021",
+    "contexts": [
+      "capture_0"
+    ],
+    "emotional_weight": 1.0
+  },
+  {
+    "concept_a": "docker",
+    "concept_b": "working",
+    "weight": 1.0,
+    "first_seen": "2026-06-19T12:43:47.114021",
+    "last_seen": "2026-06-19T12:43:47.114021",
+    "contexts": [
+      "capture_0"
+    ],
+    "emotional_weight": 1.0
+  },
+  {
+    "concept_a": "docker",
+    "concept_b": "yaml",
+    "weight": 1.0,
+    "first_seen": "2026-06-19T12:43:47.114021",
+    "last_seen": "2026-06-19T12:43:47.114021",
+    "contexts": [
+      "capture_0"
+    ],
+    "emotional_weight": 1.0
+  },
+  {
+    "concept_a": "working",
+    "concept_b": "yaml",
+    "weight": 1.0,
+    "first_seen": "2026-06-19T12:43:47.114021",
+    "last_seen": "2026-06-19T12:43:47.114021",
+    "contexts": [
+      "capture_0"
+    ],
+    "emotional_weight": 1.0
+  },
+  {
+    "concept_a": "docker",
+    "concept_b": "dockerfile",
+    "weight": 1.0,
+    "first_seen": "2026-06-19T12:43:47.114070",
+    "last_seen": "2026-06-19T12:43:47.114070",
+    "contexts": [
+      "capture_1"
+    ],
+    "emotional_weight": 1.0
+  },
+  {
+    "concept_a": "docker",
+    "concept_b": "multi-stage",
+    "weight": 1.0,
+    "first_seen": "2026-06-19T12:43:47.114070",
+    "last_seen": "2026-06-19T12:43:47.114070",
+    "contexts": [
+      "capture_1"
+    ],
+    "emotional_weight": 1.0
+  },
+  {
+    "concept_a": "dockerfile",
+    "concept_b": "multi-stage",
+    "weight": 1.0,
+    "first_seen": "2026-06-19T12:43:47.114070",
+    "last_seen": "2026-06-19T12:43:47.114070",
+    "contexts": [
+      "capture_1"
+    ],
+    "emotional_weight": 1.0
+  },
+  {
+    "concept_a": "docker",
+    "concept_b": "python",
+    "weight": 1.0,
+    "first_seen": "2026-06-19T12:43:47.114102",
+    "last_seen": "2026-06-19T12:43:47.114102",
+    "contexts": [
+      "capture_3"
+    ],
+    "emotional_weight": 1.0
+  }
+]

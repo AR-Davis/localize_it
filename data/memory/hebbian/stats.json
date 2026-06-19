@@ -1,0 +1,35 @@
+{
+  "nodes": 7,
+  "edges": 10,
+  "avg_weight": 1.0,
+  "top_concepts": [
+    [
+      "docker",
+      6
+    ],
+    [
+      "config",
+      3
+    ],
+    [
+      "yaml",
+      3
+    ],
+    [
+      "working",
+      3
+    ],
+    [
+      "dockerfile",
+      2
+    ],
+    [
+      "multi-stage",
+      2
+    ],
+    [
+      "python",
+      1
+    ]
+  ]
+}
