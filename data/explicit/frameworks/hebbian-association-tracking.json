@@ -1,0 +1,27 @@
+{
+  "type": "framework_capture",
+  "name": "hebbian-association-tracking",
+  "description": "Track concept co-occurrence to suggest related contexts: 'Cells that fire together, wire together'. Complements TF-IDF by finding implicit connections between concepts.",
+  "steps": [
+    "Initialize empty association graph: {(concept_a, concept_b): weight}",
+    "When concepts co-occur in same capture: reinforce(pair, weight=1.0, context)",
+    "Weight increases with repeated co-occurrence across captures",
+    "Retrieve related concepts: graph.walk_from(query, depth=2, min_weight)",
+    "Hybrid retrieval: combine TF-IDF similarity (0.7) + associations (0.3)",
+    "Suggest context: given 'docker', suggest ['compose', 'yaml', 'container']"
+  ],
+  "triggers": [
+    "user mentions concept, suggest historically related concepts",
+    "TF-IDF finds similar text but misses implicit connections",
+    "need to find concepts mentioned in same contexts (different vocabulary)",
+    "building knowledge graphs from capture corpus"
+  ],
+  "examples": [
+    "Capture: 'docker compose yaml config' \u2192 reinforce(docker, compose), (docker, yaml), (compose, yaml)",
+    "Query: 'docker' \u2192 related: ['compose', 'yaml', 'container', 'kubernetes']",
+    "Walk depth=2 from 'docker': ['compose', 'yaml', 'container', 'swarm']",
+    "Hybrid search: TF-IDF similarity 0.8 + association bonus 0.2 = 1.0"
+  ],
+  "captured_at": "2026-06-19T11:31:12.078169",
+  "version": "1.0"
+}

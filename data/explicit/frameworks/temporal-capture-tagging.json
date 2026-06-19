@@ -1,0 +1,27 @@
+{
+  "type": "framework_capture",
+  "name": "temporal-capture-tagging",
+  "description": "Auto-tag captures with temporal state (past/present/future) to improve retrieval relevance and enable time-aware queries",
+  "steps": [
+    "Define temporal states: past (complete, archived, learned), present (active, building, current), future (plan, upcoming, awaiting)",
+    "Create keyword detection rules for auto-classification",
+    "Tag each capture with temporal_state and confidence",
+    "Store temporal classification in capture metadata",
+    "Enable temporal-aware queries: prioritize 'present' for active work, 'past' for history",
+    "Use as secondary sort key after relevance score"
+  ],
+  "triggers": [
+    "user asks 'what am I building?' (prioritize present)",
+    "user asks 'what did I complete?' (filter to past)",
+    "session consolidation needs temporal context",
+    "project state tracking across sessions"
+  ],
+  "examples": [
+    "'Complete the auth module' \u2192 temporal: past, confidence: 0.9",
+    "'Building a new trading bot' \u2192 temporal: present, confidence: 0.85",
+    "'Plan to refactor next week' \u2192 temporal: future, confidence: 0.8",
+    "Query 'active projects' \u2192 filter temporal=present, sort by confidence"
+  ],
+  "captured_at": "2026-06-19T11:30:25.665566",
+  "version": "1.0"
+}
