@@ -20,9 +20,23 @@ from pathlib import Path
 from datetime import datetime
 from typing import Optional
 
+# Add src to path for background enrichment
+sys.path.insert(0, '/home/kinch/Projects/localize_it/src')
+
 PROJECT_DIR = Path.home() / "Projects" / "localize_it"
 DATA_DIR = PROJECT_DIR / "data"
 LOG_FILE = DATA_DIR / "localize" / "entries.jsonl"
+
+# Background enricher (lazy-loaded)
+_enricher = None
+
+def get_enricher():
+    """Lazy-load the enricher only when needed."""
+    global _enricher
+    if _enricher is None:
+        from pipeline.automatic_enrichment import AutomaticEnricher
+        _enricher = AutomaticEnricher()
+    return _enricher
 
 
 def ensure_dirs():
@@ -65,7 +79,7 @@ def ask_multiple_choice(question: str, options: list, allow_custom: bool = True)
 
 
 def capture_structured_entry(raw_input: str, category: str, structured_data: dict):
-    """Capture entry with structured data for corpus building."""
+    """Capture entry with structured data and automatic enrichment."""
     
     entry = {
         "timestamp": datetime.now().isoformat(),
@@ -77,12 +91,19 @@ def capture_structured_entry(raw_input: str, category: str, structured_data: dic
     # Merge structured data
     entry.update(structured_data)
     
+    # BACKGROUND ENRICHMENT
+    try:
+        enricher = get_enricher()
+        entry = enricher.enrich_capture(entry)
+    except Exception:
+        pass
+    
     # Save to localize log
     ensure_dirs()
     with open(LOG_FILE, 'a') as f:
         f.write(json.dumps(entry) + '\n')
     
-    # Also route to appropriate tier storage
+    # Route to appropriate tier storage
     if category == "preference":
         _save_to_intraday("preferences", entry)
     elif category == "pattern":
@@ -102,7 +123,7 @@ def capture_structured_entry(raw_input: str, category: str, structured_data: dic
 
 
 def capture_entry(raw_input: str, category: str, subcategory: Optional[str] = None, tags: list = None):
-    """Capture the localized entry to appropriate storage (legacy)."""
+    """Capture the localized entry with automatic background enrichment."""
     
     entry = {
         "timestamp": datetime.now().isoformat(),
@@ -112,6 +133,14 @@ def capture_entry(raw_input: str, category: str, subcategory: Optional[str] = No
         "tags": tags or [],
         "processed": False
     }
+    
+    # BACKGROUND ENRICHMENT (no user action required)
+    try:
+        enricher = get_enricher()
+        entry = enricher.enrich_capture(entry)
+    except Exception as e:
+        # Fail silently - enrichment is optional
+        pass
     
     # Save to localize log
     ensure_dirs()
@@ -434,6 +463,59 @@ def list_recent(n: int = 10):
         print(f"\n[{ts}] {cat}: \"{text}...\"")
 
 
+def search_with_context(query: str, prefer_present: bool = True):
+    """Search captures using temporal + Hebbian enrichment."""
+    from pipeline.enhanced_retrieval import EnhancedRetriever
+    
+    retriever = EnhancedRetriever()
+    results = retriever.search(query, prefer_present=prefer_present)
+    
+    if not results:
+        print("No results found.")
+        return
+    
+    print(f"\nResults for: \"{query}\"")
+    print("=" * 60)
+    
+    for i, result in enumerate(results[:10], 1):
+        cap = result['capture']
+        score = result['score']
+        temporal = result.get('temporal_state', 'unknown')
+        hebbian = '✓' if result.get('hebbian_boost') else ' '
+        temporal_mark = '●' if temporal == 'present' else '○'
+        
+        content = cap.get('content', cap.get('raw_input', ''))[:70]
+        cat = cap.get('category', 'unknown')
+        
+        print(f"\n{i}. [{cat}] {content}...")
+        print(f"   Score: {score:.2f} {temporal_mark} {temporal} [Hebbian: {hebbian}]")
+
+
+def what_am_i_building():
+    """Show present-temporal captures — auto-filtered active work."""
+    from pipeline.enhanced_retrieval import EnhancedRetriever
+    
+    retriever = EnhancedRetriever()
+    present = retriever.get_present_work()
+    
+    if not present:
+        print("No active work detected. Try 'localize --search building'.")
+        return
+    
+    print("\n🔨 What you're actively building (temporal=present):")
+    print("=" * 60)
+    
+    for i, cap in enumerate(present[:10], 1):
+        content = cap.get('content', cap.get('raw_input', ''))[:70]
+        conf = cap.get('temporal', {}).get('confidence', 0)
+        cat = cap.get('category', 'unknown')
+        ts = cap.get('timestamp', '')[:10]
+        
+        print(f"\n{i}. [{cat}] {ts}")
+        print(f"   {content}...")
+        print(f"   Confidence: {conf:.0%}")
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="LOCALIZE — Capture anything for your personal AI",
@@ -459,6 +541,16 @@ def main():
         action="store_true",
         help="Show system status"
     )
+    parser.add_argument(
+        "--search", "-s",
+        metavar="QUERY",
+        help="Search captures (temporal + Hebbian enhanced)"
+    )
+    parser.add_argument(
+        "--building", "-b",
+        action="store_true",
+        help="What am I actively building? (temporal=present)"
+    )
     
     args = parser.parse_args()
     
@@ -471,8 +563,25 @@ def main():
         if LOG_FILE.exists():
             count = sum(1 for _ in open(LOG_FILE))
             print(f"Total entries: {count}")
+            
+            # Show enrichment stats
+            try:
+                from pipeline.enhanced_retrieval import EnhancedRetriever
+                retriever = EnhancedRetriever()
+                present = retriever.get_present_work()
+                print(f"Active work items: {len(present)}")
+            except:
+                pass
         else:
             print("Total entries: 0")
+        return
+    
+    if args.search:
+        search_with_context(args.search)
+        return
+    
+    if args.building:
+        what_am_i_building()
         return
     
     if args.list:

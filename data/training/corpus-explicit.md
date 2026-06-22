@@ -1,13 +1,13 @@
 # Explicit Corpus Report
-Generated: 2026-06-19T03:00:06.089147
+Generated: 2026-06-22T03:00:05.944035
 
 ## Sources
 - styles: 17
-- frameworks: 24
+- frameworks: 26
 - contexts: 13
 - voices: 13
 
-## System Prompt Additions (75)
+## System Prompt Additions (77)
 
 ### style_profile: Structured Documentation
 
@@ -611,6 +611,40 @@ Use when: high false positive rate in pattern detection, need to identify reliab
 
 ---
 
+### decision_framework: temporal-capture-tagging
+
+Framework: temporal-capture-tagging
+Auto-tag captures with temporal state (past/present/future) to improve retrieval relevance and enable time-aware queries
+
+Steps:
+1. Define temporal states: past (complete, archived, learned), present (active, building, current), future (plan, upcoming, awaiting)
+2. Create keyword detection rules for auto-classification
+3. Tag each capture with temporal_state and confidence
+4. Store temporal classification in capture metadata
+5. Enable temporal-aware queries: prioritize 'present' for active work, 'past' for history
+6. Use as secondary sort key after relevance score
+
+Use when: user asks 'what am I building?' (prioritize present), user asks 'what did I complete?' (filter to past), session consolidation needs temporal context, project state tracking across sessions
+
+---
+
+### decision_framework: hebbian-association-tracking
+
+Framework: hebbian-association-tracking
+Track concept co-occurrence to suggest related contexts: 'Cells that fire together, wire together'. Complements TF-IDF by finding implicit connections between concepts.
+
+Steps:
+1. Initialize empty association graph: {(concept_a, concept_b): weight}
+2. When concepts co-occur in same capture: reinforce(pair, weight=1.0, context)
+3. Weight increases with repeated co-occurrence across captures
+4. Retrieve related concepts: graph.walk_from(query, depth=2, min_weight)
+5. Hybrid retrieval: combine TF-IDF similarity (0.7) + associations (0.3)
+6. Suggest context: given 'docker', suggest ['compose', 'yaml', 'container']
+
+Use when: user mentions concept, suggest historically related concepts, TF-IDF finds similar text but misses implicit connections, need to find concepts mentioned in same contexts (different vocabulary), building knowledge graphs from capture corpus
+
+---
+
 ### project_context: ProtonDrive CLI
 
 Project Context: ProtonDrive CLI
@@ -900,11 +934,11 @@ Formality: Formal
 - Casual markers: 0.08%
 
 Code Preference: Balanced
-- Code requests: 114
+- Code requests: 115
 - Explanation requests: 116
 
 Verbosity: Moderate
-- Average words per message: 44.4
+- Average words per message: 44.5
 
 Structure: Highly Structured
 - Prefers lists/tables: 90%
