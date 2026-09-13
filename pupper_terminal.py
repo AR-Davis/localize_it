@@ -162,11 +162,13 @@ def gather_context(intent: str, query: str) -> str:
         ctx_parts.append(run_cmd([str(HOME_BIN / "sys-doctor")], timeout=20))
 
     elif intent == "search":
-        # Strip common search prefixes repeatedly until stable
+        # Strip common search prefixes and suffixes repeatedly until stable
         term = query.strip()
         prefixes = r'^(find my|search my|where is my|where are my|find|search|notes on|notes about|grep|document about|file with|file about)\s*'
+        suffixes = r'\s*(?:files?|notes?|documents?|folders?|stuff|things?|my|the)\s*$'
         for _ in range(3):
             new_term = re.sub(prefixes, '', term, flags=re.I).strip()
+            new_term = re.sub(suffixes, '', new_term, flags=re.I).strip()
             new_term = re.sub(r'[?.!]+$', '', new_term).strip()
             if new_term == term:
                 break
