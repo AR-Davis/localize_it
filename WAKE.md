@@ -44,8 +44,9 @@ cd ~/.pi/personas/pupper && python3 pupper_terminal.py
 | Kennel health | `kennel-doctor`, `sys-doctor`, `kennel-status` |
 | Trading status | `budger-watch` |
 | File search | `toby-query`, `notes-grep` |
-| Tool inventory | Tinker inventory / access-lines.json |
+| Tool inventory | `tinker-check` / access-lines.json |
 | Full overview | `kennel-status` |
+| Weekly maintenance | `~/.pi/skills/kennel/cron/weekly-kennel.sh` |
 
 ## Intents Pupper Recognizes
 

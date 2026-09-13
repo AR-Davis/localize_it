@@ -1,0 +1,169 @@
+#!/bin/bash
+# KENNEL DOCTOR — Health check for The Kennel (2026-09-13)
+# Usage: kennel-doctor [quick|full]
+
+set -euo pipefail
+
+mode="${1:-quick}"
+
+GREEN="\033[0;32m"
+YELLOW="\033[1;33m"
+RED="\033[0;31m"
+RESET="\033[0m"
+
+ISSUES=0
+WARNINGS=0
+
+ok() { echo -e "${GREEN}[OK]${RESET} $1"; }
+warn() { echo -e "${YELLOW}[WARN]${RESET} $1"; ((WARNINGS++)) || true; }
+crit() { echo -e "${RED}[CRIT]${RESET} $1"; ((ISSUES++)) || true; }
+
+echo "🐕 KENNEL DOCTOR — $(date) — mode: $mode"
+echo "═══════════════════════════════════════════════════════════════"
+echo ""
+
+# 1. Core persona structure
+echo "━━━ PERSONAS ━━━"
+for hound in shepherd pupper builder tinker toby corraler budger programmer digger flanker tracker jobhunter deep-researcher; do
+    if [ -f "$HOME/.pi/personas/$hound/WAKE.md" ]; then
+        age_days=$(( ( $(date +%s) - $(stat -c %Y "$HOME/.pi/personas/$hound/WAKE.md") ) / 86400 ))
+        if [ "$age_days" -le 7 ]; then
+            ok "$hound WAKE fresh (${age_days}d)"
+        else
+            warn "$hound WAKE stale (${age_days}d)"
+        fi
+    else
+        crit "$hound WAKE missing"
+    fi
+done
+echo ""
+
+# 2. Inference backends
+echo "━━━ INFERENCE BACKENDS ━━━"
+if pgrep -x "ollama" > /dev/null 2>&1; then
+    ok "Ollama daemon running"
+else
+    warn "Ollama daemon not running (will start on first query)"
+fi
+
+if ollama list 2>/dev/null | grep -q "llama3.2:3b"; then
+    ok "Pupper default model llama3.2:3b installed"
+else
+    warn "llama3.2:3b not installed"
+fi
+
+# Check Mycelium local API
+if curl -s --max-time 2 http://localhost:11435/api/status >/dev/null 2>&1; then
+    ok "Mycelium local API (localhost:11435) responsive"
+else
+    warn "Mycelium local API not running — run 'mycelium-control start' to join mesh"
+fi
+echo ""
+
+# 3. Mesh / network
+echo "━━━ MESH ━━━"
+if command -v tailscale >/dev/null 2>&1; then
+    if tailscale status >/dev/null 2>&1; then
+        online=$(tailscale status 2>/dev/null | grep -c -v "offline" || true)
+        total=$(tailscale status 2>/dev/null | wc -l || true)
+        ok "Tailscale reachable ($online/$total nodes online-ish)"
+    else
+        warn "Tailscale status command failed"
+    fi
+else
+    warn "tailscale CLI not found"
+fi
+
+for host in 100.90.116.1 100.97.71.98 100.83.89.53; do
+    if timeout 2 bash -c "</dev/tcp/$host/50052" >/dev/null 2>&1; then
+        ok "Mycelium RPC $host:50052 reachable"
+    else
+        warn "Mycelium RPC $host:50052 unreachable"
+    fi
+done
+echo ""
+
+# 4. Tooling indices
+echo "━━━ TOOLS & INDICES ━━━"
+if [ -f "$HOME/.pi/personas/toby/local_index.db" ]; then
+    files=$(python3 -c "import sqlite3; print(sqlite3.connect('$HOME/.pi/personas/toby/local_index.db').execute('SELECT COUNT(*) FROM files').fetchone()[0])" 2>/dev/null || echo "?")
+    ok "Toby index present ($files files)"
+else
+    warn "Toby index missing — run 'toby-index'"
+fi
+
+if [ -f "$HOME/.pi/personas/tinker/inventory/access-lines.json" ]; then
+    age_days=$(( ( $(date +%s) - $(stat -c %Y "$HOME/.pi/personas/tinker/inventory/access-lines.json") ) / 86400 ))
+    if [ "$age_days" -le 7 ]; then
+        ok "Tinker inventory fresh (${age_days}d)"
+    else
+        warn "Tinker inventory stale (${age_days}d)"
+    fi
+else
+    crit "Tinker inventory missing"
+fi
+
+if command -v jq >/dev/null 2>&1 && [ -f "$HOME/.pi/corraler/registry/hounds.json" ]; then
+    hounds=$(jq -r '.active_hounds | length' "$HOME/.pi/corraler/registry/hounds.json" 2>/dev/null || echo 0)
+    ok "Corraler registry present ($hounds active hounds)"
+else
+    warn "Corraler registry not inspectable"
+fi
+echo ""
+
+# 5. Critical scripts / binaries
+echo "━━━ KENNEL COMMANDS ━━━"
+for cmd in kennel-status toby-query toby-index mycelium-control sys-doctor pupper; do
+    if command -v "$cmd" >/dev/null 2>&1; then
+        ok "$cmd available"
+    else
+        warn "$cmd not in PATH"
+    fi
+done
+echo ""
+
+# 6. Full-mode extras
+if [ "$mode" = "full" ]; then
+    echo "━━━ FULL-MODE CHECKS ━━━"
+    # Check for stale cron
+    if [ -f "$HOME/.pi/corraler/crontab.master" ]; then
+        cron_age=$(( ( $(date +%s) - $(stat -c %Y "$HOME/.pi/corraler/crontab.master") ) / 86400 ))
+        if [ "$cron_age" -le 7 ]; then
+            ok "Corraler master crontab fresh (${cron_age}d)"
+        else
+            warn "Corraler master crontab stale (${cron_age}d) — run ~/.pi/skills/corraler/scripts/cron-aggregator.sh"
+        fi
+    fi
+
+    # Check Syncthing peers
+    if command -v syncthingctl >/dev/null 2>&1 || [ -f "$HOME/.local/state/syncthing/config.xml" ]; then
+        peers=$(curl -s -H "X-API-Key: $(grep -oP '(?<=<apikey>)[^<]+' $HOME/.local/state/syncthing/config.xml 2>/dev/null || true)" "http://127.0.0.1:8384/rest/system/connections" 2>/dev/null | python3 -c "import sys,json; d=json.load(sys.stdin); print(len([c for c in d.get('connections',{}).values() if c.get('connected')]))" 2>/dev/null || echo "?")
+        if [ "$peers" != "?" ]; then
+            ok "Syncthing connected peers: $peers"
+        else
+            warn "Could not inspect Syncthing peers"
+        fi
+    fi
+
+    # Check for security flags
+    if grep -q "username=.*password=.*" /etc/fstab 2>/dev/null; then
+        warn "Plaintext credentials in /etc/fstab — move to credentials file"
+    fi
+    echo ""
+fi
+
+# 7. Summary
+echo "═══════════════════════════════════════════════════════════════"
+if [ $ISSUES -eq 0 ] && [ $WARNINGS -eq 0 ]; then
+    echo -e "${GREEN}🟢 KENNEL HEALTHY — All checks passed${RESET}"
+elif [ $ISSUES -eq 0 ]; then
+    echo -e "${YELLOW}🟡 KENNEL OPERATIONAL — $WARNINGS warning(s)${RESET}"
+else
+    echo -e "${RED}🔴 KENNEL NEEDS ATTENTION — $ISSUES issue(s), $WARNINGS warning(s)${RESET}"
+fi
+echo ""
+echo "Quick fixes:"
+echo "  mycelium-control start       — Join local Mycelium mesh"
+echo "  toby-index                   — Rebuild file index"
+echo "  ~/.pi/skills/corraler/scripts/cron-aggregator.sh  — Refresh crontab"
+echo ""
