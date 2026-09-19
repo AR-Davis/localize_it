@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-06-22T03:00:05.944035",
+    "generated_at": "2026-09-19T03:00:40.689303",
     "version": "1.0",
     "tiers": [
       "explicit",
@@ -12,7 +12,7 @@
       "contexts": 13,
       "voices": 13
     },
-    "merged_from": "/home/kinch/Projects/localize_it/data/training/corpus-2026-06-21.json"
+    "merged_from": "/home/kinch/Projects/localize_it/data/training/corpus-2026-09-18.json"
   },
   "system_prompt_additions": [
     {
@@ -431,15 +431,11 @@
     },
     {
       "type": "style_profile",
-      "content": "Style Profile\n\nFormality: Formal\n- Formal markers: 0.30%\n- Casual markers: 0.08%\n\nCode Preference: Balanced\n- Code requests: 115\n- Explanation requests: 116\n\nVerbosity: Moderate\n- Average words per message: 44.5\n\nStructure: Highly Structured\n- Prefers lists/tables: 90%\n\nDirectness: Question Friendly\n- Command style: 15%\n"
+      "content": "Style Profile\n\nFormality: Formal\n- Formal markers: 0.28%\n- Casual markers: 0.07%\n\nCode Preference: Balanced\n- Code requests: 182\n- Explanation requests: 187\n\nVerbosity: Verbose\n- Average words per message: 52.3\n\nStructure: Highly Structured\n- Prefers lists/tables: 77%\n\nDirectness: Question Friendly\n- Command style: 19%\n"
     },
     {
       "type": "preferences",
-      "content": "- Use lists, tables, and clear structure"
-    },
-    {
-      "type": "pattern_wake_requests",
-      "content": "User frequently asks for wake requests"
+      "content": "- Provide detailed explanations\n- Use lists, tables, and clear structure"
     },
     {
       "type": "pattern_code_requests",
@@ -450,16 +446,20 @@
       "content": "User frequently asks for verify requests"
     },
     {
+      "type": "pattern_wake_requests",
+      "content": "User frequently asks for wake requests"
+    },
+    {
       "type": "pattern_explain_requests",
       "content": "User frequently asks for explain requests"
     },
     {
       "type": "familiar_topics",
-      "content": "User is familiar with: shepherd, script, git, repository, rest, automation, rhubarb, watts, pecan, code"
+      "content": "User is familiar with: shepherd, bash, script, code, pi, kennel, budger, programmer, case, finance"
     },
     {
       "type": "knowledge_gaps",
-      "content": "User is actively learning:\n- skill location kinch (asked 5 times)\n- shepherd (asked 4 times)\n- still (asked 4 times)\n- morning shepherd (asked 4 times)\n- skill dream location (asked 3 times)"
+      "content": "User is actively learning:\n- looking (asked 5 times)\n- skill location kinch (asked 5 times)\n- shepherd (asked 4 times)\n- morning budger check (asked 4 times)\n- still (asked 4 times)"
     }
   ]
 }

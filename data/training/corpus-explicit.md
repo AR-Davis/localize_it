@@ -1,5 +1,5 @@
 # Explicit Corpus Report
-Generated: 2026-06-22T03:00:05.944035
+Generated: 2026-09-19T03:00:40.689303
 
 ## Sources
 - styles: 17
@@ -930,34 +930,29 @@ Example phrases:
 Style Profile
 
 Formality: Formal
-- Formal markers: 0.30%
-- Casual markers: 0.08%
+- Formal markers: 0.28%
+- Casual markers: 0.07%
 
 Code Preference: Balanced
-- Code requests: 115
-- Explanation requests: 116
+- Code requests: 182
+- Explanation requests: 187
 
-Verbosity: Moderate
-- Average words per message: 44.5
+Verbosity: Verbose
+- Average words per message: 52.3
 
 Structure: Highly Structured
-- Prefers lists/tables: 90%
+- Prefers lists/tables: 77%
 
 Directness: Question Friendly
-- Command style: 15%
+- Command style: 19%
 
 
 ---
 
 ### preferences: unnamed
 
+- Provide detailed explanations
 - Use lists, tables, and clear structure
-
----
-
-### pattern_wake_requests: unnamed
-
-User frequently asks for wake requests
 
 ---
 
@@ -973,6 +968,12 @@ User frequently asks for verify requests
 
 ---
 
+### pattern_wake_requests: unnamed
+
+User frequently asks for wake requests
+
+---
+
 ### pattern_explain_requests: unnamed
 
 User frequently asks for explain requests
@@ -981,18 +982,18 @@ User frequently asks for explain requests
 
 ### familiar_topics: unnamed
 
-User is familiar with: shepherd, script, git, repository, rest, automation, rhubarb, watts, pecan, code
+User is familiar with: shepherd, bash, script, code, pi, kennel, budger, programmer, case, finance
 
 ---
 
 ### knowledge_gaps: unnamed
 
 User is actively learning:
+- looking (asked 5 times)
 - skill location kinch (asked 5 times)
 - shepherd (asked 4 times)
+- morning budger check (asked 4 times)
 - still (asked 4 times)
-- morning shepherd (asked 4 times)
-- skill dream location (asked 3 times)
 
 ---
 

@@ -20,6 +20,18 @@ Every interaction you have with cloud AI becomes training data for your personal
 2. ☀️ **Intraday Logging** — Active, prompted, preference-based  
 3. ⭐ **Explicit Commands** — Direct, intentional, framework capture
 
+### Beyond Fine-Tuning: Local RAG Assistant
+
+LOCALIZE_IT also powers an **offline, personal system manual assistant**. Instead of (or alongside) training a LoRA, you can compile your local docs, scripts, personas, and skills into a searchable knowledge base and serve it through a tiny local model like `llama3.2:1b`.
+
+Use cases:
+- *"What does `mycelium-control` do?"*
+- *"Which hound handles finance?"*
+- *"How do I check the kennel status?"*
+- *"What tools do I have offline?"*
+
+The assistant retrieves relevant chunks from your compiled manual and answers from them, not from cloud memory. See [`docs/rag-assistant.md`](docs/rag-assistant.md) for the full guide.
+
 ---
 
 ## 🏗️ ARCHITECTURE

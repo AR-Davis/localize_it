@@ -1,0 +1,31 @@
+# LOCALIZE_IT — Ignore generated artifacts
+# Keep source code, explicit captures, seed data, and documentation in git.
+
+# Daily generated shadow artifacts (keep seed files at root of data/shadow)
+data/shadow/knowledge/2*.json
+data/shadow/patterns/2*.json
+data/shadow/style/2*.json
+
+# Daily generated training corpora (keep seed corpus-2026-06-12 and aggregates)
+data/training/corpus-2*.json
+data/training/corpus-2*.md
+
+# Daily synthesis logs
+logs/shadow-synthesis-2*.md
+logs/*.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments / local python artifacts
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db

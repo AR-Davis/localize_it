@@ -1,0 +1,14 @@
+{
+  "trained_at": "2026-09-19T15:14:04.779885",
+  "version": "1.0",
+  "labels": [
+    "HOUND_INFO",
+    "LEARNING",
+    "MESH_INFO",
+    "OTHER",
+    "SCRIPT_INFO",
+    "STATUS_REQUEST",
+    "TOOL_LOOKUP"
+  ],
+  "purpose": "RAG assistant query-to-source routing"
+}

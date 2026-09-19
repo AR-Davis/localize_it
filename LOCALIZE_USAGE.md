@@ -144,6 +144,24 @@ Your Input → Categorization Questions → Stored By Type
                               LoRA Fine-tuning
 ```
 
+## RAG Assistant Mode
+
+LOCALIZE_IT also supports a **local RAG assistant** for answering questions about your system. The same explicit captures and source docs that feed LoRA training can feed a searchable knowledge base served by a tiny local model.
+
+See [`docs/rag-assistant.md`](docs/rag-assistant.md) for the full guide, including:
+- How to compile your scripts, personas, and skills into a KB
+- How to retrieve and generate answers with `llama3.2:1b`
+- How to train a KB-specific query classifier
+- Reference implementation in `~/.pi/personas/pupper/`
+
+Quick start:
+```bash
+pupper-kb          # interactive offline KB assistant
+compile-pupper-kb  # rebuild the manual now
+```
+
+---
+
 ## Integration with Shepherd
 
 When you say **"let's localize this"** during a session, Shepherd will:
