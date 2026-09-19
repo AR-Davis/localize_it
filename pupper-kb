@@ -1,0 +1,5 @@
+#!/bin/bash
+# Wrapper: run Pupper in knowledge-base mode
+set -e
+cd /home/kinch/.pi/personas/pupper
+exec python3 pupper_kb.py "$@"

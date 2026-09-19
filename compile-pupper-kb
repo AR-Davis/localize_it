@@ -1,0 +1,5 @@
+#!/bin/bash
+# Wrapper: recompile Pupper knowledge base
+set -e
+cd /home/kinch/.pi/personas/pupper
+exec python3 compile_kb.py "$@"

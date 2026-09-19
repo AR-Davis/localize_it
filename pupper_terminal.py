@@ -70,7 +70,10 @@ def classify_intent(query: str) -> str:
         return "tools"
 
     # Topic-specific intents before generic status words like "what's wrong"
-    if any(x in q for x in ["tailscale", "mycelium", "mesh", "ember", "crow", "wren", "hearth", "ollama", "node"]):
+    if any(x in q for x in ["ollama", "inference", "are you thinking", "can you think", "offline capable", "ai down", "brain", "local llm", "llm", "model"]):
+        return "inference"
+
+    if any(x in q for x in ["tailscale", "mycelium", "mesh", "ember", "crow", "wren", "hearth", "node"]):
         return "mesh"
 
     if any(x in q for x in ["trading bot", "continuous trader", "alpaca", "dowdogs", "bot trading", "trade", "trading", "equity", "position"]):
@@ -100,7 +103,13 @@ def gather_context(intent: str, query: str) -> str:
     """Run offline diagnostic tools based on intent and return their output."""
     ctx_parts = []
 
-    if intent == "mesh":
+    if intent == "inference":
+        ctx_parts.append("== Inference doctor (local AI health) ==")
+        ctx_parts.append(run_cmd([str(HOME_BIN / "inference-doctor")], timeout=90))
+        ctx_parts.append("\n== Local Ollama models ==")
+        ctx_parts.append(run_cmd(["ollama", "list"], timeout=10))
+
+    elif intent == "mesh":
         # Put the most actionable checks first so tiny model sees them even if context is truncated
         ctx_parts.append("== Mesh RPC port probes (timeout 2s) ==")
         for host in ["100.90.116.1", "100.97.71.98", "100.83.89.53"]:
@@ -228,7 +237,9 @@ def main():
     system = build_system_prompt()
     router = SmartInferenceRouter(prefer_mycelium=False, raven="huginn")
     print(router.status_report())
-    print("\n🐕 Pupper terminal ready. Ask me about your systems. Type 'exit' to quit.\n")
+    print("\n🐕 Pupper terminal ready (tool-runner mode). Ask me about your systems.")
+    print("   For offline system docs, run: pupper-kb")
+    print("   Type 'exit' to quit.\n")
 
     history = []
     while True:
@@ -255,9 +266,9 @@ def main():
             history.append(f"Pupper: [search results presented]")
             continue
 
-        # Overview / tools intents: present clean results directly
-        if intent in ("overview", "tools"):
-            print(f"\nPupper:\n  *woof* Here's the Kennel board:\n")
+        # Overview / tools / inference intents: present clean results directly
+        if intent in ("overview", "tools", "inference"):
+            print(f"\nPupper:\n  *woof* Here's what I found:\n")
             print(textwrap.indent(context.strip(), "  "))
             print("")
             history.append(f"Kinch: {user_input}")
@@ -265,7 +276,7 @@ def main():
             continue
 
         # Cap context length so tiny model isn't overwhelmed
-        if intent in ("overview", "search"):
+        if intent in ("overview", "search", "inference"):
             context = context[:3500]
         else:
             context = context[:2500]
