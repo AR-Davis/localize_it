@@ -1,0 +1,6 @@
+{"timestamp": "2026-09-19T20:30:45.821468", "query": "Hi Pupper, what is your purpose?", "predicted_label": "HOUND_INFO", "helpful": true, "correct_label": null}
+{"timestamp": "2026-09-19T20:32:06.110722", "query": "Pupper, give me an overview of your abilities. You can take up to a minute to respond.", "predicted_label": "HOUND_INFO", "helpful": false, "correct_label": ["TOOL_LOOKUP"]}
+{"timestamp": "2026-09-19T20:33:35.543887", "query": "Ok, Pupper, tell me your tools and scripts. List them for me.", "predicted_label": "TOOL_LOOKUP", "helpful": false, "correct_label": ["TOOL_LOOKUP", "SCRIPT_INFO"]}
+{"timestamp": "2026-09-19T20:34:13.977565", "query": "Ok pupper. Give me a list of all the scripts you handle.", "predicted_label": "HOUND_INFO", "helpful": true, "correct_label": null}
+{"timestamp": "2026-09-19T20:35:00.165308", "query": "Ok, how do I log out here?", "predicted_label": "HOUND_INFO", "helpful": true, "correct_label": null}
+{"timestamp": "2026-09-19T20:35:53.632653", "query": "Ok Pupper, I would like you to run the end of day scripts to log us out.", "predicted_label": "HOUND_INFO", "helpful": true, "correct_label": null}

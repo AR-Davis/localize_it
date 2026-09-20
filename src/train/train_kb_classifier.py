@@ -51,6 +51,16 @@ def load_kb_training_data() -> Tuple[List[str], List[str]]:
         ("how do I run the trading bot", "TOOL_LOOKUP"),
         ("what is khelp", "TOOL_LOOKUP"),
         ("what is sys-doctor", "TOOL_LOOKUP"),
+        ("what are your tools and scripts", "TOOL_LOOKUP"),
+        ("what tools and scripts do you have", "TOOL_LOOKUP"),
+        ("what scripts and tools do you have", "TOOL_LOOKUP"),
+        ("list your abilities", "TOOL_LOOKUP"),
+        ("what are your tools and scripts", "SCRIPT_INFO"),
+        ("what tools and scripts do you have", "SCRIPT_INFO"),
+        ("what scripts and tools do you have", "SCRIPT_INFO"),
+        ("list your abilities", "SCRIPT_INFO"),
+
+        # SCRIPT_INFO
 
         # SCRIPT_INFO
         ("what arguments does mycelium-control take", "SCRIPT_INFO"),
@@ -63,6 +73,9 @@ def load_kb_training_data() -> Tuple[List[str], List[str]]:
         ("how do I start the api gateway", "SCRIPT_INFO"),
         ("what commands does grove-offline have", "SCRIPT_INFO"),
         ("what is the syntax for ai-ask", "SCRIPT_INFO"),
+        ("what scripts do you handle", "SCRIPT_INFO"),
+        ("list all the scripts you handle", "SCRIPT_INFO"),
+        ("what scripts can you run", "SCRIPT_INFO"),
 
         # HOUND_INFO
         ("what is Shepherd", "HOUND_INFO"),
@@ -76,6 +89,8 @@ def load_kb_training_data() -> Tuple[List[str], List[str]]:
         ("what is Tinker", "HOUND_INFO"),
         ("what is the Kennel", "HOUND_INFO"),
         ("who handles infrastructure", "HOUND_INFO"),
+        ("what is your purpose", "HOUND_INFO"),
+        ("who are you", "HOUND_INFO"),
 
         # MESH_INFO
         ("is the Mycelium up", "MESH_INFO"),

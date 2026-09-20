@@ -54,11 +54,21 @@ def load_feedback() -> Tuple[List[str], List[str]]:
                 query = entry.get("query", "").strip()
                 if not query:
                     continue
-                # Prefer the correct label if the prediction was wrong
-                label = entry.get("correct_label") or entry.get("predicted_label")
-                if label:
-                    texts.append(query)
-                    labels.append(label)
+                # Prefer correct labels if prediction was wrong.
+                # correct_label may be a list (multi-label) or a single string.
+                correct = entry.get("correct_label")
+                if correct:
+                    if isinstance(correct, list):
+                        label_list = correct
+                    else:
+                        label_list = [correct]
+                else:
+                    label_list = [entry.get("predicted_label")]
+                for label in label_list:
+                    label = str(label).strip()
+                    if label:
+                        texts.append(query)
+                        labels.append(label)
             except json.JSONDecodeError:
                 continue
     return texts, labels
