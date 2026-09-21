@@ -1,6 +1,6 @@
 # Pupper Offline Knowledge Base
 
-Compiled: 2026-09-19T20:43:04.226766
+Compiled: 2026-09-21T06:15:01.179833
 Sources: 170
 
 This handbook contains scripts, personas, skills, and system notes.
@@ -6696,6 +6696,15 @@ The KB is compiled nightly at 06:15 from:
 | Offline KB mode | `pupper-kb` |
 | Rebuild KB | `compile-pupper-kb` |
 | KB feedback (manual) | `pupper-kb-feedback` |
+
+## Capabilities Maintenance
+
+When Pupper gains a new tool, script, or skill, update these three places so "what can you do?" stays accurate:
+1. **`~/.pi/personas/pupper/PERSONA.md`** — edit the "Pupper Capabilities Overview" section.
+2. **`~/.pi/personas/pupper/WAKE.md`** — add or update the relevant row in the Intents or Integrated Commands table.
+3. **`~/Projects/localize_it/src/train/train_kb_classifier.py`** — add new example query/label pairs if users ask about the new capability in unexpected ways.
+
+Then run `compile-pupper-kb` and, if classifier examples changed, retrain with `cd ~/Projects/localize_it && python3 src/train/retrain_kb_classifier.py`.
 
 ## Intents Pupper Recognizes
 

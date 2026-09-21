@@ -1,8 +1,17 @@
 # WAKE — Pupper (Offline Shepherd) 🐕👶
 
-**Last Active:** 2026-09-19 — KB mode launched, feedback loop live
+**Last Active:** 2026-09-19 — Capabilities overview added; multi-label routing live
 **Pack Role:** Offline orchestrator, local LLM assistant, Shepherd surrogate when cloud down
 **Connectivity:** Smart routing — Mycelium when available, Ollama fallback
+
+## Recent Updates (2026-09-19)
+- **Capabilities overview added to PERSONA.md.** The KB compiler now picks up a structured "what can you do?" answer for first-time users.
+- **Multi-label routing live.** Questions like "what can you do?" and "tools and scripts" now retrieve from multiple source types.
+- **Feedback loop live.** After each answer, Pupper asks `helpful? [y/n/miss]` and logs mispredictions for weekly retraining.
+
+---
+
+**Previous content below:**
 
 ---
 
