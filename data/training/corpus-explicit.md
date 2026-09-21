@@ -1,5 +1,5 @@
 # Explicit Corpus Report
-Generated: 2026-09-19T03:00:40.689303
+Generated: 2026-09-21T03:00:18.577180
 
 ## Sources
 - styles: 17
@@ -934,8 +934,8 @@ Formality: Formal
 - Casual markers: 0.07%
 
 Code Preference: Balanced
-- Code requests: 182
-- Explanation requests: 187
+- Code requests: 186
+- Explanation requests: 188
 
 Verbosity: Verbose
 - Average words per message: 52.3
@@ -944,7 +944,7 @@ Structure: Highly Structured
 - Prefers lists/tables: 77%
 
 Directness: Question Friendly
-- Command style: 19%
+- Command style: 18%
 
 
 ---
