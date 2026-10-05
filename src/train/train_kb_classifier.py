@@ -134,6 +134,12 @@ def load_kb_training_data() -> Tuple[List[str], List[str]]:
         ("who handles infrastructure", "HOUND_INFO"),
         ("what is your purpose", "HOUND_INFO"),
         ("who are you", "HOUND_INFO"),
+        ("list 10 things you can be used for", "HOUND_INFO"),
+        ("list the most common things you can be used for", "HOUND_INFO"),
+        ("what can the kennel do", "HOUND_INFO"),
+        ("what can Shepherd and the hounds do", "HOUND_INFO"),
+        ("what are your capabilities", "HOUND_INFO"),
+        ("what functions does the pack provide", "HOUND_INFO"),
 
         # MESH_INFO
         ("is the Mycelium up", "MESH_INFO"),
@@ -168,6 +174,11 @@ def load_kb_training_data() -> Tuple[List[str], List[str]]:
         ("what is the Three Ravens routing", "LEARNING"),
         ("tell me about offline mode", "LEARNING"),
         ("how does inference fallback work", "LEARNING"),
+        ("how do you assign questions to RAG or the librarian", "LEARNING"),
+        ("how do you decide what goes to RAG and what goes to the librarian", "LEARNING"),
+        ("tell me about routing in the Mycelium", "LEARNING"),
+        ("explain the capture router", "LEARNING"),
+        ("how are captures routed", "LEARNING"),
 
         # OTHER
         ("hello", "OTHER"),

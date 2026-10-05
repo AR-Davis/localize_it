@@ -6,3 +6,5 @@
 {"timestamp": "2026-09-19T20:35:53.632653", "query": "Ok Pupper, I would like you to run the end of day scripts to log us out.", "predicted_label": "HOUND_INFO", "helpful": true, "correct_label": null}
 {"timestamp": "2026-09-21T13:13:37.396576", "query": "Pupper, help me understand the directory organization on myou view it?", "predicted_label": "HOUND_INFO", "helpful": false, "correct_label": null}
 {"timestamp": "2026-09-21T13:14:03.829908", "query": "Apparently you, an offline RAG agent, require the internet to work.", "predicted_label": "LEARNING", "helpful": false, "correct_label": null}
+{"timestamp": "2026-10-05T14:30:00.000000", "query": "Tell me more about how you assign questions I ask you and how you decide what goes to RAG and what goes to the librarian.", "predicted_label": "LEARNING", "helpful": false, "correct_label": ["LEARNING", "MESH_INFO"]}
+{"timestamp": "2026-10-05T14:30:01.000000", "query": "List 10 of the most common things you think you can be used for.", "predicted_label": "HOUND_INFO", "helpful": false, "correct_label": ["HOUND_INFO"]}

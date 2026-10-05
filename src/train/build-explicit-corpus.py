@@ -257,9 +257,11 @@ def main():
     
     # Merge with shadow if requested
     if args.merge_shadow:
-        shadow_corpus_file = OUTPUT_DIR / "corpus-*.json"
         import glob
-        shadow_files = glob.glob(str(shadow_corpus_file))
+        shadow_files = glob.glob(str(OUTPUT_DIR / "corpus-*.json"))
+        # Exclude the generated output so we don't merge with ourself.
+        output_name = Path(args.output).name
+        shadow_files = [p for p in shadow_files if Path(p).name != output_name]
         
         if shadow_files:
             # Get most recent
